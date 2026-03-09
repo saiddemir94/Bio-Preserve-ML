@@ -4,18 +4,17 @@ import joblib
 
 from features.feature_extraction import extract_features
 
-# Load biological rules
 with open("data/biological_rules.json") as f:
     rules = json.load(f)
 
-# Load food context
+
 with open("data/food_context.json") as f:
     food = json.load(f)
 
-# Load trained model
+
 model = joblib.load("ml/model.pkl")
 
-# Load peptide database
+
 db = pd.read_csv("data/database_peptides.csv")
 
 
@@ -34,17 +33,17 @@ def check_food_compatibility(features):
 
         ok = True
 
-        # Tuzlu ortam → yüksek charge gerekli
+        # Tuzlu ortam > yüksek charge gerekli
         if f["salt_ratio"] > 2:
             if features["net_charge"] < 4:
                 ok = False
 
-        # Asidik ortam → kısa peptit avantajlı
+        # Asidik ortam > kısa peptit avantajlı
         if f["pH"] < 5:
             if features["length"] > 22:
                 ok = False
 
-        # Yağlı ortam → orta hidrofobiklik gerekli
+        # Yağlı ortam > orta hidrofobiklik gerekli
         if f["fat_content"] == "high":
             if not (0.35 <= features["hydrophobic_ratio"] <= 0.6):
                 ok = False
