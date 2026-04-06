@@ -1,0 +1,11 @@
+﻿sequence,length,net_charge,hydrophobic_ratio,key_amino_acid_ratio,passed_biological_rules,rule_notes,ml_prediction,ml_probability,compatible_foods,food_notes,final_status
+KRKRKRKRKR,10,10,0.0,1.0,False,Length is outside the target range.; Net charge is outside the target range.; Hydrophobicity ratio is outside the target range.,0,0.0,,Not evaluated because biological filters failed.,Rejected
+RWKRLKRLKRLK,12,8,0.3333,0.9167,False,Length is outside the target range.; Hydrophobicity ratio is outside the target range.,0,0.0,,Not evaluated because biological filters failed.,Rejected
+LLKKLLKKLLKK,12,6,0.5,1.0,False,Length is outside the target range.,0,0.0,,Not evaluated because biological filters failed.,Rejected
+KLLKLLKLLKLL,12,4,0.6667,1.0,False,Length is outside the target range.; Hydrophobicity ratio is outside the target range.,0,0.0,,Not evaluated because biological filters failed.,Rejected
+VIVIVIVIVIVI,12,0,1.0,0.5,False,Length is outside the target range.; Net charge is outside the target range.; Hydrophobicity ratio is outside the target range.,0,0.0,,Not evaluated because biological filters failed.,Rejected
+GLFDIIKKIAESF,13,0,0.5385,0.6154,False,Length is outside the target range.; Net charge is outside the target range.,0,0.0,,Not evaluated because biological filters failed.,Rejected
+GGGGGGGGGG,10,0,0.0,0.0,False,Length is outside the target range.; Net charge is outside the target range.; Hydrophobicity ratio is outside the target range.; Key amino acid content is below the desired threshold.,0,0.0,,Not evaluated because biological filters failed.,Rejected
+LLLLLLLLLL,10,0,1.0,1.0,False,Length is outside the target range.; Net charge is outside the target range.; Hydrophobicity ratio is outside the target range.,0,0.0,,Not evaluated because biological filters failed.,Rejected
+KWKLFKKIGAVLKVL,15,5,0.6,0.6667,True,Passed all biological filters.,1,1.0,"Peynir, Yogurt, Taze Et, Fermente Et (Sucuk), Meyve Suyu, Bitkisel Protein Bazli Urun",Compatible with selected food matrices.,Approved
+GIGKFLHSAKKFGKAFVGEIMNS,23,4,0.4348,0.4348,True,Passed all biological filters.,1,1.0,"Peynir, Taze Et, Bitkisel Protein Bazli Urun",Rejected foods: Yogurt: Sequence is too long for an acidic environment. | Fermente Et (Sucuk): Sequence is too long for an acidic environment. | Meyve Suyu: Sequence is too long for an acidic environment.,Approved

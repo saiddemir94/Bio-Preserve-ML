@@ -1,0 +1,7 @@
+sequence,target_organism,mic_value,mic_unit,label
+KWKLFKKIGAVLKVL,Listeria monocytogenes,8,um,1
+GIGKFLHSAKKFGKAFVGEIMNS,Escherichia coli,16,um,1
+LLKKLLKKLLKK,Staphylococcus aureus,12,um,1
+GGGGGGGGGG,Listeria monocytogenes,96,um,0
+TTTTSSSSAA,Escherichia coli,128,um,0
+DEDEDEDEDE,Salmonella enterica,256,um,0

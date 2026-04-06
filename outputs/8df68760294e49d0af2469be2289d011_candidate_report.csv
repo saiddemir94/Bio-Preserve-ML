@@ -1,0 +1,4 @@
+﻿sequence,length,net_charge,hydrophobic_ratio,key_amino_acid_ratio,passed_biological_rules,rule_notes,ml_prediction,ml_probability,compatible_foods,food_notes,final_status
+RWKRLKRLKRLK,12,8,0.3333,0.9167,False,Length is outside the target range.; Hydrophobicity ratio is outside the target range.,0,0.0,,Not evaluated because biological filters failed.,Rejected
+LLKKLLKKLLKK,12,6,0.5,1.0,False,Length is outside the target range.,0,0.0,,Not evaluated because biological filters failed.,Rejected
+KWKLFKKIGAVLKVL,15,5,0.6,0.6667,True,Passed all biological filters.,1,1.0,"Peynir, Yogurt, Taze Et, Fermente Et (Sucuk), Meyve Suyu, Bitkisel Protein Bazli Urun",Compatible with selected food matrices.,Approved
