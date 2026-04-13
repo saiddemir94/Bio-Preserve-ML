@@ -1,11 +1,6 @@
 # Bio-Preserve-ML
 
-BioPreserve is a peptide screening project for natural preservative discovery. The stack uses:
-
-- `FastAPI` for upload and report APIs
-- `React + Vite` for the web interface
-- a shared Python pipeline for biological rules, AMP scoring, and food compatibility analysis
-- a lightweight AMP dataset ingestion layer for future database growth
+BioPreserve is a peptide screening project for natural preservative discovery.
 
 ## Quick local usage
 
@@ -35,31 +30,6 @@ LLKKLLKKLLKK
 RWKRLKRLKRLK
 ```
 
-## AMP dataset growth workflow
-
-Raw database exports should be placed under `data/raw/`.
-
-Supported source prefixes:
-
-- `dbaasp_*.csv`
-- `dramp_*.csv`
-- `custom_*.csv`
-
-Sample raw file already included:
-
-- `data/raw/custom_sample_amp_data.csv`
-
-To rebuild the training dataset and retrain the model:
-
-1. Run `rebuild-amp-dataset.bat`
-
-Or manually:
-
-```powershell
-& ".\.venv\Scripts\python.exe" data_ingestion\build_amp_dataset.py
-& ".\.venv\Scripts\python.exe" ml\train_model.py
-```
-
 This produces:
 
 - `data/amp_master_dataset.csv`: normalized master AMP table with metadata
@@ -76,8 +46,4 @@ This produces:
 - `data/`: sample datasets and configuration files
 - `outputs/`: generated upload files and candidate reports
 
-## API endpoints
 
-- `GET /api/health`
-- `POST /api/run-pipeline`
-- `GET /api/reports/{filename}`
