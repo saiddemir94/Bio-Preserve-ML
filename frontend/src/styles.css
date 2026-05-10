@@ -118,7 +118,7 @@ h1 {
   transition: border-color 160ms ease, background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
 
-.dropzone::after {
+.dropzone::before {
   position: absolute;
   top: 18px;
   right: 20px;
@@ -153,6 +153,7 @@ h1 {
   font-size: clamp(1.25rem, 2vw, 1.65rem);
   letter-spacing: -0.035em;
   margin-bottom: 8px;
+  padding-right: 170px;
 }
 
 .dropzone-copy,
@@ -533,5 +534,149 @@ tbody tr:hover {
 
   .search-input {
     min-width: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    background:
+      radial-gradient(circle at 18% 4%, rgba(13, 107, 95, 0.14), transparent 28%),
+      linear-gradient(135deg, #f7f3e9 0%, #e7f1eb 100%);
+  }
+
+  .page-shell {
+    width: min(100% - 12px, 1220px);
+    padding: 8px 0 28px;
+  }
+
+  .hero,
+  .alert,
+  .summary-card,
+  .toolbar,
+  .table-shell,
+  .empty-state {
+    border-radius: 22px;
+  }
+
+  .hero {
+    padding: 8px;
+  }
+
+  .upload-panel {
+    gap: 12px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .dropzone {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .dropzone::before {
+    position: static;
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 14px;
+    padding: 8px 11px;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+  }
+
+  .dropzone strong {
+    padding-right: 0;
+    font-size: 1.25rem;
+    line-height: 1.18;
+  }
+
+  .dropzone-copy,
+  .hint {
+    line-height: 1.5;
+  }
+
+  .dropzone input[type="file"],
+  .target-grid select,
+  .search-input {
+    margin-top: 12px;
+    padding: 13px 14px;
+    border-radius: 15px;
+  }
+
+  .target-grid {
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .mode-card {
+    min-height: auto;
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .mode-card small {
+    font-size: 0.86rem;
+  }
+
+  .dropzone-actions {
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 16px;
+  }
+
+  .helper-row {
+    gap: 8px;
+    align-items: start;
+  }
+
+  .file-chip {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    border-radius: 14px;
+  }
+
+  .summary-grid {
+    gap: 10px;
+  }
+
+  .summary-card {
+    padding: 18px;
+  }
+
+  .summary-card strong {
+    font-size: 1.8rem;
+  }
+
+  .toolbar {
+    gap: 14px;
+    padding: 18px;
+    align-items: stretch;
+  }
+
+  .toolbar-actions {
+    gap: 10px;
+  }
+
+  .toggle {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .table-shell {
+    padding: 8px;
+  }
+
+  table {
+    min-width: 980px;
+  }
+
+  th,
+  td {
+    padding: 12px 10px;
   }
 }
