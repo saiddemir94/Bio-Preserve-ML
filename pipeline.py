@@ -29,6 +29,57 @@ DEFAULT_FEATURE_COLUMNS = [
     "hydrophobic_ratio",
     "key_amino_acid_ratio",
 ]
+PATHOGEN_RULES = {
+    "Listeria monocytogenes": {
+        "min_charge": 3,
+        "hydrophobicity_range": (0.40, 0.65),
+        "note": "Gram-positive target pathogen profile.",
+    },
+    "Salmonella": {
+        "min_charge": 4,
+        "hydrophobicity_range": (0.35, 0.60),
+        "note": "Gram-negative target pathogen profile.",
+    },
+    "E. coli": {
+        "min_charge": 4,
+        "hydrophobicity_range": (0.35, 0.60),
+        "note": "Gram-negative target pathogen profile.",
+    },
+}
+
+
+def available_foods():
+    return [food_matrix["product"] for food_matrix in FOOD_CONTEXT["food_matrices"]]
+
+
+def available_pathogens():
+    return FOOD_CONTEXT.get("target_pathogens", list(PATHOGEN_RULES))
+
+
+def find_food_matrix(selected_food):
+    if not selected_food:
+        return None
+
+    normalized_food = selected_food.strip().lower()
+    for food_matrix in FOOD_CONTEXT["food_matrices"]:
+        if food_matrix["product"].lower() == normalized_food:
+            return food_matrix
+
+    valid_foods = ", ".join(available_foods())
+    raise ValueError(f"Unknown food matrix '{selected_food}'. Valid options: {valid_foods}")
+
+
+def validate_pathogen(target_pathogen):
+    if not target_pathogen:
+        return None
+
+    normalized_pathogen = target_pathogen.strip().lower()
+    for pathogen in available_pathogens():
+        if pathogen.lower() == normalized_pathogen:
+            return pathogen
+
+    valid_pathogens = ", ".join(available_pathogens())
+    raise ValueError(f"Unknown target pathogen '{target_pathogen}'. Valid options: {valid_pathogens}")
 
 
 def passes_biological_rules(features):
@@ -53,11 +104,35 @@ def passes_biological_rules(features):
     return len(reasons) == 0, reasons
 
 
-def check_food_compatibility(features):
+def check_pathogen_compatibility(features, target_pathogen):
+    pathogen = validate_pathogen(target_pathogen)
+    if not pathogen:
+        return True, "No target pathogen selected."
+
+    rules = PATHOGEN_RULES.get(pathogen)
+    if not rules:
+        return True, f"No pathogen-specific rule configured for {pathogen}."
+
+    reasons = []
+    if features["net_charge"] < rules["min_charge"]:
+        reasons.append(f"Net charge is low for {pathogen}.")
+
+    min_hydrophobicity, max_hydrophobicity = rules["hydrophobicity_range"]
+    if not min_hydrophobicity <= features["hydrophobic_ratio"] <= max_hydrophobicity:
+        reasons.append(f"Hydrophobicity is outside the preferred range for {pathogen}.")
+
+    if reasons:
+        return False, "; ".join(reasons)
+
+    return True, rules["note"]
+
+
+def check_food_compatibility(features, selected_food=None):
     suitable_foods = []
     rejected_foods = []
+    food_matrices = [find_food_matrix(selected_food)] if selected_food else FOOD_CONTEXT["food_matrices"]
 
-    for food_matrix in FOOD_CONTEXT["food_matrices"]:
+    for food_matrix in food_matrices:
         reasons = []
 
         if food_matrix["salt_ratio"] > 2 and features["net_charge"] < 4:
@@ -99,12 +174,16 @@ def predict_candidate(features):
     return predicted_label, probability
 
 
-def evaluate_sequence(sequence):
+def evaluate_sequence(sequence, selected_food=None, target_pathogen=None):
     cleaned_sequence = str(sequence).strip().upper()
+    selected_food_name = selected_food or ""
+    target_pathogen_name = target_pathogen or ""
 
     if not cleaned_sequence:
         return {
             "sequence": "",
+            "target_food": selected_food_name,
+            "target_pathogen": target_pathogen_name,
             "length": 0,
             "net_charge": 0,
             "hydrophobic_ratio": 0.0,
@@ -123,6 +202,8 @@ def evaluate_sequence(sequence):
     except ValueError as error:
         return {
             "sequence": cleaned_sequence,
+            "target_food": selected_food_name,
+            "target_pathogen": target_pathogen_name,
             "length": 0,
             "net_charge": 0,
             "hydrophobic_ratio": 0.0,
@@ -140,6 +221,8 @@ def evaluate_sequence(sequence):
 
     result = {
         "sequence": cleaned_sequence,
+        "target_food": selected_food_name,
+        "target_pathogen": target_pathogen_name,
         "length": features["length"],
         "net_charge": features["net_charge"],
         "hydrophobic_ratio": round(features["hydrophobic_ratio"], 4),
@@ -166,12 +249,17 @@ def evaluate_sequence(sequence):
         result["food_notes"] = "Rejected by the machine learning model."
         return result
 
-    suitable_foods, rejected_foods = check_food_compatibility(features)
+    pathogen_ok, pathogen_note = check_pathogen_compatibility(features, target_pathogen)
+    if not pathogen_ok:
+        result["food_notes"] = pathogen_note
+        return result
+
+    suitable_foods, rejected_foods = check_food_compatibility(features, selected_food)
     result["compatible_foods"] = ", ".join(suitable_foods)
 
     if suitable_foods:
         result["food_notes"] = (
-            "Compatible with selected food matrices."
+            f"{pathogen_note} Compatible with selected food matrix."
             if not rejected_foods
             else "Rejected foods: "
             + " | ".join(
@@ -185,7 +273,15 @@ def evaluate_sequence(sequence):
     return result
 
 
-def process_sequences_dataframe(input_frame, sequence_column="sequence"):
+def process_sequences_dataframe(
+    input_frame,
+    sequence_column="sequence",
+    selected_food=None,
+    target_pathogen=None,
+):
+    find_food_matrix(selected_food)
+    validate_pathogen(target_pathogen)
+
     normalized_columns = {
         column: str(column).strip().replace("\ufeff", "") for column in input_frame.columns
     }
@@ -202,7 +298,7 @@ def process_sequences_dataframe(input_frame, sequence_column="sequence"):
         )
 
     results = [
-        evaluate_sequence(sequence)
+        evaluate_sequence(sequence, selected_food=selected_food, target_pathogen=target_pathogen)
         for sequence in input_frame[sequence_column].fillna("")
     ]
     result_frame = pd.DataFrame(results).sort_values(

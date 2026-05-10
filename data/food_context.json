@@ -1,4 +1,9 @@
 {
+  "target_pathogens": [
+    "Listeria monocytogenes",
+    "Salmonella",
+    "E. coli"
+  ],
   "food_matrices": [
     {
       "product": "Peynir",

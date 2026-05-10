@@ -2,11 +2,17 @@ from pathlib import Path
 from uuid import uuid4
 
 import pandas as pd
-from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 
-from pipeline import OUTPUT_DIR, process_sequences_dataframe, save_report
+from pipeline import (
+    OUTPUT_DIR,
+    available_foods,
+    available_pathogens,
+    process_sequences_dataframe,
+    save_report,
+)
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -54,8 +60,20 @@ def health_check():
     return {"status": "ok"}
 
 
+@app.get("/api/options")
+def get_options():
+    return {
+        "foods": available_foods(),
+        "pathogens": available_pathogens(),
+    }
+
+
 @app.post("/api/run-pipeline")
-async def run_pipeline(sequence_file: UploadFile = File(...)):
+async def run_pipeline(
+    sequence_file: UploadFile = File(...),
+    selected_food: str = Form(""),
+    target_pathogen: str = Form(""),
+):
     ensure_csv_upload(sequence_file)
 
     UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
@@ -68,7 +86,11 @@ async def run_pipeline(sequence_file: UploadFile = File(...)):
         upload_path.write_bytes(content)
 
         input_frame = pd.read_csv(upload_path)
-        result_frame = process_sequences_dataframe(input_frame)
+        result_frame = process_sequences_dataframe(
+            input_frame,
+            selected_food=selected_food,
+            target_pathogen=target_pathogen,
+        )
         save_report(result_frame, report_path)
     except Exception as error:
         raise HTTPException(

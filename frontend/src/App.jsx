@@ -1,13 +1,46 @@
-import { startTransition, useDeferredValue, useRef, useState } from "react";
+import { startTransition, useDeferredValue, useEffect, useRef, useState } from "react";
 
 const API_BASE_URL = "http://127.0.0.1:8000";
 const SAMPLE_CSV = "sequence\nKWKLFKKIGAVLKVL\nLLKKLLKKLLKK\nRWKRLKRLKRLK\n";
+const DEFAULT_OPTIONS = {
+  foods: [
+    "Peynir",
+    "Yogurt",
+    "Taze Et",
+    "Fermente Et (Sucuk)",
+    "Meyve Suyu",
+    "Bitkisel Protein Bazli Urun",
+  ],
+  pathogens: ["Listeria monocytogenes", "Salmonella", "E. coli"],
+};
+const ANALYSIS_MODES = [
+  {
+    value: "general",
+    label: "Genel tarama",
+    description: "Gıda veya patojen zorunlu olmadan tüm adayları değerlendirir.",
+  },
+  {
+    value: "food",
+    label: "Gıda odaklı",
+    description: "Adayları seçilen gıda matrisi için filtreler.",
+  },
+  {
+    value: "pathogen",
+    label: "Patojen odaklı",
+    description: "Adayları seçilen hedef mikroorganizmaya göre filtreler.",
+  },
+  {
+    value: "combined",
+    label: "Gıda + patojen",
+    description: "Hem gıda matrisi hem hedef patojen birlikte değerlendirilir.",
+  },
+];
 
 const summaryCards = [
-  { key: "totalSequences", label: "Total sequences" },
-  { key: "approvedCount", label: "Approved" },
-  { key: "rejectedCount", label: "Rejected" },
-  { key: "averageProbability", label: "Average ML probability" },
+  { key: "totalSequences", label: "Toplam peptit" },
+  { key: "approvedCount", label: "Uygun aday" },
+  { key: "rejectedCount", label: "Elenen aday" },
+  { key: "averageProbability", label: "Ortalama ML skoru" },
 ];
 
 function App() {
@@ -20,8 +53,30 @@ function App() {
   const [query, setQuery] = useState("");
   const [approvedOnly, setApprovedOnly] = useState(false);
   const [dragActive, setDragActive] = useState(false);
+  const [options, setOptions] = useState(DEFAULT_OPTIONS);
+  const [analysisMode, setAnalysisMode] = useState("general");
+  const [selectedFood, setSelectedFood] = useState("");
+  const [targetPathogen, setTargetPathogen] = useState("");
   const fileInputRef = useRef(null);
   const deferredQuery = useDeferredValue(query);
+
+  useEffect(() => {
+    async function loadOptions() {
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/options`);
+        if (!response.ok) {
+          return;
+        }
+
+        const payload = await response.json();
+        setOptions(payload);
+      } catch {
+        setOptions(DEFAULT_OPTIONS);
+      }
+    }
+
+    loadOptions();
+  }, []);
 
   const filteredResults = results.filter((row) => {
     if (approvedOnly && row.final_status !== "Approved") {
@@ -36,6 +91,8 @@ function App() {
     return (
       row.sequence.toLowerCase().includes(normalizedQuery) ||
       row.final_status.toLowerCase().includes(normalizedQuery) ||
+      row.target_food.toLowerCase().includes(normalizedQuery) ||
+      row.target_pathogen.toLowerCase().includes(normalizedQuery) ||
       row.compatible_foods.toLowerCase().includes(normalizedQuery) ||
       row.rule_notes.toLowerCase().includes(normalizedQuery)
     );
@@ -45,15 +102,20 @@ function App() {
     event.preventDefault();
 
     if (!selectedFile) {
-      setErrorMessage("Please choose a CSV file before running the pipeline.");
+      setErrorMessage("Taramayı başlatmadan önce bir CSV dosyası seçmelisiniz.");
       return;
     }
 
     setIsSubmitting(true);
     setErrorMessage("");
 
+    const shouldUseFood = analysisMode === "food" || analysisMode === "combined";
+    const shouldUsePathogen = analysisMode === "pathogen" || analysisMode === "combined";
+
     const formData = new FormData();
     formData.append("sequence_file", selectedFile);
+    formData.append("selected_food", shouldUseFood ? selectedFood : "");
+    formData.append("target_pathogen", shouldUsePathogen ? targetPathogen : "");
 
     try {
       const response = await fetch(`${API_BASE_URL}/api/run-pipeline`, {
@@ -89,6 +151,9 @@ function App() {
     setDownloadUrl("");
     setQuery("");
     setApprovedOnly(false);
+    setAnalysisMode("general");
+    setSelectedFood("");
+    setTargetPathogen("");
     setErrorMessage("");
 
     if (fileInputRef.current) {
@@ -103,7 +168,7 @@ function App() {
 
     const isCsv = nextFile.name.toLowerCase().endsWith(".csv");
     if (!isCsv) {
-      setErrorMessage("Only CSV files are supported.");
+      setErrorMessage("Sadece CSV dosyaları destekleniyor.");
       return;
     }
 
@@ -119,35 +184,12 @@ function App() {
   }
 
   const sampleCsvHref = `data:text/csv;charset=utf-8,${encodeURIComponent(SAMPLE_CSV)}`;
+  const showFoodSelect = analysisMode === "food" || analysisMode === "combined";
+  const showPathogenSelect = analysisMode === "pathogen" || analysisMode === "combined";
 
   return (
     <main className="page-shell">
       <section className="hero">
-        <div className="hero-copy">
-          <p className="eyebrow">BioPreserve AI</p>
-          <h1>Upload peptide candidates and get a clean screening report in one pass</h1>
-          <p className="lede">
-            This local dashboard is designed for quick lab-side review. Upload a CSV with
-            a <code>sequence</code> column, run the pipeline, inspect approvals, and
-            download a ready-to-share report.
-          </p>
-
-          <div className="steps">
-            <div className="step">
-              <span>1</span>
-              <p>Download the sample CSV format if you need a template.</p>
-            </div>
-            <div className="step">
-              <span>2</span>
-              <p>Upload your peptide list and run the screening pipeline.</p>
-            </div>
-            <div className="step">
-              <span>3</span>
-              <p>Filter approved candidates and export the final CSV report.</p>
-            </div>
-          </div>
-        </div>
-
         <form className="upload-panel" onSubmit={handleSubmit}>
           <div
             className={`dropzone ${dragActive ? "active" : ""}`}
@@ -165,9 +207,11 @@ function App() {
             }}
             onDrop={handleDrop}
           >
-            <p className="dropzone-label">Sequence CSV</p>
-            <strong>Drag and drop your file here</strong>
-            <p className="dropzone-copy">or choose it manually from your computer</p>
+            <strong>Peptit listenizi CSV olarak yükleyin</strong>
+            <p className="dropzone-copy">
+              Dosyada <code>sequence</code> adlı bir sütun olmalı ve her satırda tek bir
+              peptit sekansı bulunmalıdır.
+            </p>
 
             <input
               id="sequenceFile"
@@ -180,30 +224,90 @@ function App() {
               }}
             />
 
+            <div className="target-grid">
+              <fieldset className="analysis-mode">
+                <legend>Analiz odağı</legend>
+                <div className="mode-options">
+                  {ANALYSIS_MODES.map((mode) => (
+                    <label
+                      className={`mode-card ${analysisMode === mode.value ? "selected" : ""}`}
+                      key={mode.value}
+                    >
+                      <input
+                        type="radio"
+                        name="analysisMode"
+                        value={mode.value}
+                        checked={analysisMode === mode.value}
+                        onChange={(event) => {
+                          setAnalysisMode(event.target.value);
+                          setSelectedFood(options.foods?.[0] ?? DEFAULT_OPTIONS.foods[0]);
+                          setTargetPathogen(options.pathogens?.[0] ?? DEFAULT_OPTIONS.pathogens[0]);
+                        }}
+                      />
+                      <span>{mode.label}</span>
+                      <small>{mode.description}</small>
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+
+              {showFoodSelect ? (
+                <label>
+                  <span>Hedef gıda</span>
+                  <select
+                    value={selectedFood || options.foods?.[0] || DEFAULT_OPTIONS.foods[0]}
+                    onChange={(event) => setSelectedFood(event.target.value)}
+                  >
+                    {options.foods.map((food) => (
+                      <option key={food} value={food}>
+                        {food}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              ) : null}
+
+              {showPathogenSelect ? (
+                <label>
+                  <span>Hedef patojen</span>
+                  <select
+                    value={targetPathogen || options.pathogens?.[0] || DEFAULT_OPTIONS.pathogens[0]}
+                    onChange={(event) => setTargetPathogen(event.target.value)}
+                  >
+                    {options.pathogens.map((pathogen) => (
+                      <option key={pathogen} value={pathogen}>
+                        {pathogen}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              ) : null}
+            </div>
+
             <div className="dropzone-actions">
               <button className="primary-button" type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Running pipeline..." : "Run pipeline"}
+                {isSubmitting ? "Tarama çalışıyor..." : "Taramayı başlat"}
               </button>
 
               <button className="secondary-button" type="button" onClick={handleReset}>
-                Clear
+                Temizle
               </button>
             </div>
           </div>
 
           <div className="helper-row">
             <a className="text-link" href={sampleCsvHref} download="sample_sequences.csv">
-              Download sample CSV
+              Örnek CSV indir
             </a>
             <p className="hint">
-              Expected header: <code>sequence</code>
+              Beklenen sütun: <code>sequence</code>
             </p>
           </div>
 
           {selectedFile ? (
             <p className="file-chip">{selectedFile.name}</p>
           ) : (
-            <p className="file-chip muted">No file selected yet</p>
+            <p className="file-chip muted">Henüz dosya seçilmedi</p>
           )}
         </form>
       </section>
@@ -223,8 +327,8 @@ function App() {
 
           <section className="toolbar">
             <div className="toolbar-copy">
-              <h2>Candidate report</h2>
-              <p>Use the filters below to focus on approved peptides or search specific rows.</p>
+              <h2>Aday raporu</h2>
+              <p>Uygun adayları filtreleyin veya belirli satırlar içinde arama yapın.</p>
             </div>
 
             <div className="toolbar-actions">
@@ -234,20 +338,20 @@ function App() {
                   checked={approvedOnly}
                   onChange={(event) => setApprovedOnly(event.target.checked)}
                 />
-                <span>Approved only</span>
+                <span>Sadece uygunlar</span>
               </label>
 
               <input
                 aria-label="Search results"
                 className="search-input"
-                placeholder="Search by sequence, status, note, or food"
+                placeholder="Sekans, durum, not veya gıdaya göre ara"
                 type="search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
               />
 
               <a className="primary-button" href={downloadUrl}>
-                Download report
+                Raporu indir
               </a>
             </div>
           </section>
@@ -260,22 +364,26 @@ function App() {
             <table>
               <thead>
                 <tr>
-                  <th>Sequence</th>
-                  <th>Status</th>
-                  <th>ML Probability</th>
-                  <th>Length</th>
-                  <th>Charge</th>
-                  <th>Hydrophobicity</th>
-                  <th>Key AA Ratio</th>
-                  <th>Compatible Foods</th>
-                  <th>Rule Notes</th>
-                  <th>Food Notes</th>
+                  <th>Sekans</th>
+                  <th>Hedef gıda</th>
+                  <th>Hedef patojen</th>
+                  <th>Durum</th>
+                  <th>ML skoru</th>
+                  <th>Uzunluk</th>
+                  <th>Yük</th>
+                  <th>Hidrofobiklik</th>
+                  <th>Kritik AA oranı</th>
+                  <th>Uyumlu gıdalar</th>
+                  <th>Kural notu</th>
+                  <th>Gıda notu</th>
                 </tr>
               </thead>
               <tbody>
                 {filteredResults.map((row) => (
                   <tr key={`${row.sequence}-${row.ml_probability}-${row.final_status}`}>
                     <td className="sequence">{row.sequence}</td>
+                    <td>{row.target_food}</td>
+                    <td>{row.target_pathogen}</td>
                     <td>
                       <span className={`status-pill ${row.final_status.toLowerCase()}`}>
                         {row.final_status}
@@ -297,8 +405,8 @@ function App() {
         </section>
       ) : summary ? (
         <section className="empty-state">
-          <h2>No rows matched your current filter.</h2>
-          <p>Try clearing the search or turning off the approved-only filter.</p>
+          <h2>Filtreye uygun satır bulunamadı.</h2>
+          <p>Aramayı temizlemeyi veya sadece uygunlar filtresini kapatmayı deneyin.</p>
         </section>
       ) : null}
     </main>
