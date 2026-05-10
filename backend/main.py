@@ -1,9 +1,11 @@
+import os
 from pathlib import Path
 from uuid import uuid4
 
 import pandas as pd
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
 from pipeline import (
@@ -16,8 +18,18 @@ from pipeline import (
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+FRONTEND_DIST_DIR = BASE_DIR / "frontend" / "dist"
 UPLOAD_DIR = OUTPUT_DIR / "uploads"
 ALLOWED_EXTENSIONS = {".csv"}
+DEFAULT_ALLOWED_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173"]
+
+
+def get_allowed_origins():
+    configured_origins = os.getenv("FRONTEND_ORIGINS", "")
+    extra_origins = [
+        origin.strip() for origin in configured_origins.split(",") if origin.strip()
+    ]
+    return DEFAULT_ALLOWED_ORIGINS + extra_origins
 
 app = FastAPI(
     title="BioPreserve API",
@@ -27,7 +39,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=get_allowed_origins(),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -116,3 +128,20 @@ def download_report(filename: str):
         raise HTTPException(status_code=404, detail="Requested report file could not be found.")
 
     return FileResponse(report_path, filename=filename, media_type="text/csv")
+
+
+if FRONTEND_DIST_DIR.exists():
+    app.mount(
+        "/assets",
+        StaticFiles(directory=FRONTEND_DIST_DIR / "assets"),
+        name="frontend-assets",
+    )
+
+    @app.get("/{full_path:path}", include_in_schema=False)
+    def serve_frontend(full_path: str):
+        requested_path = FRONTEND_DIST_DIR / full_path
+
+        if requested_path.is_file():
+            return FileResponse(requested_path)
+
+        return FileResponse(FRONTEND_DIST_DIR / "index.html")
