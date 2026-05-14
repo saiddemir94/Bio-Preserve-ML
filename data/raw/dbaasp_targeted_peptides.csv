@@ -1,0 +1,78 @@
+﻿dbaasp_id,name,sequence,target_organism,mic_value,mic_unit,label,synthesis_type,complexity
+DBAASPR_2290,XPF-SE4,GVWTTILGGLKKFAKGGLEALTNPK,Escherichia coli,104.1664,µM,0,Ribosomal,Monomer
+DBAASPR_2782,"Polistes Mastoparan R3/R1, Mastoparan PDD-B",INWLKLGKKILGAI,Escherichia coli,105.9102,µM,0,Ribosomal,Monomer
+DBAASPR_506,Temporin-A,FLPLIGRVLSGIL,Escherichia coli,125.0,µg/ml,0,Ribosomal,Monomer
+DBAASPR_847,"Temporin-B, Temporin-1Tb",LLPIVGNLLKSLL,Escherichia coli NCTC 12923,128.0,µg/ml,0,Ribosomal,Monomer
+DBAASPR_2273,CPF-P5,GFGSFLGKALKAALKIGADVLGGAPQQ,Escherichia coli,130.905,µM,0,Ribosomal,Monomer
+DBAASPR_606,Dermaseptin S4,ALWMTLLKKVLKAAAKAALNAVLVGANA,Escherichia coli U16318,142.7305,µM,0,Ribosomal,Monomer
+DBAASPR_2286,PGLa-SE2,GMATAAGTTLGKLAKFVIGAV,Escherichia coli,158.2752,µM,0,Ribosomal,Monomer
+DBAASPR_2287,XPF-SE1,GLFLDTLKKFAKAGMEAVTNPK,Escherichia coli,190.7128,µM,0,Ribosomal,Monomer
+DBAASPR_2289,XPF-SE3,GFWTTAAEGLKKFAKAGLASILNPK,Escherichia coli,209.9328,µM,0,Ribosomal,Monomer
+DBAASPR_1824,Maculatin-1.1,GLFGVLAKVAAHVVPAIAEHF,Escherichia coli MG1655,236.1249,µM,0,Ribosomal,Monomer
+DBAASPR_2284,Magainin-SE1,GLKEVLHSTKKFAKGFITGLTGQ,Escherichia coli,394.392,µM,0,Ribosomal,Monomer
+DBAASPR_2225,"Alyteserin-1Ma, Preproalyteserin-1/2Ma",GFKEVLKADLGSLVKGIAAHVAN,Escherichia coli,500.71506,µM,0,Ribosomal,Monomer
+DBAASPR_2227,Alyteserin-1Mb,GFKEVLKAGLGSLVKGIPAHVAN,Escherichia coli,500.79044,µM,0,Ribosomal,Monomer
+DBAASPR_2226,"Alyteserin-2Mb, Preproalyteserin-1/2Mb",ILGAIIPLVSGLLSHL,Escherichia coli,646.016,µM,0,Ribosomal,Monomer
+DBAASPR_12667,Citrocin,GGVGKIIEYFIGGGVGRYG,Salmonella enterica,950.095,µM,0,Ribosomal,Monomer
+DBAASPR_2121,Microcin J25,GGAGHVPEYFVGIGTPISFYG,Salmonella enterica subsp. enterica serovar Newport,0.01,µg/ml,1,Ribosomal,Monomer
+DBAASPR_2229,Tachyplesin-1,KWCFRVCYRGICYRRCR,Escherichia coli MB4902,0.016,µg/ml,1,Ribosomal,Monomer
+DBAASPR_2015,"Polyphemusin I, PM-1",RRWCFRVCYRGFCYRKCR,Escherichia coli MB4902,0.03,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1160,Apidaecin-1B,GNNRPVYIPQPRPPHPRL,Escherichia coli JW0013,0.05060352,µM,1,Ribosomal,Monomer
+DBAASPR_759,"Neutrophil defensin 1, HNP-1",ACYCRIPACIAGERRYGTCIYQGRLWAFCC,Escherichia coli,0.5,µg/ml,1,Ribosomal,Monomer
+DBAASPR_2025,Arenicin-1,RWCVYAYVRVRGVLVRYRRCW,Escherichia coli WBB 01,0.82811403,µM,1,Ribosomal,Monomer
+DBAASPR_564,"Drosocin, Drosocin-1",GKPRPYSPRPTSHPRPIRV,Escherichia coli ATCC 35218,0.879844,µM,1,Ribosomal,Monomer
+DBAASPR_850,Thanatin,GSKKPVPIIYCNRRTGKCQRM,Escherichia coli ATCC 35218,1.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1273,Ranalexin,FLGGLIKIVPAMICAVTKKC,Escherichia coli,1.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1737,Cathelicidin-BF,KFFRKLKKSVKKRAKEFFKKPRVIGVSIPF,Escherichia coli K-12,1.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_4349,Dermaseptin-S9,GLRSKIWLWVLLMIWQESNKFKKM,Listeria monocytogenes,1.215932,µM,1,Ribosomal,Monomer
+DBAASPR_1465,Peptide BmKn2,FIGAIARLLSKIF,Escherichia coli,1.5,µg/ml,1,Ribosomal,Monomer
+DBAASPR_4757,"Protegrin 4, PG4",RGGRLCYCRGWICFCVGR,Listeria monocytogenes,1.9,µg/ml,1,Ribosomal,Monomer
+DBAASPR_2300,Ascaphin-8,GFKDLLKGAAKALVKTVLF,Listeria monocytogenes,2.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5799,Temporin-PTa,FFGSVLKLIPKIL,Listeria monocytogenes,2.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_806,Melittin,GIGAVLKVLTTGLPALISWIKRKRQQ,Escherichia coli KCCM 11569,2.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_4758,"Protegrin 5, PG-5",RGGRLCYCRPRFCVCVGR,Listeria monocytogenes,2.5,µg/ml,1,Ribosomal,Monomer
+DBAASPR_2044,Dermaseptin-01 / DS 01,GLWSTIKQKGKEAAIAAAKAAGQAALGAL,Escherichia coli ATCC 25922,2.79834,µM,1,Ribosomal,Monomer
+DBAASPR_4756,Protegrin-3,RGGGLCYCRRRFCVCVGR,Listeria monocytogenes,2.8,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1430,"Horse cathelicidin 1, Myeloid cathelicidin 1, eCATH-1",KRFGRLAKSFLRMRILLPRRKILLAS,Escherichia coli ML-35,3.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1483,Odorranain-B1,AALKGCWTKSIPPKPCFGKR,Escherichia coli,3.21,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1506,"Odorranain-P1a, Brevinin-1-OA2",VIPFVASVAAEMMQHVYCAASKKC,Escherichia coli,3.5,µg/ml,1,Ribosomal,Monomer
+DBAASPR_160,Tritrpticin,VRRFPWWWPFLRR,Escherichia coli D31,3.6144269,µM,1,Ribosomal,Monomer
+DBAASPR_37,PGLa,GMASKAGAIAGKIAKVALKAL,Escherichia coli NCTC 12923,4.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_872,"Buforin-2, Histone H2A",TRSSRAGLQFPVGRVHRLLRK,Escherichia coli,4.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1493,Odorranain-F1,GFMDTAKNAAKNVAVTLLDNLKCKITKAC,Escherichia coli,4.2,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1494,Odorranain-G1,FMPILSCSRFKRC,Escherichia coli,4.68,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1525,Nigrosin-OG21 antimicrobial peptide,GLLSGVLGVGKKVLCGLSGLC,Escherichia coli,4.68,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1526,Nigrosin-OG13,GLLSGILGAGKHIVCGLSGLR,Escherichia coli,4.68,µg/ml,1,Ribosomal,Monomer
+DBAASPR_491,"Cathelicidin-4, Indolicidin",ILPWKWPWWPWRR,Escherichia coli ATCC 25922,4.768425,µM,1,Ribosomal,Monomer
+DBAASPR_360,Magainin-2,GIGKFLHSAKKFGKAFVGEIMNS,Escherichia coli KCTC 1682,4.94196,µM,1,Ribosomal,Monomer
+DBAASPR_1524,"Nigrosin-OG20, Grahamin-1",GLLSGILGAGKHIVCGLSGLC,Escherichia coli ATCC 25922,5.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_2252,Scolopin 2,GILKKFMLHRGTKVYKMRTLSKRSH,Escherichia coli ATCC 25629,5.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1010,"Ranatuerin-1, Ranatuerin-1CBa",SMLSVLKNLGKVGLGFVACKINKQC,Escherichia coli,5.3107,µM,1,Ribosomal,Monomer
+DBAASPR_2768,Mastoparan PDD-A,INWKKIFEKVKNLV,Escherichia coli,5.4981575,µM,1,Ribosomal,Monomer
+DBAASPR_6384,"Mastoparan-AF, Mastoparan M",INLKAIAALAKKLF,Salmonella enterica subsp. enterica serovar Enteritidis ATCC 13076,6.06392,µM,1,Ribosomal,Monomer
+DBAASPR_2781,Mastoparan PDD-B,INWLKLGKKILGAL,Escherichia coli,6.27616,µM,1,Ribosomal,Monomer
+DBAASPR_1059,"Cathelicidin-1, Bactenecin-1, Bac1",RLCRIVVIRVCR,Listeria monocytogenes,8.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1231,Misgurin,RQRVEELSKFSKKGAAARRRK,Escherichia coli,8.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1584,"Mastoparan-1, Mastoparan I, MPI, MP-1",IDWKKLLDAAKQIL,Escherichia coli ATCC 25922,8.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_2271,Caerulein precursor fragment CPF-P3,GFGSFLGKALKAALKIGANVLGGAPQQ,Escherichia coli NCTC 12923,8.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_2434,Ib-AMP4,QWGRRCCGWGPGRRYCRRWC,Escherichia coli ATCC 25922,8.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1320,Citropin-1.1,GLFDVIKKVASVIGGL,Escherichia coli KpC+002101123,8.085,µM,1,Ribosomal,Monomer
+DBAASPR_2787,Mastoparan MP,INWLKLGKKMMSAL,Escherichia coli,8.17575,µM,1,Ribosomal,Monomer
+DBAASPR_1503,"Odorranain-M2 antimicrobial peptide, Odorranain-M1",ATAWDFGPHGLLPIRPIRIRPLCGKDKS,Escherichia coli,9.37,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1543,Nigrocin-OG5,GLLSGILGAGKQKVCGLSGLC,Escherichia coli,9.37,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1241,"Protonectin, Agelaia-chemotactic peptide, Agelaia-CP",ILGTILGLLKGL,Escherichia coli ATCC 25922,9.68472,µM,1,Ribosomal,Monomer
+DBAASPR_626,Gaegurin-5,FLGALFKVASKVLPSVKCAITKKC,Escherichia coli,12.5,µg/ml,1,Ribosomal,Monomer
+DBAASPR_2251,Scolopin 1,FLPKMSTKLRVPYRRGTKDYH,Escherichia coli ATCC 25629,12.5,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1523,Odorranain-W1,GLFGKSSVWGRKYYVDLAGCAKA,Escherichia coli,12.6,µg/ml,1,Ribosomal,Monomer
+DBAASPR_2504,Kassinatuerin-1,GFMKYIGPLIPHAVKAISDLI,Escherichia coli,14.280313,µM,1,Ribosomal,Monomer
+DBAASPR_6413,"Mastoparan-D, Mastoparan-T",INLKAIAAFAKKLL,Salmonella enterica,16.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1253,Aurein-2.5,GLFDIVKKVVGAFGSL,Escherichia coli NCTC 12923,16.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_4353,"Antimicrobial protein plp, Peptide HKPLP",FLGLIFHGLVHAGKLIHGLIHRNRG,Salmonella enterica,16.6641,µM,1,Ribosomal,Monomer
+DBAASPR_1520,Odorranain-T1,TSRCYIGYRRKVVCS,Escherichia coli,17.5,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1466,"Peptide BmKb1, Non-disulfide-bridged peptide 4.2, NDBP-4.2, Toxin peptide 6, MeuFSPL-1",FLFSLIPSAISGLISAFK,Escherichia coli,18.1,µg/ml,1,Ribosomal,Monomer
+DBAASPR_15018,Sviceucin,CVWGGDCTDFLGCGTAWICV,Listeria monocytogenes,21.065,µM,1,Ribosomal,Monomer
+DBAASPR_2777,Mastoparan PDD-A-9,INWKKIFEKVSNLV,Escherichia coli,21.501625,µM,1,Ribosomal,Monomer
+DBAASPR_1136,Caerin-1.1,GLLSVLGSVAKHVLPHVVPVIAEHL,Escherichia coli ATCC 25922,21.844517,µM,1,Ribosomal,Monomer
+DBAASPR_1495,"Odorranain-H2 antimicrobial peptide, Odorranain-H1",GIFGKILGVGKKVLCGLSGVC,Escherichia coli,23.6,µg/ml,1,Ribosomal,Monomer
+DBAASPR_779,Aurein-1.2,GLFDIIKKIAESF,Escherichia coli ATCC 25922,23.70896,µM,1,Ribosomal,Monomer
+DBAASPR_2318,Gaegurin-6,FLPLLAGLAANFLPTIICKISYKC,Escherichia coli DH5alpha,25.0,µg/ml,1,Ribosomal,Monomer

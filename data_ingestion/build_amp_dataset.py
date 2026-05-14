@@ -1,11 +1,14 @@
 from pathlib import Path
+import sys
 
 import pandas as pd
 
-from features.feature_extraction import extract_features
-
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(BASE_DIR))
+
+from features.feature_extraction import extract_features
+
 RAW_DIR = BASE_DIR / "data" / "raw"
 OUTPUT_PATH = BASE_DIR / "data" / "amp_dataset.csv"
 MASTER_OUTPUT_PATH = BASE_DIR / "data" / "amp_master_dataset.csv"

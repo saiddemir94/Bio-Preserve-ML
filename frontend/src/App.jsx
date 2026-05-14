@@ -17,22 +17,34 @@ const ANALYSIS_MODES = [
   {
     value: "general",
     label: "Genel tarama",
-    description: "Gıda veya patojen zorunlu olmadan tüm adayları değerlendirir.",
+    description: "Peptit havuzunu genel biyolojik uygunluk ve ML skoruna göre sıralar.",
   },
   {
     value: "food",
     label: "Gıda odaklı",
-    description: "Adayları seçilen gıda matrisi için filtreler.",
+    description: "Adayları seçilen gıda matrisinin koşullarına göre önceliklendirir.",
   },
   {
     value: "pathogen",
     label: "Patojen odaklı",
-    description: "Adayları seçilen hedef mikroorganizmaya göre filtreler.",
+    description: "Adayları hedef mikroorganizma profiline göre değerlendirir.",
   },
   {
     value: "combined",
     label: "Gıda + patojen",
-    description: "Hem gıda matrisi hem hedef patojen birlikte değerlendirilir.",
+    description: "Gıda matrisi ve hedef patojen birlikte dikkate alınır.",
+  },
+];
+const DATA_SOURCE_MODES = [
+  {
+    value: "system",
+    label: "Sistem peptit havuzu",
+    description: "DBAASP tabanlı mevcut aday havuzu analiz edilir.",
+  },
+  {
+    value: "upload",
+    label: "Kendi CSV dosyam",
+    description: "sequence sütununa sahip CSV dosyasıyla özel analiz yapılır.",
   },
 ];
 
@@ -41,6 +53,7 @@ const summaryCards = [
   { key: "approvedCount", label: "Uygun aday" },
   { key: "rejectedCount", label: "Elenen aday" },
   { key: "averageProbability", label: "Ortalama ML skoru" },
+  { key: "dataSource", label: "Veri kaynağı" },
 ];
 
 function App() {
@@ -54,6 +67,7 @@ function App() {
   const [approvedOnly, setApprovedOnly] = useState(false);
   const [dragActive, setDragActive] = useState(false);
   const [options, setOptions] = useState(DEFAULT_OPTIONS);
+  const [dataSourceMode, setDataSourceMode] = useState("system");
   const [analysisMode, setAnalysisMode] = useState("general");
   const [selectedFood, setSelectedFood] = useState("");
   const [targetPathogen, setTargetPathogen] = useState("");
@@ -101,11 +115,6 @@ function App() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    if (!selectedFile) {
-      setErrorMessage("Taramayı başlatmadan önce bir CSV dosyası seçmelisiniz.");
-      return;
-    }
-
     setIsSubmitting(true);
     setErrorMessage("");
 
@@ -113,7 +122,15 @@ function App() {
     const shouldUsePathogen = analysisMode === "pathogen" || analysisMode === "combined";
 
     const formData = new FormData();
-    formData.append("sequence_file", selectedFile);
+    if (dataSourceMode === "upload" && !selectedFile) {
+      setErrorMessage("CSV analizi için önce bir dosya seçmelisiniz.");
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (dataSourceMode === "upload" && selectedFile) {
+      formData.append("sequence_file", selectedFile);
+    }
     formData.append("selected_food", shouldUseFood ? selectedFood : "");
     formData.append("target_pathogen", shouldUsePathogen ? targetPathogen : "");
 
@@ -151,6 +168,7 @@ function App() {
     setDownloadUrl("");
     setQuery("");
     setApprovedOnly(false);
+    setDataSourceMode("system");
     setAnalysisMode("general");
     setSelectedFood("");
     setTargetPathogen("");
@@ -168,7 +186,7 @@ function App() {
 
     const isCsv = nextFile.name.toLowerCase().endsWith(".csv");
     if (!isCsv) {
-      setErrorMessage("Sadece CSV dosyaları destekleniyor.");
+      setErrorMessage("Lütfen yalnızca .csv uzantılı bir dosya yükleyin.");
       return;
     }
 
@@ -207,22 +225,69 @@ function App() {
             }}
             onDrop={handleDrop}
           >
-            <strong>Peptit listenizi CSV olarak yükleyin</strong>
+            <strong>Peptit adaylarını tarayın</strong>
             <p className="dropzone-copy">
-              Dosyada <code>sequence</code> adlı bir sütun olmalı ve her satırda tek bir
-              peptit sekansı bulunmalıdır.
+              Sistem havuzunu kullanın veya <code>sequence</code> sütunlu CSV dosyanızı
+              yükleyerek özel analiz başlatın.
             </p>
 
-            <input
-              id="sequenceFile"
-              ref={fileInputRef}
-              type="file"
-              accept=".csv"
-              onChange={(event) => {
-                const nextFile = event.target.files?.[0] ?? null;
-                handleFileSelection(nextFile);
-              }}
-            />
+            <fieldset className="data-source">
+              <legend>Veri kaynağı</legend>
+              <div className="source-options">
+                {DATA_SOURCE_MODES.map((source) => (
+                  <label
+                    className={`source-card ${dataSourceMode === source.value ? "selected" : ""}`}
+                    key={source.value}
+                  >
+                    <input
+                      type="radio"
+                      name="dataSource"
+                      value={source.value}
+                      checked={dataSourceMode === source.value}
+                      onChange={(event) => {
+                        setDataSourceMode(event.target.value);
+                        setErrorMessage("");
+                      }}
+                    />
+                    <span>{source.label}</span>
+                    <small>{source.description}</small>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+
+            {dataSourceMode === "upload" ? (
+              <div className="file-stage">
+                <div className="file-picker">
+                  <label className="file-button" htmlFor="sequenceFile">
+                    Dosya seç
+                  </label>
+                  <input
+                    id="sequenceFile"
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".csv"
+                    onChange={(event) => {
+                      const nextFile = event.target.files?.[0] ?? null;
+                      handleFileSelection(nextFile);
+                    }}
+                  />
+                </div>
+
+                <div className="file-stage-copy">
+                  {selectedFile ? <strong>{selectedFile.name}</strong> : null}
+                  <p>
+                    {selectedFile
+                      ? "Seçilen CSV dosyası analiz edilecek."
+                      : "sequence sütununa sahip CSV dosyanızı yükleyin."}
+                  </p>
+                </div>
+
+                <a className="sample-link" href={sampleCsvHref} download="sample_sequences.csv">
+                  Örnek CSV indir
+                </a>
+              </div>
+            ) : null}
 
             <div className="target-grid">
               <fieldset className="analysis-mode">
@@ -286,7 +351,11 @@ function App() {
 
             <div className="dropzone-actions">
               <button className="primary-button" type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Tarama çalışıyor..." : "Taramayı başlat"}
+                {isSubmitting
+                  ? "Analiz ediliyor..."
+                  : dataSourceMode === "upload"
+                    ? "Yüklenen listeyi analiz et"
+                    : "Aday peptitleri listele"}
               </button>
 
               <button className="secondary-button" type="button" onClick={handleReset}>
@@ -295,20 +364,6 @@ function App() {
             </div>
           </div>
 
-          <div className="helper-row">
-            <a className="text-link" href={sampleCsvHref} download="sample_sequences.csv">
-              Örnek CSV indir
-            </a>
-            <p className="hint">
-              Beklenen sütun: <code>sequence</code>
-            </p>
-          </div>
-
-          {selectedFile ? (
-            <p className="file-chip">{selectedFile.name}</p>
-          ) : (
-            <p className="file-chip muted">Henüz dosya seçilmedi</p>
-          )}
         </form>
       </section>
 
@@ -328,7 +383,7 @@ function App() {
           <section className="toolbar">
             <div className="toolbar-copy">
               <h2>Aday raporu</h2>
-              <p>Uygun adayları filtreleyin veya belirli satırlar içinde arama yapın.</p>
+              <p>Sonuçları uygunluk durumuna, sekansa, gıdaya veya açıklama notlarına göre inceleyin.</p>
             </div>
 
             <div className="toolbar-actions">

@@ -9,6 +9,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
 from pipeline import (
+    DEFAULT_INPUT_PATH,
     OUTPUT_DIR,
     available_foods,
     available_pathogens,
@@ -46,7 +47,7 @@ app.add_middleware(
 )
 
 
-def build_summary(result_frame):
+def build_summary(result_frame, source_label):
     approved_count = int((result_frame["final_status"] == "Approved").sum())
     rejected_count = int((result_frame["final_status"] == "Rejected").sum())
     average_probability = (
@@ -58,6 +59,7 @@ def build_summary(result_frame):
         "approvedCount": approved_count,
         "rejectedCount": rejected_count,
         "averageProbability": round(average_probability, 4),
+        "dataSource": source_label,
     }
 
 
@@ -82,22 +84,26 @@ def get_options():
 
 @app.post("/api/run-pipeline")
 async def run_pipeline(
-    sequence_file: UploadFile = File(...),
+    sequence_file: UploadFile | None = File(None),
     selected_food: str = Form(""),
     target_pathogen: str = Form(""),
 ):
-    ensure_csv_upload(sequence_file)
-
     UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
     upload_id = uuid4().hex
     upload_path = UPLOAD_DIR / f"{upload_id}_input.csv"
     report_path = OUTPUT_DIR / f"{upload_id}_candidate_report.csv"
 
     try:
-        content = await sequence_file.read()
-        upload_path.write_bytes(content)
+        if sequence_file and sequence_file.filename:
+            ensure_csv_upload(sequence_file)
+            content = await sequence_file.read()
+            upload_path.write_bytes(content)
+            input_frame = pd.read_csv(upload_path)
+            source_label = "Kullanıcı CSV dosyası"
+        else:
+            input_frame = pd.read_csv(DEFAULT_INPUT_PATH)
+            source_label = "Sistem peptit havuzu"
 
-        input_frame = pd.read_csv(upload_path)
         result_frame = process_sequences_dataframe(
             input_frame,
             selected_food=selected_food,
@@ -114,7 +120,7 @@ async def run_pipeline(
         ) from error
 
     return {
-        "summary": build_summary(result_frame),
+        "summary": build_summary(result_frame, source_label),
         "results": result_frame.to_dict(orient="records"),
         "downloadUrl": f"/api/reports/{report_path.name}",
     }

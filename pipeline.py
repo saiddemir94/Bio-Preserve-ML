@@ -301,10 +301,14 @@ def process_sequences_dataframe(
         evaluate_sequence(sequence, selected_food=selected_food, target_pathogen=target_pathogen)
         for sequence in input_frame[sequence_column].fillna("")
     ]
-    result_frame = pd.DataFrame(results).sort_values(
-        by=["final_status", "ml_probability", "net_charge"],
+    result_frame = pd.DataFrame(results)
+    result_frame["_status_rank"] = result_frame["final_status"].map(
+        {"Approved": 1, "Rejected": 0}
+    ).fillna(0)
+    result_frame = result_frame.sort_values(
+        by=["_status_rank", "ml_probability", "net_charge"],
         ascending=[False, False, False],
-    )
+    ).drop(columns=["_status_rank"])
     return result_frame
 
 
