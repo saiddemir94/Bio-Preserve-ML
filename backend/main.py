@@ -9,6 +9,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
 from pipeline import (
+    DEFAULT_INPUT_PATH,
     OUTPUT_DIR,
     available_foods,
     available_pathogens,
@@ -80,8 +81,33 @@ def get_options():
     }
 
 
+@app.get("/api/run-pipeline")
+def run_pipeline_system(
+    selected_food: str = "",
+    target_pathogen: str = "",
+):
+    report_path = OUTPUT_DIR / f"{uuid4().hex}_candidate_report.csv"
+
+    try:
+        input_frame = pd.read_csv(DEFAULT_INPUT_PATH)
+        result_frame = process_sequences_dataframe(
+            input_frame,
+            selected_food=selected_food,
+            target_pathogen=target_pathogen,
+        )
+        save_report(result_frame, report_path)
+    except Exception as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+
+    return {
+        "summary": build_summary(result_frame),
+        "results": result_frame.to_dict(orient="records"),
+        "downloadUrl": f"/api/reports/{report_path.name}",
+    }
+
+
 @app.post("/api/run-pipeline")
-async def run_pipeline(
+async def run_pipeline_upload(
     sequence_file: UploadFile = File(...),
     selected_food: str = Form(""),
     target_pathogen: str = Form(""),
@@ -136,6 +162,10 @@ if FRONTEND_DIST_DIR.exists():
         StaticFiles(directory=FRONTEND_DIST_DIR / "assets"),
         name="frontend-assets",
     )
+
+    @app.get("/", include_in_schema=False)
+    def serve_root():
+        return FileResponse(FRONTEND_DIST_DIR / "index.html")
 
     @app.get("/{full_path:path}", include_in_schema=False)
     def serve_frontend(full_path: str):

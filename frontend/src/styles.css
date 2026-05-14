@@ -208,6 +208,38 @@ h1 {
   padding: 0;
 }
 
+.file-label {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.file-label input[type="file"] {
+  width: 100%;
+  border: 1px solid rgba(15, 93, 86, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 14px 16px;
+  margin-top: 0;
+  color: var(--text);
+  outline: none;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+  cursor: pointer;
+}
+
+.file-label input[type="file"]:focus {
+  border-color: rgba(13, 107, 95, 0.55);
+  box-shadow: 0 0 0 4px rgba(13, 107, 95, 0.1);
+}
+
+.file-label .hint,
+.file-label .file-chip {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
 .analysis-mode legend {
   margin-bottom: 12px;
   color: var(--muted);

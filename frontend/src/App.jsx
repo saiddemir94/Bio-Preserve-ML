@@ -1,7 +1,6 @@
 import { startTransition, useDeferredValue, useEffect, useRef, useState } from "react";
 
 const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "").replace(/\/$/, "");
-const SAMPLE_CSV = "sequence\nKWKLFKKIGAVLKVL\nLLKKLLKKLLKK\nRWKRLKRLKRLK\n";
 const DEFAULT_OPTIONS = {
   foods: [
     "Peynir",
@@ -17,7 +16,7 @@ const ANALYSIS_MODES = [
   {
     value: "general",
     label: "Genel tarama",
-    description: "Gıda veya patojen zorunlu olmadan tüm adayları değerlendirir.",
+    description: "Tüm adayları genel biyolojik uygunluk ve ML skoruna göre değerlendirir.",
   },
   {
     value: "food",
@@ -27,12 +26,24 @@ const ANALYSIS_MODES = [
   {
     value: "pathogen",
     label: "Patojen odaklı",
-    description: "Adayları seçilen hedef mikroorganizmaya göre filtreler.",
+    description: "Adayları seçilen hedef mikroorganizmaya göre değerlendirir.",
   },
   {
     value: "combined",
     label: "Gıda + patojen",
-    description: "Hem gıda matrisi hem hedef patojen birlikte değerlendirilir.",
+    description: "Hem gıda matrisi hem hedef patojen birlikte dikkate alınır.",
+  },
+];
+const DATA_SOURCES = [
+  {
+    value: "system",
+    label: "Sistem peptit havuzu",
+    description: "DBAASP tabanlı mevcut aday havuzu analiz edilir.",
+  },
+  {
+    value: "csv",
+    label: "Kendi CSV dosyam",
+    description: "sequence sütununa sahip CSV dosyasıyla özel analiz yapılır.",
   },
 ];
 
@@ -44,7 +55,6 @@ const summaryCards = [
 ];
 
 function App() {
-  const [selectedFile, setSelectedFile] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [summary, setSummary] = useState(null);
@@ -52,11 +62,12 @@ function App() {
   const [downloadUrl, setDownloadUrl] = useState("");
   const [query, setQuery] = useState("");
   const [approvedOnly, setApprovedOnly] = useState(false);
-  const [dragActive, setDragActive] = useState(false);
   const [options, setOptions] = useState(DEFAULT_OPTIONS);
   const [analysisMode, setAnalysisMode] = useState("general");
   const [selectedFood, setSelectedFood] = useState("");
   const [targetPathogen, setTargetPathogen] = useState("");
+  const [dataSource, setDataSource] = useState("system");
+  const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);
   const deferredQuery = useDeferredValue(query);
 
@@ -64,71 +75,61 @@ function App() {
     async function loadOptions() {
       try {
         const response = await fetch(`${API_BASE_URL}/api/options`);
-        if (!response.ok) {
-          return;
-        }
-
+        if (!response.ok) return;
         const payload = await response.json();
         setOptions(payload);
       } catch {
         setOptions(DEFAULT_OPTIONS);
       }
     }
-
     loadOptions();
   }, []);
 
   const filteredResults = results.filter((row) => {
-    if (approvedOnly && row.final_status !== "Approved") {
-      return false;
-    }
-
-    if (!deferredQuery.trim()) {
-      return true;
-    }
-
-    const normalizedQuery = deferredQuery.trim().toLowerCase();
+    if (approvedOnly && row.final_status !== "Approved") return false;
+    if (!deferredQuery.trim()) return true;
+    const q = deferredQuery.trim().toLowerCase();
     return (
-      row.sequence.toLowerCase().includes(normalizedQuery) ||
-      row.final_status.toLowerCase().includes(normalizedQuery) ||
-      row.target_food.toLowerCase().includes(normalizedQuery) ||
-      row.target_pathogen.toLowerCase().includes(normalizedQuery) ||
-      row.compatible_foods.toLowerCase().includes(normalizedQuery) ||
-      row.rule_notes.toLowerCase().includes(normalizedQuery)
+      row.sequence.toLowerCase().includes(q) ||
+      row.final_status.toLowerCase().includes(q) ||
+      row.target_food.toLowerCase().includes(q) ||
+      row.target_pathogen.toLowerCase().includes(q) ||
+      row.compatible_foods.toLowerCase().includes(q) ||
+      row.rule_notes.toLowerCase().includes(q)
     );
   });
 
   async function handleSubmit(event) {
     event.preventDefault();
-
-    if (!selectedFile) {
-      setErrorMessage("Taramayı başlatmadan önce bir CSV dosyası seçmelisiniz.");
-      return;
-    }
-
     setIsSubmitting(true);
     setErrorMessage("");
 
     const shouldUseFood = analysisMode === "food" || analysisMode === "combined";
     const shouldUsePathogen = analysisMode === "pathogen" || analysisMode === "combined";
 
-    const formData = new FormData();
-    formData.append("sequence_file", selectedFile);
-    formData.append("selected_food", shouldUseFood ? selectedFood : "");
-    formData.append("target_pathogen", shouldUsePathogen ? targetPathogen : "");
-
     try {
-      const response = await fetch(`${API_BASE_URL}/api/run-pipeline`, {
-        method: "POST",
-        body: formData,
-      });
+      let response;
 
-      const payload = await response.json();
-
-      if (!response.ok) {
-        throw new Error(payload.detail || "Pipeline request failed.");
+      if (dataSource === "system") {
+        const params = new URLSearchParams();
+        if (shouldUseFood) params.set("selected_food", selectedFood || options.foods[0]);
+        if (shouldUsePathogen) params.set("target_pathogen", targetPathogen || options.pathogens[0]);
+        response = await fetch(`${API_BASE_URL}/api/run-pipeline?${params}`);
+      } else {
+        if (!selectedFile) {
+          setErrorMessage("Lütfen bir CSV dosyası seçin.");
+          setIsSubmitting(false);
+          return;
+        }
+        const formData = new FormData();
+        formData.append("sequence_file", selectedFile);
+        if (shouldUseFood) formData.append("selected_food", selectedFood || options.foods[0]);
+        if (shouldUsePathogen) formData.append("target_pathogen", targetPathogen || options.pathogens[0]);
+        response = await fetch(`${API_BASE_URL}/api/run-pipeline`, { method: "POST", body: formData });
       }
 
+      const payload = await response.json();
+      if (!response.ok) throw new Error(payload.detail || "Pipeline request failed.");
       startTransition(() => {
         setSummary(payload.summary);
         setResults(payload.results);
@@ -145,7 +146,6 @@ function App() {
   }
 
   function handleReset() {
-    setSelectedFile(null);
     setSummary(null);
     setResults([]);
     setDownloadUrl("");
@@ -155,35 +155,11 @@ function App() {
     setSelectedFood("");
     setTargetPathogen("");
     setErrorMessage("");
-
-    if (fileInputRef.current) {
-      fileInputRef.current.value = "";
-    }
+    setDataSource("system");
+    setSelectedFile(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
   }
 
-  function handleFileSelection(nextFile) {
-    if (!nextFile) {
-      return;
-    }
-
-    const isCsv = nextFile.name.toLowerCase().endsWith(".csv");
-    if (!isCsv) {
-      setErrorMessage("Sadece CSV dosyaları destekleniyor.");
-      return;
-    }
-
-    setErrorMessage("");
-    setSelectedFile(nextFile);
-  }
-
-  function handleDrop(event) {
-    event.preventDefault();
-    setDragActive(false);
-    const nextFile = event.dataTransfer.files?.[0];
-    handleFileSelection(nextFile);
-  }
-
-  const sampleCsvHref = `data:text/csv;charset=utf-8,${encodeURIComponent(SAMPLE_CSV)}`;
   const showFoodSelect = analysisMode === "food" || analysisMode === "combined";
   const showPathogenSelect = analysisMode === "pathogen" || analysisMode === "combined";
 
@@ -191,40 +167,56 @@ function App() {
     <main className="page-shell">
       <section className="hero">
         <form className="upload-panel" onSubmit={handleSubmit}>
-          <div
-            className={`dropzone ${dragActive ? "active" : ""}`}
-            onDragEnter={(event) => {
-              event.preventDefault();
-              setDragActive(true);
-            }}
-            onDragOver={(event) => {
-              event.preventDefault();
-              setDragActive(true);
-            }}
-            onDragLeave={(event) => {
-              event.preventDefault();
-              setDragActive(false);
-            }}
-            onDrop={handleDrop}
-          >
-            <strong>Peptit listenizi CSV olarak yükleyin</strong>
+          <div className="dropzone">
+            <strong>Peptit adaylarını tarayın</strong>
             <p className="dropzone-copy">
-              Dosyada <code>sequence</code> adlı bir sütun olmalı ve her satırda tek bir
-              peptit sekansı bulunmalıdır.
+              Sistem peptit havuzunu veya kendi CSV dosyanızı analiz edin. Veri kaynağını ve analiz odağını seçin.
             </p>
 
-            <input
-              id="sequenceFile"
-              ref={fileInputRef}
-              type="file"
-              accept=".csv"
-              onChange={(event) => {
-                const nextFile = event.target.files?.[0] ?? null;
-                handleFileSelection(nextFile);
-              }}
-            />
-
             <div className="target-grid">
+              <fieldset className="analysis-mode">
+                <legend>Veri kaynağı</legend>
+                <div className="mode-options">
+                  {DATA_SOURCES.map((source) => (
+                    <label
+                      className={`mode-card ${dataSource === source.value ? "selected" : ""}`}
+                      key={source.value}
+                    >
+                      <input
+                        type="radio"
+                        name="dataSource"
+                        value={source.value}
+                        checked={dataSource === source.value}
+                        onChange={(event) => {
+                          setDataSource(event.target.value);
+                          setSelectedFile(null);
+                          if (fileInputRef.current) fileInputRef.current.value = "";
+                        }}
+                      />
+                      <span>{source.label}</span>
+                      <small>{source.description}</small>
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+
+              {dataSource === "csv" ? (
+                <label className="file-label">
+                  <span>CSV dosyası</span>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".csv"
+                    onChange={(event) => setSelectedFile(event.target.files?.[0] ?? null)}
+                  />
+                  {selectedFile ? (
+                    <p className="file-chip">{selectedFile.name}</p>
+                  ) : (
+                    <p className="hint">sequence sütunu içeren bir CSV seçin.</p>
+                  )}
+                </label>
+              ) : null}
+
               <fieldset className="analysis-mode">
                 <legend>Analiz odağı</legend>
                 <div className="mode-options">
@@ -288,27 +280,11 @@ function App() {
               <button className="primary-button" type="submit" disabled={isSubmitting}>
                 {isSubmitting ? "Tarama çalışıyor..." : "Taramayı başlat"}
               </button>
-
               <button className="secondary-button" type="button" onClick={handleReset}>
                 Temizle
               </button>
             </div>
           </div>
-
-          <div className="helper-row">
-            <a className="text-link" href={sampleCsvHref} download="sample_sequences.csv">
-              Örnek CSV indir
-            </a>
-            <p className="hint">
-              Beklenen sütun: <code>sequence</code>
-            </p>
-          </div>
-
-          {selectedFile ? (
-            <p className="file-chip">{selectedFile.name}</p>
-          ) : (
-            <p className="file-chip muted">Henüz dosya seçilmedi</p>
-          )}
         </form>
       </section>
 

@@ -4,3 +4,4 @@ frontend/dist/
 outputs/uploads/
 __pycache__/
 *.pyc
+.claude/
