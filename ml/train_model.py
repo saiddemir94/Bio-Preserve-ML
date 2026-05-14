@@ -43,6 +43,7 @@ def train_model():
         n_estimators=120,
         max_depth=7,
         min_samples_leaf=1,
+        class_weight="balanced",
         random_state=42,
     )
     model.fit(x_train, y_train)

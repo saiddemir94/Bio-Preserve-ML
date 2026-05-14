@@ -1,78 +1,1180 @@
 ﻿dbaasp_id,name,sequence,target_organism,mic_value,mic_unit,label,synthesis_type,complexity
-DBAASPR_2290,XPF-SE4,GVWTTILGGLKKFAKGGLEALTNPK,Escherichia coli,104.1664,µM,0,Ribosomal,Monomer
-DBAASPR_2782,"Polistes Mastoparan R3/R1, Mastoparan PDD-B",INWLKLGKKILGAI,Escherichia coli,105.9102,µM,0,Ribosomal,Monomer
-DBAASPR_506,Temporin-A,FLPLIGRVLSGIL,Escherichia coli,125.0,µg/ml,0,Ribosomal,Monomer
-DBAASPR_847,"Temporin-B, Temporin-1Tb",LLPIVGNLLKSLL,Escherichia coli NCTC 12923,128.0,µg/ml,0,Ribosomal,Monomer
-DBAASPR_2273,CPF-P5,GFGSFLGKALKAALKIGADVLGGAPQQ,Escherichia coli,130.905,µM,0,Ribosomal,Monomer
-DBAASPR_606,Dermaseptin S4,ALWMTLLKKVLKAAAKAALNAVLVGANA,Escherichia coli U16318,142.7305,µM,0,Ribosomal,Monomer
-DBAASPR_2286,PGLa-SE2,GMATAAGTTLGKLAKFVIGAV,Escherichia coli,158.2752,µM,0,Ribosomal,Monomer
-DBAASPR_2287,XPF-SE1,GLFLDTLKKFAKAGMEAVTNPK,Escherichia coli,190.7128,µM,0,Ribosomal,Monomer
-DBAASPR_2289,XPF-SE3,GFWTTAAEGLKKFAKAGLASILNPK,Escherichia coli,209.9328,µM,0,Ribosomal,Monomer
-DBAASPR_1824,Maculatin-1.1,GLFGVLAKVAAHVVPAIAEHF,Escherichia coli MG1655,236.1249,µM,0,Ribosomal,Monomer
-DBAASPR_2284,Magainin-SE1,GLKEVLHSTKKFAKGFITGLTGQ,Escherichia coli,394.392,µM,0,Ribosomal,Monomer
-DBAASPR_2225,"Alyteserin-1Ma, Preproalyteserin-1/2Ma",GFKEVLKADLGSLVKGIAAHVAN,Escherichia coli,500.71506,µM,0,Ribosomal,Monomer
-DBAASPR_2227,Alyteserin-1Mb,GFKEVLKAGLGSLVKGIPAHVAN,Escherichia coli,500.79044,µM,0,Ribosomal,Monomer
-DBAASPR_2226,"Alyteserin-2Mb, Preproalyteserin-1/2Mb",ILGAIIPLVSGLLSHL,Escherichia coli,646.016,µM,0,Ribosomal,Monomer
-DBAASPR_12667,Citrocin,GGVGKIIEYFIGGGVGRYG,Salmonella enterica,950.095,µM,0,Ribosomal,Monomer
 DBAASPR_2121,Microcin J25,GGAGHVPEYFVGIGTPISFYG,Salmonella enterica subsp. enterica serovar Newport,0.01,µg/ml,1,Ribosomal,Monomer
+DBAASPR_11812,LS-stomoxyn,GFRKRFNKLVKKVKHTIKETANVSKDVAIVAGSGVAVGAAM,Escherichia coli ATCC 25922,0.016,µg/ml,1,Ribosomal,Monomer
 DBAASPR_2229,Tachyplesin-1,KWCFRVCYRGICYRRCR,Escherichia coli MB4902,0.016,µg/ml,1,Ribosomal,Monomer
 DBAASPR_2015,"Polyphemusin I, PM-1",RRWCFRVCYRGFCYRKCR,Escherichia coli MB4902,0.03,µg/ml,1,Ribosomal,Monomer
+DBAASPR_11810,"LS-Sarcotoxin, MD-Cecropin",GWLKKIGKKIERVGQHTRDATIQTIGVAQQAANVAATLK,Escherichia coli ATCC 25922,0.031,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1160,Apidaecin-1B,GNNRPVYIPQPRPPHPRL,Escherichia coli JW0013,0.05060352,µM,1,Ribosomal,Monomer
+DBAASPR_764,"Human Cathelicidin, CAP-18, hCAP-18, LL-37",LLGDFFRKSKEKIGKEFKRIVQRIKDFLRNLVPRTES,Escherichia coli ATCC 12014,0.1,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5134,Bacteriocin E50-52,TTKNYGNGVCNSVNWCQCGNVWASCNLATGCAAWLCKLA,Salmonella enterica,0.1,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5839,Bacteriocin L-1077,TNYGNGVGVPDAIMAGIIKLIFIFNIRQGYNFGKKAT,Salmonella enterica subsp. enterica serovar Gallinarum/Pullorum,0.19,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5390,"Cathelicidin-OH antimicrobial peptide, Oh_CRAMP",KRFKKFFKKLKNSVKKRAKKFFKKPRVIGVSIPF,Escherichia coli ATCC 25922,0.25,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5385,"Cathelicidin-like peptide, Batroxicidin",KRFKKFFKKLKNSVKKRVKKFFRKPRVIGVTFPF,Escherichia coli ATCC 25922,0.25,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5383,"Cathelicidin-like peptide, Crotalicidin",KRFKKFFKKVKKSVKKRLKKIFKKPMVIGVTIPF,Escherichia coli ATCC 25922,0.25,µg/ml,1,Ribosomal,Monomer
+DBAASPR_23704,Lariocidin,SKKSKPGDGKFGRGVKRG,Escherichia coli BW25113 ΔbamBΔtolC,0.25,µg/ml,1,Ribosomal,Monomer
+DBAASPR_13548,Pyrrhocoricin,VDKGSYLPRPTPPRPIYNRN,Escherichia coli JW0013,0.3512595,µM,1,Ribosomal,Monomer
 DBAASPR_759,"Neutrophil defensin 1, HNP-1",ACYCRIPACIAGERRYGTCIYQGRLWAFCC,Escherichia coli,0.5,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5401,"Neutrophil defensin 2, HNP-2",CYCRIPACIAGERRYGTCIYQGRLWAFCC,Escherichia coli,0.5,µg/ml,1,Ribosomal,Monomer
+DBAASPR_6785,"Neutrophil defensin 3, HNP-3",DCYCRIPACIAGERRYGTCIYQGRLWAFCC,Escherichia coli,0.5,µg/ml,1,Ribosomal,Monomer
+DBAASPN_21150,Malformin E,LVICC,Escherichia coli,0.5002907,µM,1,Nonribosomal,Monomer
+DBAASPR_7038,BMAP28,GGLRSLGRKILRAWKKYGPIIVPIIRIG,Escherichia coli ATCC 12795,0.626988,µM,1,Ribosomal,Monomer
+DBAASPR_12172,"Bombolitin, Bi-bombolitin",LNLKKILGKIGVMLSHLN,Escherichia coli,0.8,µg/ml,1,Ribosomal,Monomer
 DBAASPR_2025,Arenicin-1,RWCVYAYVRVRGVLVRYRRCW,Escherichia coli WBB 01,0.82811403,µM,1,Ribosomal,Monomer
 DBAASPR_564,"Drosocin, Drosocin-1",GKPRPYSPRPTSHPRPIRV,Escherichia coli ATCC 35218,0.879844,µM,1,Ribosomal,Monomer
-DBAASPR_850,Thanatin,GSKKPVPIIYCNRRTGKCQRM,Escherichia coli ATCC 35218,1.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_4675,"Protegrin 1, PG-1, Neutrophil peptide 1",RGGRLCYCRRRFCVCVGR,Escherichia coli,0.9,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1273,Ranalexin,FLGGLIKIVPAMICAVTKKC,Escherichia coli,1.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_8974,"AAEL000598-PA, Aedesin",GGLKKLGKKLEGAGKRVFKASEKALPVVVGIKAIGK,Escherichia coli,1.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_850,Thanatin,GSKKPVPIIYCNRRTGKCQRM,Escherichia coli ATCC 35218,1.0,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1737,Cathelicidin-BF,KFFRKLKKSVKKRAKEFFKKPRVIGVSIPF,Escherichia coli K-12,1.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_4756,Protegrin-3,RGGGLCYCRRRFCVCVGR,Escherichia coli ER2566,1.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_3198,"Dermcidin, DCD-1L",SSLLEKGLDGAKKAVGGLGKLGKDAVEDLESVGKGAVHDVKDVLDSVL,Escherichia coli,1.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_12376,Pb-CATH4,TRSRWRRFIRGAGRFARRYGWRIA,Escherichia coli ATCC 25922,1.0,µg/ml,1,Ribosomal,Monomer
 DBAASPR_4349,Dermaseptin-S9,GLRSKIWLWVLLMIWQESNKFKKM,Listeria monocytogenes,1.215932,µM,1,Ribosomal,Monomer
 DBAASPR_1465,Peptide BmKn2,FIGAIARLLSKIF,Escherichia coli,1.5,µg/ml,1,Ribosomal,Monomer
+DBAASPR_4480,Oxyopinin-4a,GIRCPKSWKCKAFKQRVLKRLLAMLRQHAF,Escherichia coli,1.80979,µM,1,Ribosomal,Monomer
+DBAASPR_4999,"Avian beta-defensin 1, AvBD1, Gallinacin-1,",GRKSDCFRKSGFCAFLKCPSLTLISGKCSRFYLCCKRIW,Escherichia coli,1.8509942,µM,1,Ribosomal,Monomer
 DBAASPR_4757,"Protegrin 4, PG4",RGGRLCYCRGWICFCVGR,Listeria monocytogenes,1.9,µg/ml,1,Ribosomal,Monomer
-DBAASPR_2300,Ascaphin-8,GFKDLLKGAAKALVKTVLF,Listeria monocytogenes,2.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5135,Tritrpticin -AMD,VRRFPWWWPFLRR,Escherichia coli CVCC 1515,1.9,µg/ml,1,Ribosomal,Monomer
 DBAASPR_5799,Temporin-PTa,FFGSVLKLIPKIL,Listeria monocytogenes,2.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_4867,"Piscidin 1, Moronecidin",FFHHIFRGIVHVGKTIHRLVTG,Escherichia coli E157,2.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_2300,Ascaphin-8,GFKDLLKGAAKALVKTVLF,Listeria monocytogenes,2.0,µg/ml,1,Ribosomal,Monomer
 DBAASPR_806,Melittin,GIGAVLKVLTTGLPALISWIKRKRQQ,Escherichia coli KCCM 11569,2.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_21627,Cathelicidin Aquiluscidin,KRFKKFFKKVKKSVKKRLKKIFKKPMVIGVSFPF,Escherichia coli TOP 10,2.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5387,"Cathelicidin-related antimicrobial peptide isoform, Pt_CRAMP1",KRFKKFFMKLKKSVKKRVMKFFKKPMVIGVTFPF,Escherichia coli ATCC 25922,2.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_17389,"Darobactin, Darobactin A",WNWSKSF,Escherichia coli ATCC 25922,2.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_571,"Cecropin-A, Cecropin-C",KWKLFKKIEKVGQNIRDGIIKAGPAVAVVGQATQIAK,Escherichia coli ATCC 25922,2.00545,µM,1,Ribosomal,Monomer
+DBAASPR_8157,Hc-CATH,KFFKRLLKSVRRAVKKFRKKPRLIGLSTLL,Escherichia coli ATCC 25922,2.34,µg/ml,1,Ribosomal,Monomer
+DBAASPR_13256,Cm-CATH3,TRGRWKRFWRGAGRFFRRHKEKIIRAAVDIVLS,Escherichia coli ATCC 25922,2.34,µg/ml,1,Ribosomal,Monomer
+DBAASPR_4536,Cathelicidin-PY,RKCNFLCKLKEKLRTVITSHIDKVLRPQG,Escherichia coli ATCC 25922,2.35,µg/ml,1,Ribosomal,Monomer
+DBAASPR_4725,"Cathelicidin CATH3, Pc-CATH1",RIKRFWPVVIRTVVAGYNLYRAIKKK,Escherichia coli 1342,2.3531778,µM,1,Ribosomal,Monomer
+DBAASPR_9157,Lycosin-II,VWLSALKFIGKHLAKHQLSKL,Escherichia coli ATCC 25922,2.42102,µM,1,Ribosomal,Monomer
 DBAASPR_4758,"Protegrin 5, PG-5",RGGRLCYCRPRFCVCVGR,Listeria monocytogenes,2.5,µg/ml,1,Ribosomal,Monomer
 DBAASPR_2044,Dermaseptin-01 / DS 01,GLWSTIKQKGKEAAIAAAKAAGQAALGAL,Escherichia coli ATCC 25922,2.79834,µM,1,Ribosomal,Monomer
-DBAASPR_4756,Protegrin-3,RGGGLCYCRRRFCVCVGR,Listeria monocytogenes,2.8,µg/ml,1,Ribosomal,Monomer
+DBAASPR_14830,Astacidin PcAst-1b/c,SNVYRPPPYRPVYRPLRRPGYRP,Escherichia coli ATCC 25922,2.85639,µM,1,Ribosomal,Monomer
+DBAASPR_8608,"Cecropin Sb, SibaCec",GKLTKDKLKRGAKKALNVASKVAPIVAAGASIAR,Escherichia coli ATCC 25922,2.9912689,µM,1,Ribosomal,Monomer
 DBAASPR_1430,"Horse cathelicidin 1, Myeloid cathelicidin 1, eCATH-1",KRFGRLAKSFLRMRILLPRRKILLAS,Escherichia coli ML-35,3.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5569,Piscidin 3,FIHHIFRGIVHAGRSIGRFLTG,Escherichia coli,3.1,µg/ml,1,Ribosomal,Monomer
+DBAASPR_7699,"Cathelicidin-related peptide, Oh-Cath",KFFKKLKNSVKKRAKKFFKKPRVIGVSIPF,Escherichia coli ML-35p,3.125,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1483,Odorranain-B1,AALKGCWTKSIPPKPCFGKR,Escherichia coli,3.21,µg/ml,1,Ribosomal,Monomer
+DBAASPR_6281,"Cecropin Mdc, LSer-Cec1",GWLKKIGKKIERVGQHTRDATIQTIGVAQQAANVAATLKG,Escherichia coli D31,3.410416,µM,1,Ribosomal,Monomer
+DBAASPR_21251,Sactipeptide Ruminococcin C1,WGCVCSGSTAVANSHNAGPAYCVGYCGNNGVVTRNANANVAKTA,Listeria monocytogenes,3.465512,µM,1,Ribosomal,Monomer
 DBAASPR_1506,"Odorranain-P1a, Brevinin-1-OA2",VIPFVASVAAEMMQHVYCAASKKC,Escherichia coli,3.5,µg/ml,1,Ribosomal,Monomer
-DBAASPR_160,Tritrpticin,VRRFPWWWPFLRR,Escherichia coli D31,3.6144269,µM,1,Ribosomal,Monomer
+DBAASPR_10229,Bacteriocin TP,ASVVNKLTGGVAGLLK,Escherichia coli ATCC 25922,3.82215,µM,1,Ribosomal,Monomer
+DBAASPR_5002,"Avian beta-defensin 2, AvBD2, Gallinacin-2",LFCKGGSCHFGGCPSHLIKVGSCFGFRSCCKWPWNA,Escherichia coli,3.92475,µM,1,Ribosomal,Monomer
 DBAASPR_37,PGLa,GMASKAGAIAGKIAKVALKAL,Escherichia coli NCTC 12923,4.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_22346,"Cathelicidin TS-CATH, Vipericidin",KRFKKFFKKIKKSVKKRVKKLFKKPRVIPISIPF,Escherichia coli ATCC 25922,4.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_7130,"Cathelicidin-3, CATH-3",RVKRFWPLVPVAINTVAAGINLYKAIRRK,Escherichia coli ATCC 25922,4.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5620,"Gallinacin-6, Beta-defensin 6, Gallinacin-4, AvBD6",SPIHACRYQRGVCIPGPCRWPYYRVGSCGSGLKSCCVRNRWA,Escherichia coli ATCC 25922,4.0,µg/ml,1,Ribosomal,Monomer
 DBAASPR_872,"Buforin-2, Histone H2A",TRSSRAGLQFPVGRVHRLLRK,Escherichia coli,4.0,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1493,Odorranain-F1,GFMDTAKNAAKNVAVTLLDNLKCKITKAC,Escherichia coli,4.2,µg/ml,1,Ribosomal,Monomer
+DBAASPR_3717,"Nigrosin-2Sb, Nigrocin-1-OW1",GILSGVLGMGKKIVCGLSGLC,Escherichia coli ATCC 25922,4.4,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1494,Odorranain-G1,FMPILSCSRFKRC,Escherichia coli,4.68,µg/ml,1,Ribosomal,Monomer
-DBAASPR_1525,Nigrosin-OG21 antimicrobial peptide,GLLSGVLGVGKKVLCGLSGLC,Escherichia coli,4.68,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1501,Odorranain-K1,GLFTLIKGAAKLIGKTVPKKQARLGMNLWLVKLPTNVKT,Escherichia coli,4.68,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1526,Nigrosin-OG13,GLLSGILGAGKHIVCGLSGLR,Escherichia coli,4.68,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1525,Nigrosin-OG21 antimicrobial peptide,GLLSGVLGVGKKVLCGLSGLC,Escherichia coli,4.68,µg/ml,1,Ribosomal,Monomer
+DBAASPR_9847,Cathelicidin-RC1,KKCKFFCKVKKKIKSIGFQIPIVSIPFK,Escherichia coli ATCC 25922,4.69,µg/ml,1,Ribosomal,Monomer
+DBAASPR_13254,Cm-CATH2,RRSRFGRFFKKVRKQLGRVLRHSRITVGGRMRF,Escherichia coli ATCC 25922,4.69,µg/ml,1,Ribosomal,Monomer
+DBAASPR_10592,"As Cathelicidin 6, As-CATH6",TRWLWLLRGGLKAAGWGIRAHLNRNQ,Escherichia coli 1,4.69,µg/ml,1,Ribosomal,Monomer
 DBAASPR_491,"Cathelicidin-4, Indolicidin",ILPWKWPWWPWRR,Escherichia coli ATCC 25922,4.768425,µM,1,Ribosomal,Monomer
+DBAASPR_2797,Mastoparan PMM,INWKKIASIGKEVLKAL,Escherichia coli,4.78605,µM,1,Ribosomal,Monomer
+DBAASPR_4478,"Cathelicidin CATH2, Cc-CATH2",LVQRGRFGRFLKKVRRFIPKVIIAAQIGSRFG,Escherichia coli 1334,4.834167,µM,1,Ribosomal,Monomer
 DBAASPR_360,Magainin-2,GIGKFLHSAKKFGKAFVGEIMNS,Escherichia coli KCTC 1682,4.94196,µM,1,Ribosomal,Monomer
-DBAASPR_1524,"Nigrosin-OG20, Grahamin-1",GLLSGILGAGKHIVCGLSGLC,Escherichia coli ATCC 25922,5.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_4193,Clavaspirin,FLRFIGSVIHGIGHLVHHIGVAL,Escherichia coli ATCC 25922,4.98402,µM,1,Ribosomal,Monomer
 DBAASPR_2252,Scolopin 2,GILKKFMLHRGTKVYKMRTLSKRSH,Escherichia coli ATCC 25629,5.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1524,"Nigrosin-OG20, Grahamin-1",GLLSGILGAGKHIVCGLSGLC,Escherichia coli ATCC 25922,5.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_14969,Cathelicidin MaeuCath7,KRGLWESLKRKVTKLGDDIRNTLRNFKIKFPVPRQG,Escherichia coli,5.2,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1010,"Ranatuerin-1, Ranatuerin-1CBa",SMLSVLKNLGKVGLGFVACKINKQC,Escherichia coli,5.3107,µM,1,Ribosomal,Monomer
 DBAASPR_2768,Mastoparan PDD-A,INWKKIFEKVKNLV,Escherichia coli,5.4981575,µM,1,Ribosomal,Monomer
+DBAASPR_11468,"Mastoparan-C, MP-C",LNLKALLAVAKKIL,Escherichia coli NCTC 10418,6.04004,µM,1,Ribosomal,Monomer
 DBAASPR_6384,"Mastoparan-AF, Mastoparan M",INLKAIAALAKKLF,Salmonella enterica subsp. enterica serovar Enteritidis ATCC 13076,6.06392,µM,1,Ribosomal,Monomer
+DBAASPR_2141,Diptericin,DLHIPPPDNKINWPQLSGGGGGSPKTGYDININAQQK,Escherichia coli,6.25,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1507,Odorranain-P2a,GLLSGILGAGKHIVCGLSGPCQSLNRKSSDVEYHLAKC,Escherichia coli,6.25,µg/ml,1,Ribosomal,Monomer
+DBAASPR_7129,"Cathelicidin-2, CATH-2",RFGRFLRKIRRFRPKVTITIQGSARF,Escherichia coli ATCC 25922,6.25,µg/ml,1,Ribosomal,Monomer
 DBAASPR_2781,Mastoparan PDD-B,INWLKLGKKILGAL,Escherichia coli,6.27616,µM,1,Ribosomal,Monomer
+DBAASPR_3348,"Dybowskin-2CDYa, Chensinin-1",SAVGRHGRRFGLRKHRKH,Escherichia coli ATCC 11775,6.47259,µM,1,Ribosomal,Monomer
+DBAASPR_3357,Pseudin-2,GLNALKKVFQGIHEAIKLINNHVQ,Escherichia coli,6.720525,µM,1,Ribosomal,Monomer
+DBAASPR_1854,Spheniscin-2,SFGLCRLRRGFCARGRCRFPSIPIGRCSRFVQCCRRVW,Escherichia coli SBS 363,6.761325,µM,1,Ribosomal,Monomer
+DBAASPR_5623,"Piscidin-4, Oreochromicin 2",FIHHIIGGLFSAGKAIHRLIRRRRR,Escherichia coli,7.81,µg/ml,1,Ribosomal,Monomer
+DBAASPR_8607,"Cecropin 3 Px, Px-cec3",KGFKKIEKLGRHIRDGVVKAGPAVGVVGQASSIMG,Salmonella enterica,7.911904,µM,1,Ribosomal,Monomer
+DBAASPR_2158,Buforin-1,AGRGKQGGKVRAKAKTRSSRAGLQFPVGRVHRLLRKGNY,Escherichia coli,8.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_2271,Caerulein precursor fragment CPF-P3,GFGSFLGKALKAALKIGANVLGGAPQQ,Escherichia coli NCTC 12923,8.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_12129,Alloferon-1,HGVSGHGQHGVHG,Escherichia coli ATCC 25922,8.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1584,"Mastoparan-1, Mastoparan I, MPI, MP-1",IDWKKLLDAAKQIL,Escherichia coli ATCC 25922,8.0,µg/ml,1,Ribosomal,Monomer
+DBAASPN_6742,"Cyclo(Pro-Phe), Diketopiperazine (PF)",PF,Escherichia coli MTCC 2622,8.0,µg/ml,1,Nonribosomal,Monomer
+DBAASPR_2434,Ib-AMP4,QWGRRCCGWGPGRRYCRRWC,Escherichia coli ATCC 25922,8.0,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1059,"Cathelicidin-1, Bactenecin-1, Bac1",RLCRIVVIRVCR,Listeria monocytogenes,8.0,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1231,Misgurin,RQRVEELSKFSKKGAAARRRK,Escherichia coli,8.0,µg/ml,1,Ribosomal,Monomer
-DBAASPR_1584,"Mastoparan-1, Mastoparan I, MPI, MP-1",IDWKKLLDAAKQIL,Escherichia coli ATCC 25922,8.0,µg/ml,1,Ribosomal,Monomer
-DBAASPR_2271,Caerulein precursor fragment CPF-P3,GFGSFLGKALKAALKIGANVLGGAPQQ,Escherichia coli NCTC 12923,8.0,µg/ml,1,Ribosomal,Monomer
-DBAASPR_2434,Ib-AMP4,QWGRRCCGWGPGRRYCRRWC,Escherichia coli ATCC 25922,8.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5547,Bullfrog Buforin I,SGRGKQGGKVRAKAKTRSSRAGLQFPVGRVHRLLRKGNY,Escherichia coli,8.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5670,"Antimicrobial protein 1, Peptide AN5-1",YSKSLPLSVLNP,Escherichia coli ATCC 25922,8.0,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1320,Citropin-1.1,GLFDVIKKVASVIGGL,Escherichia coli KpC+002101123,8.085,µM,1,Ribosomal,Monomer
 DBAASPR_2787,Mastoparan MP,INWLKLGKKMMSAL,Escherichia coli,8.17575,µM,1,Ribosomal,Monomer
+DBAASPR_1484,Odorranain-C1,GVLGAVKDLLIGAGKSAAQSVLKTLSCKLSNDC,Escherichia coli,8.21,µg/ml,1,Ribosomal,Monomer
+DBAASPR_11404,"Md Cecropin, Mdcec",KKIGKKIERVGQHTRDATIQTIAVAQQAANVAATLKG,Salmonella enterica,8.233302,µM,1,Ribosomal,Monomer
+DBAASPR_10356,"EA-CATH1, EA Cathelicidin 1",KRRGSVTTRYQFLMIHLLRPKKLFA,Escherichia coli ATCC 25922,8.885049,µM,1,Ribosomal,Monomer
+DBAASPR_7871,"Royalisin, Defensin-1",VTCDLLSFKGQVNDSACAANCLSLGKAGGHCEKGVCICRKTSFKDLWDKRF,Salmonella enterica,9.0,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1503,"Odorranain-M2 antimicrobial peptide, Odorranain-M1",ATAWDFGPHGLLPIRPIRIRPLCGKDKS,Escherichia coli,9.37,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1492,Odorranain-E1,GLGGAKKNFIIAANKTAPQSVKKTFSCKLYNG,Escherichia coli,9.37,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1543,Nigrocin-OG5,GLLSGILGAGKQKVCGLSGLC,Escherichia coli,9.37,µg/ml,1,Ribosomal,Monomer
+DBAASPR_11165,Python Cathelicidin CATHPb1,KRFKKFFRKIKKGFRKIFKKTKIFIGGTIPI,Escherichia coli ATCC 25922,9.38,µg/ml,1,Ribosomal,Monomer
+DBAASPR_10590,"As Cathelicidin 4, As-CATH4",RRGLFKKLRRKIKKGFKKIFKRLPPVGVGVSIPLAGRR,Escherichia coli ATCC 25922,9.38,µg/ml,1,Ribosomal,Monomer
+DBAASPR_13255,Cm-CATH1,RRSIFRKLRRKIKKGLKKGIQHLLAGGRQGLPQGGRPGMI,Escherichia coli ATCC 25922,9.38,µg/ml,1,Ribosomal,Monomer
+DBAASPR_12428,Cathelicidin Ps-CATH4,TRGRWGRFKRRAGRFIRRNRWQIISTGLKLIG,Escherichia coli ATCC 25922,9.38,µg/ml,1,Ribosomal,Monomer
+DBAASPR_10591,"As Cathelicidin 5, As-CATH5",TRRKFWKKVLNGALKIAPFLLG,Escherichia coli ATCC 25922,9.38,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1241,"Protonectin, Agelaia-chemotactic peptide, Agelaia-CP",ILGTILGLLKGL,Escherichia coli ATCC 25922,9.68472,µM,1,Ribosomal,Monomer
+DBAASPR_5545,"Pepsinogen A-derived antimicrobial peptide, bPaAP",GVVKVSRLKGESLRARL,Escherichia coli,10.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5546,"Pepsinogen C-derived antimicrobial peptide, bPcAP",IIKVPLKKFKSMREVMRDHGIKAPVVDPATKY,Escherichia coli,10.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_10245,Temporin-GHb,FIHHIIGALGHLF,Escherichia coli D31,10.021772,µM,1,Ribosomal,Monomer
+DBAASPR_4122,Nigrocin-2,GLLSKVLGVGKKVLCGVSGLC,Escherichia coli,10.16795,µM,1,Ribosomal,Monomer
+DBAASPR_8606,"Cecropin 2 Px, Px-cec2",NPFKKLERVGQHIRDGIIKAGPAVEVIGQANSIARPAGK,Salmonella enterica,10.3522,µM,1,Ribosomal,Monomer
+DBAASPN_15017,"Cyclo(Pro-Leu), S.sp. DKP-PL, Gancidin W",PL,Escherichia coli,10.41,µg/ml,1,Nonribosomal,Monomer
+DBAASPR_18250,PhciCath5,KRGGIWKLIRPLGRGAGRILRHFHIDFCGNC,Escherichia coli ATCC 25922,11.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_9759,"Aa Cecropin 3, Ccrp 3",APRMEIGKRREKLGRNVFKAAKKALPVIAGYKALG,Escherichia coli,11.53425,µM,1,Ribosomal,Monomer
+DBAASPR_5105,"Cathelicidin, FeCath",QLGELIQQGGQKIVEKIQKIGQRIRDFFSNLRPRQEA,Listeria monocytogenes,12.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_15626,Cathelicidin-DM,SSRRKPCKGWLCKLKLRGGYTLIGSATNLNRPTYVRA,Escherichia coli ATCC 25922,12.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_20641,Segetalin D,AFPGLSF,Escherichia coli,12.5,µg/ml,1,Ribosomal,Monomer
 DBAASPR_626,Gaegurin-5,FLGALFKVASKVLPSVKCAITKKC,Escherichia coli,12.5,µg/ml,1,Ribosomal,Monomer
 DBAASPR_2251,Scolopin 1,FLPKMSTKLRVPYRRGTKDYH,Escherichia coli ATCC 25629,12.5,µg/ml,1,Ribosomal,Monomer
+DBAASPR_6134,Stylisin 1,YPLPFIP,Escherichia coli,12.5,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1523,Odorranain-W1,GLFGKSSVWGRKYYVDLAGCAKA,Escherichia coli,12.6,µg/ml,1,Ribosomal,Monomer
+DBAASPR_2200,Ranatuerin-2CSa,GILSSFKGVAKGVAKDLAGKLLETLKCKITGC,Escherichia coli ATCC 25726,13.024159,µM,1,Ribosomal,Monomer
+DBAASPR_9712,"Piscidin-like peptide, Pc-Piscidin",IWGLIAHGVGHVGRLIHGLIRG,Escherichia coli,13.9908,µM,1,Ribosomal,Monomer
+DBAASPR_5278,Enterocin EJ97,MLAKIKAMIKKFPNPYTLAAKLTTYEINWYKQQYGRYPWERPVA,Listeria monocytogenes CECT 4032,14.0,µg/ml,1,Ribosomal,Monomer
 DBAASPR_2504,Kassinatuerin-1,GFMKYIGPLIPHAVKAISDLI,Escherichia coli,14.280313,µM,1,Ribosomal,Monomer
-DBAASPR_6413,"Mastoparan-D, Mastoparan-T",INLKAIAAFAKKLL,Salmonella enterica,16.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_816,"Skin peptide tyrosine-tyrosine, SPYY, Skin-PYY",YPPKPESPGEDASPEEMNKYLTALRHYINLVTRQRY,Escherichia coli,15.0,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1253,Aurein-2.5,GLFDIVKKVVGAFGSL,Escherichia coli NCTC 12923,16.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_22344,Cathelicidin LV-CATH,GRFRRLRNRIRNIWRKIGPIAGPLISRFG,Escherichia coli ATCC 25922,16.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_22345,Cathelicidin BM-CATH,GRFSRLRKRIRKVWRKIGPIAGPIIGHFG,Escherichia coli ATCC 25922,16.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_6413,"Mastoparan-D, Mastoparan-T",INLKAIAAFAKKLL,Salmonella enterica,16.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_20232,Clavanin C,VFHLLGKIIHHVGNFVYGFSHVF,Escherichia coli ATCC 25922,16.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_21185,Bacteriocin LFX01,ITGGPAVVHQA,Escherichia coli,16.17,µg/ml,1,Ribosomal,Monomer
+DBAASPR_4743,"Papiliocin, Cecropin",RWKIFKKIEKVGRNVRDGIIKAGPAVAVVGQAATVVKG,Escherichia coli,16.2678,µM,1,Ribosomal,Monomer
+DBAASPR_1491,Odorranain-D1,GFLDTFKNLALNAAKSAGVSVLNSLSCKLFKTC,Escherichia coli,16.32,µg/ml,1,Ribosomal,Monomer
 DBAASPR_4353,"Antimicrobial protein plp, Peptide HKPLP",FLGLIFHGLVHAGKLIHGLIHRNRG,Salmonella enterica,16.6641,µM,1,Ribosomal,Monomer
+DBAASPR_5622,Oreochromicin 1,FIHHIIGGLFSVGKHIHGLIHGH,Escherichia coli,16.937466,µM,1,Ribosomal,Monomer
 DBAASPR_1520,Odorranain-T1,TSRCYIGYRRKVVCS,Escherichia coli,17.5,µg/ml,1,Ribosomal,Monomer
 DBAASPR_1466,"Peptide BmKb1, Non-disulfide-bridged peptide 4.2, NDBP-4.2, Toxin peptide 6, MeuFSPL-1",FLFSLIPSAISGLISAFK,Escherichia coli,18.1,µg/ml,1,Ribosomal,Monomer
+DBAASPR_20067,Myticofensin B3-α,KCDWWCRY,Escherichia coli,18.742464,µM,1,Ribosomal,Monomer
+DBAASPR_15870,Cathelicidin SA-CATH,KFFKKLKKSVKKHVKKFFKKPKVIGVSIPF,Escherichia coli ATCC 25922,18.75,µg/ml,1,Ribosomal,Monomer
+DBAASPR_3943,Piceain 1,KSLRPRCWIKIKFRCKSLKF,Escherichia coli ATCC 25922,18.75,µg/ml,1,Ribosomal,Monomer
+DBAASPR_8609,"Cathelicidin 2 Cl, Cl-CATH2",LIQRGRFGRFLGRIRRFRPRINFDIRARGSIRLG,Escherichia coli ATCC 25922,18.75,µg/ml,1,Ribosomal,Monomer
+DBAASPR_13273,Cm-CATH4,MAFPFSTQRINPEIEEGNASLADLPVTHAGSLPGIKAQVRTALGIALLLVA,Escherichia coli,18.75,µg/ml,1,Ribosomal,Monomer
+DBAASPR_11168,Python Cathelicidin CATHPb4,TRSRWRRFIRGAGRFARRYGWRIALGLVG,Escherichia coli ATCC 25922,18.75,µg/ml,1,Ribosomal,Monomer
+DBAASPR_10247,Temporin-GHd,FLQHIIGALSHFF,Escherichia coli ATCC 25922,19.416142,µM,1,Ribosomal,Monomer
+DBAASPR_10244,Temporin-GHa,FLQHIIGALGHLF,Escherichia coli D31,19.481573,µM,1,Ribosomal,Monomer
+DBAASPR_8085,"Defensin Mdde, Phormicin C",ATCDLLSGTGVGHSACAAHCLLRGNRGGYCNGKGVCVCRN,Escherichia coli,19.9834,µM,1,Ribosomal,Monomer
+DBAASPR_10760,Moricin PxMor3,APKVNVNALKKGGHVIKKGLGVIGAAGTAHEVYNHVRNRNQG,Salmonella enterica,20.58177,µM,1,Ribosomal,Monomer
 DBAASPR_15018,Sviceucin,CVWGGDCTDFLGCGTAWICV,Listeria monocytogenes,21.065,µM,1,Ribosomal,Monomer
 DBAASPR_2777,Mastoparan PDD-A-9,INWKKIFEKVSNLV,Escherichia coli,21.501625,µM,1,Ribosomal,Monomer
+DBAASPR_14238,Px-Moricin,APKVNVNALKKGGRVIKKGLGVIGAAGTAHEVYNHVRNRNQG,Salmonella enterica,21.550936,µM,1,Ribosomal,Monomer
 DBAASPR_1136,Caerin-1.1,GLLSVLGSVAKHVLPHVVPVIAEHL,Escherichia coli ATCC 25922,21.844517,µM,1,Ribosomal,Monomer
+DBAASPN_6743,"Cyclo(Pro-Tyr), Diketopiperazine (PY)",PY,Escherichia coli,22.32,µg/ml,1,Nonribosomal,Monomer
+DBAASPR_10759,Moricin PxMor2,APKVNVNALRKGGRVIRKGLGVIGAAGTAHEVYNHVRNRNQG,Salmonella enterica,23.5965,µM,1,Ribosomal,Monomer
 DBAASPR_1495,"Odorranain-H2 antimicrobial peptide, Odorranain-H1",GIFGKILGVGKKVLCGLSGVC,Escherichia coli,23.6,µg/ml,1,Ribosomal,Monomer
+DBAASPR_2609,Defensin Pa,ATCDILSFQSQWVTPNHAGCALHCVIKGYKGGQCKITVCHCRR,Listeria monocytogenes,23.68835,µM,1,Ribosomal,Monomer
 DBAASPR_779,Aurein-1.2,GLFDIIKKIAESF,Escherichia coli ATCC 25922,23.70896,µM,1,Ribosomal,Monomer
+DBAASPR_4612,Pardaxin P-1,GFFALIPKIISSPLFKTLLSAVGSALSSSGEQE,Escherichia coli,24.0,µg/ml,1,Ribosomal,Monomer
 DBAASPR_2318,Gaegurin-6,FLPLLAGLAANFLPTIICKISYKC,Escherichia coli DH5alpha,25.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_4205,Esculentin-1c,GIFSKLAGKKIKNLLISGLKNIGKEVGMDVVRTGIDIAGCKIKGEC,Escherichia coli,25.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_3920,Caerin-4.1,GLWQKIKSAAGDLASGIVEGIKS,Escherichia coli,25.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_5556,Gaegurin-1,SLFSLIKAGAKFLGKNLLKQGACYAACKASKQC,Escherichia coli,25.0,µg/ml,1,Ribosomal,Monomer
+DBAASPR_1217,Urechistachykinin-2,AAGMGFFGAR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1900,Ishikawain-1,AAGYPFGIKV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1901,Ishikawain-2,AAIYPFGIKIRCKAAFC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2824,OGTI,AANIPFKVHFRCKAAFC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3746,Schmackerin-C1,AAPRGGKGFFCKLFKDC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1340,Termicin,ACNFQSCWATCQAQHSIYFRRAFCDRSQCKCVFVRG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_871,"Neutrophil antibiotic peptide NP-4, RatNP-4, Neutrophil defensin 4",ACYCRIGACVSGERLTGACGLNGRIYRLCCR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1997,"Caerin-5.1, Rothein 4.1",AEILFGDVRPPWMPPPIFPEMP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2444,"SAMPH1, Histone H1",AEVAPAPAAAAPAKAPKKKAAAKPKKAGPS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1772,"Defensin-6, Defensin alpha 6",AFTCHCRRSCYSTEYSYGTCTVMGINHRFCCL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2156,"Prepromelittin-related peptide, MRP, AR-23",AIGSILGALAKGLPTLISWIKNR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_22256,Mortiamide C,AIIVIFI,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3561,"Temporin-HN1, Tiannanensin",AILTTLANWARKFL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1596,Pleurain-E1 antimicrobial peptide,AKAWGIPPHVIPQIVPVRIRPLCGNV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2135,Moricin-1,AKIPIKAIKTVGKAVGKGLRAINIASTANDVFNFLKPKKRKH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2180,Palustrin-1b,ALFSILRGLKKLGNMGQAFVNCKIYKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2157,"Putative antimicrobial peptide A Pacific variant, Ci-PAP-A22",ALRSAVRTVARVGRAVLPHVAI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2181,Palustrin-1d,ALSILKGLEKLAKMGIALTNCKATKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2186,Palustrin-1c,ALSILRGLEKLAKMGIALTNCKATKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_661,"Dermaseptin-B4, Dermaseptin-2, Dermaseptin BIV",ALWKDILKNVGKAAGKAVLNTVTDMVNQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1098,"Dermaseptin-3, DS III, Dermaseptin-S3, DS3",ALWKNMLKGIGKLAGKAALGAVKKLVGAES,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_660,"Dermaseptin-B3, Dermaseptin DRS-DI4-like peptide, Dermaseptin-6, DStar 06",ALWKNMLKGIGKLAGQAALGAVKTLVGA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3195,"Dermadistinctin-Q1, DD Q1",ALWKNMLKGIGKLAGQAALGAVKTLVGAES,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3007,Dermaseptin DRG3,ALWKTIIKGAGKMIGSLAKNLLGSQAQPES,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3193,"Dermadistinctin-L, DD L",ALWKTLLKNVGKAAGKAALNAVTDMVNQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3194,"Dermadistinctin-M, DD M",ALWKTMLKKLGTMALHAGKAAFGAAADTISQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_991,"Dermaseptin-1, DS I, Dermaseptin-S1, DS1",ALWKTMLKKLGTMALHAGKAALGAAADTISQGTQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_606,Dermaseptin S4,ALWMTLLKKVLKAAAKAALNAVLVGANA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1571,Antioxidin-RP1,AMRLTYNKPCLYGT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1666,Agrocybin,ANDPQCLYGNVAAKF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3748,"Antixoidant peptide, Wuchuanin-A1",APDRPRKFCGILG,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_1517,Odorranain-Q2 antimicrobial peptide,APFCLGYLSPKLKDMEPKPRG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2045,Ostricacin-2,APGNKAECEREKGYCGFLKCSFPFVVSGKCSRFFFCCKNIW,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2737,Fa-AMP1,AQCGAQGGGATCPGGLCCSQWGWCGSTPKYCGAGCQSNCK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2738,Fa-AMP2,AQCGAQGGGATCPGGLCCSQWGWCGSTPKYCGAGCQSNCR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1899,Odorranain-MISa,ATAWNLGPHGLRPIRPIRIRPLCGKDKS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2630,"DEF1, AgDef1, Def-AAA, Defensin",ATCDLASGFGVGSSLCAAHCIARRYRGGYCNSKAVCVCRN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1799,"Defensin, Phlebotomus defensin",ATCDLLSAFGVGHAACAAHCIGHGYRGGYCNSKAVCTCRR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1099,"Defensin-A, AaDef",ATCDLLSGFGVGDSACAAHCIARGNRGGYCNSKKVCVCRN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1911,Sapecin,ATCDLLSGTGINHSACAAHCLLRGNRGGYCNGKAVCVCRN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2629,Phormicin,ATCDLLSGTGINHSACAAHCLLRGNRGGYCNGKGVCVCRN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1687,"Human Defensin-5, HD5",ATCYCRTGRCATRESLSGVCEISGRLYRLCCR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3730,"Ranatuerin-2R-RA1 peptide, Andersonin-W1",ATNIPFKVHFRCKAAFC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_18502,Euryjanicin B,ATPFVPP,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_949,Bacteriocin enterocin-P,ATRSYGNGVYCNNSKCWVNWGEAKENIAGIVISGWASGLAGMGH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2207,Temporin-1TGb,AVDLAKIANKVLSSLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_23744,Surugamide G,AVIKIFLV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3731,"Ranatuerin-2R-RA2, Ranatuerin-2Ra, Ranatuerin-2SHb, Andersonin-W2",AVNIPFKVHFRCKAAFC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1505,"Odorranain-O-RA peptide, Odorranain-k1",AVPLIYNRPGIYVTKRPKGK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_23745,Surugamide J,AVVKVFVV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_22143,Asperheptatide B,AWAAVFV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3238,"Anticancerous peptide 1, Cr-ACP1",AWKLFDDGV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_22139,Asperversiamide C,AWSAVFV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_769,"Neutrophil defensin 2, HANP-2",CFCKRPVCDSGETQIGYCRLGNTFYRLCCRQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1906,Ishikawain-7,CGYRHGRLNCGRG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1643,"Antimicrobial peptide 2, MJ-AMP2, AMP2",CIGNGGRCNENVGPPYCCSGFCLRQPNQGYGVCRNR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1548,Taipehensin-2TP1,CLMARPNYRCKIFKQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_20466,Penicillin G,CV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3751,Wuchuanin-E1,CVDIGFSPTGKRPPFCPYPG,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_1669,Nigroain-D3,CVHWQTNTARTSCIGP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1667,Nigroain-B1,CVISAGWNHKIRCKLTGNC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_13304,Lugdunin,CVWLVVV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3750,Wuchuannin-D1,DAAVEPELYHWGKVWLPN,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_3738,"Andersonin-6 antimicrobial peptide, Andersonin-S1",DANVENGEDAEDLTDKFIGLMG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_461,Drosomycin,DCLSGRYKGPCAVWDNETCRRVCKEEGRSSGHCSPSLKCWCEGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1670,Nigroain-E1,DCTRWIIGINGRICRD,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1681,Alliumin,DDFLCAGGCL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_18477,Iturin-like lipopeptide,DDHSAGT,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1610,Pleurain-K1 antimicrobial peptide,DDPDKGMLKWKNDFFQEF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1504,Odorranain-N1,DEKGPKWKR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2646,Longicornsin,DFGCGQGMIFMCQRRCMRLYPGSTGFCRGFRCMCDTHIPLRPPFMVG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1924,Defensin AFP1 / Hs-AFP1,DGVKLCDVPSGTWSGHCGSSSKCSQQCKDREHFAYGGACHYQFPSVKCFCKRQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1214,Proline-rich antimicrobial peptide 1,DIQIPGIKKPTHRDIIIPNWNPNVRTQPWQRFGGNKS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1234,Defensin-like peptide,DKLIGSCVWGATNYTSDCNAECKRRGYKGGHCGSFWNVNCWCEE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1686,Defensin heliomicin,DKLIGSCVWGAVNYTSDCNGECKRRGYKGGHCGSFANVNCWCET,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1655,Antimicrobial ribonuclease,DNGEAGRAAR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_15,Histatin 5,DSHAKRHHGYKRKFHEKHHSHRGY,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2042,TA1686 Hepcidin-25 / LEAP,DTHFPICIFCCGCCHRSKCGMCCKT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1239,"Defensin, Galiomicin",DTLIGSCVWGATNYTSDCNAECKRRGYKGGHCGSFLNVNCWCE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_18476,Iturin V,DYDVPDS,Gram- bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1851,Tachystatin-C,DYDWSLRGPPKCATYGQKCRTWSPPNCCWNLRCKAFRCRPR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1236,Lebocin-like anionic peptide 1,EADEPLWLYKGDNIERAPTTADHPILPSIIDDVKLDPNRRYA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1215,Proline-rich antimicrobial peptide 2,EIRLPEPFRFPSPTVPKPIDIDPILPHPWSPRQTYPIIARRS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_5507,Gageotetrin A,EL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1922,Defensin AMP1 / DmAMP1,ELCEKASKTWSGNCGNTGHCDNQCKSWEGAAHGACHVRNGKHMCFCYFNC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_5514,Gageotetrin C,ELLL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_19717,Pumilacidin,ELLLDLI,Gram- bacteria,,,1,Nonribosomal,monomer
+DBAASPN_13907,Bacaucin,ELLSRVD,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_5449,Gageostatin A,ELLVDLL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3651,"Andersonin-2 peptide, Andersonin-Q1",EMLKKKKEVKMERKT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3737,Andersonin-R1,ENAEEDIVLMENLFCSYIVGSADSFWT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1238,Cecropin-D-like peptide,ENFFKEIERAGQRIRDAIISAAPAVETLAQAQKIIKGGD,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3650,"Andersonin-11 peptide, Andersonin-N1, Antixoidant peptide",ENMFNIKSSVESDSFWG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_16,Distinctin chain 1,ENREVPPGFTALIKTLRKCKII,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1346,"Jellein-3, Jellein-III",EPFKISIHL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3327,"Venom peptide 2-long, OdVP2L",EPILGIITSLLKSL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1237,Anionic antimicrobial peptide 2,ETESTPDYLKNIQQQLEEYTKNFNTQVQNAFDSDKIKSEVNNFIESLGKILNTEKKEAPK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_21588,Gageopeptin A,EVLADLL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_2033,"FALL39, Antibacterial protein FALL-39",FALLGDFFRKSKEKIGKEFKRIVQRIKDFLRNLVPRTES,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_20906,Sevadicin,FAW,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_649,Tigerinin-1,FCTMIPIPRCY,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2128,Eumenine mastoparan-ER,FDIMGLIKKVAGAL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1143,Pilosulin 4,FDITKLNIKKLTKATCKVISKGASMCKVLFDKKKQE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2129,Eumenine mastoparan-EF,FDVMGIIKKIASAL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3232,Temporin-SHf,FFFLSRIF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2144,"Meucin-18, Venom antimicrobial peptide-9",FFGHLFKLATKIIPSLFQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3106,Ranalexin-Va,FFGLHNLVPSMLCVVRKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2732,Brevinin-1LTa,FFGTALKIAANVLPTAICKILKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3173,Chrysophsin-1,FFGWLIKGAIHAGKAIHGLIHRRRH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3174,Chrysophsin-2,FFGWLIRGAIHAGKAIHGLIHRRRH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_758,"Moronecidin, Piscidin-2",FFHHIFRGIVHVGKTIHKLVTG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3227,Plicatamide,FFHLHFH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1644,Japonicin-1,FFPIGVFCKIFKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1862,"Temporin-AL-g, Amolopin-2h antimicrobial peptide",FFPIVGKLLFGLFGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1865,"Temporin-AL-j, Amolopin-2k antimicrobial peptide",FFPIVGKLLFGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1860,"Temporin-AL-e, Amolopin-2f antimicrobial peptide",FFPIVGKLLFGLSGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1866,"Temporin-AL-k, Amolopin-2i antimicrobial peptide",FFPIVGKLLS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1882,Temporin-CG2,FFPIVGKLLSGLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1864,"Temporin-AL-i, Amolopin-2i antimicrobial peptide",FFPIVGKLLSGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1861,"Temporin-AL-f, Amolopin-2g antimicrobial peptide",FFPIVGKLLSGLSGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3484,Temporin-AJ8,FFPIVGKRLYGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3345,Japonicin-1CDYa,FFPLALLCKVFKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1680,Temporin-RN3,FFPLLFGALSSHLPKLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2729,Temporin -LTa,FFPLVLGALGSILPKIF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3584,Brevinin-1PRc,FFPMLAGVAARVVPKVICLITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3754,Imcroporin,FFSLLPSLIGGLVSAIK,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_3745,Margaratain-B1,FFSTSCRSGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_22255,Mortiamide B,FFVVVFV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_22254,Mortiamide A,FFVVVLV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1645,Japonicin-2,FGLPMLSILPKALCILLKRKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3006,Conolysin-Mt,FHPSLWVLIPQYIQLIRKILKSG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2968,Epinecidin-1,FIFHIIKGLFHAGKMIHGLVTRRRH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3646,"Andersonin-I1 peptide, Andersonin-D1",FIFPKKNIINSLFGR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3331,"Grammistin D, Gs D, Grammistin Pp 1",FIGGIISFFKRLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3332,"Grammistin E, GsE, Grammistin Pp 2b",FIGGIISFIKKLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2228,"Alyteserin-2Ma, Preproalyteserin-1/2Ma",FIGKLISAASGLLSHL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3175,Chrysophsin-3,FIGLLISAGKAIHDLIRRRH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1473,Temporin-1DYa,FIGPIISALASLFG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1673,Gaegurin-RN1,FIGPVLKIAAGILPTAICKIFKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2730,Temporin -LTb,FIITGLVRGLTKLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3557,Temporin-1Gd,FILPLIASFLSKFL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1605,Pleurain-J1 antimicrobial peptide,FIPGLRRLFATVVPTVVCAINKLPPG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1017,Ranatuerin-8,FISAIASFLGKFL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1015,Ranatuerin-6,FISAIASMLGKFL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1361,"Lactoferricin-B, Lfcin-B",FKCRRWQWRMKKLGAPSITCVRRAF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1095,Lactoferricin B,FKCRRWQWRMKKLGAPSITCVRRAFA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_964,"Parabutoporin, PP, Non-disulfide-bridged peptide 3.2, NDBP-3.2",FKLGSFLKKAWKSKLAKKLRAKGKEMLKDYAKGLLEGGSEEVPGQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1668,Nigroain-C2,FKTWKRPPFQTSCWGIIKE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3755,Astacidin 1,FKVQNQHGQVVKIFHH,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_1978,Temporin-LTe,FLAGLIGGLAKML,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3473,Kassorin-M,FLEGLLNTVTGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_13443,,FLFL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1018,Ranatuerin-9,FLFPLITSFLSKVL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2211,Temporin-1TSa,FLGALAKIISGIF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_918,Gaegurin-5,FLGALFKVASKVLPSVFCAITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1413,"Pleurocidin-like peptide WF3, NRC-05",FLGALIKGAIHGGRFIHGMIQNHH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2294,PFQa,FLGALLGPLMNLLQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3475,"Amphiphatic peptide CT1, VmCT1",FLGALWNVAKSVF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3472,Kassorin-S,FLGGILNTITGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3107,Ranalexin-Vb,FLGGLFKLVPSVICAVTKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1590,Pleurain-B1 antimicrobial peptide,FLGGLLASLLGKI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1020,Ranalexin-1Ca,FLGGLMKAFPALICAVTKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3559,Ranalexin-1G,FLGGLMKIIPAAFCAVTKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1675,Gaegurin-RN5,FLGPIIKIATGILPTAICKFLKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2209,Brevinin-1TSa,FLGSIVGALASALPSLISKIRN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1980,Brevinin-1RTb,FLGSLLGLVGKVVPTLFCKISKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1476,Brevinin-1DYd,FLIGMTHGLICLISRKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1477,"Brevinin-1DYe, Brevinin-1CEa",FLIGMTQGLICLITRKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1567,"Vespid chemotactic peptide 5g, VCP 5g",FLIIRRPIVLGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3478,"Amphipathic peptide CT2, VsCT2",FLKGIIDTVSKLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3477,"Amphipathic peptide CT1, VsCT1",FLKGIIDTVSNWL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3387,Temporin-Ra,FLKPLFNAALKLLP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3243,Cyanophlyctin,FLNALKNFAKTAGKRLKSLLN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1810,Brevinin-Bb,FLPAIAGMAAKFLPKIFCAISKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1812,Brevinin-Bd,FLPAIAGVAAKFLPKIFCAISKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1813,Brevinin-Be,FLPAIVGAAAKFLPKIFCVISKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2974,Brevinin-1Sa,FLPAIVGAAGQFLPKIFCAISKKC,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_3652,"Brevinin-1-RAA10 antimicrobial peptide, Brevinin-1-OA12",FLPAVIRVAANVLPTAFCAISKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3669,Brevinin-1-OR10,FLPAVLLVATHVLPTVFCAITRKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2217,Brevinin-1HSa,FLPAVLRVAAKIVPTVFCAISKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2218,"Brevinin-1HSb, Brevinin-1JDb",FLPAVLRVAAQVVPTVFCAISKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1809,Brevinin-Ba,FLPFIAGMAAKFLPKIFCAISKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1814,Brevinin-Bf,FLPFIAGMAANFLPKIFCAISKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1811,Brevinin-Bc,FLPFIAGVAAKFLPKIFCAISKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1013,Ranatuerin-4,FLPFIARLAAKVFPSIICSVTKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1025,Temporin-1Ce,FLPFLATLLSKVL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3759,Senegalin,FLPFLIPALTSLISSL,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_1881,Temporin-CG1,FLPFVGNLLKGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1885,Temporin-CG5,FLPFVGNLLNGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3743,"Antixoidant peptide, Macrotympanain-A1",FLPGLECVW,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3241,Temporin-ECa,FLPGLLAGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1898,Brevinin-1ISa,FLPGVLRLVTKVGPAVVCAITRNC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1859,"Temporin-AL-d, Amolopin-2e",FLPIAGKLLSGLSGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1014,Ranatuerin-5,FLPIASLLGKYL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_990,Brevinin-1Pb,FLPIIAGIAAKVFPKIFCAISKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1817,Brevinin-1Pa,FLPIIAGVAAKVFPKIFCAISKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1565,"Vespid chemotactic peptide 5e, VCP 5e, Vespid chemotactic peptide X, VESCP-X, Ves-CP-X",FLPIIAKLLGGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3535,Temporin-1BYa,FLPIIAKVLSGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1818,Brevinin-1Pc,FLPIIASVAAKVFSKIFCAISKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1819,Brevinin-1Pd,FLPIIASVAANVFSKIFCAISKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1129,"Vespid chemotactic peptide M, VESCP-M, Ves-CP-M, Vespid chemotactic peptide 5h",FLPIIGKLLSGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3587,Temporin-PRb,FLPIITNLLGKLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2201,Brevinin-1CSa,FLPILAGLAAKIVPKLFCLATKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3536,Brevinin-1BYa,FLPILASLAAKFGPKLFCLVTKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3537,Brevinin-1BYb,FLPILASLAAKLGPKLFCLVTKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3538,Brevinin-1BYc,FLPILASLAATLGPKLLCLITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2208,Temporin-1TGa,FLPILGKLLSGIL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1884,Temporin-CG4,FLPILGNLLNGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3586,Temporin-PRa,FLPILGNLLSGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1808,Temporin-1Lc,FLPILINLIHKGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1566,"Vespid chemotactic peptide 5f, VCP 5f",FLPIPRPILLGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1889,Brevinin-1CG2,FLPIVAGLAANFLPKIVCKITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3487,Jingdongin-2,FLPIVENCSLVCWENNQKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1883,Temporin-CG3,FLPIVGKLLSGLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1127,"Temporin-1P, Temporin-1CSa",FLPIVGKLLSGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1570,"Temporin-ALa, Amolopin-2a",FLPIVGKLLSGLSGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1863,"Temporin-AL-h, Amolopin-2a antimicrobial peptide",FLPIVGKLLSGLSGLS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2205,Temporin-1Sb,FLPIVTNLLSGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3734,Andersonin-Y2,FLPKLFAGIISKNF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3733,"Andersonin-Y1, AY1",FLPKLFAKITKKNMAHIR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_917,"Beta-defensin 14, BD-14, mBD-14",FLPKTLRKFFCRIRGGRCAVLNCLGKEEQIGRCSNSGRKCCRKKK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1569,"Brevinin-ALb, Amolopin-1b",FLPLAVSLAANFLPKLFCKITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1024,Temporin-1Cb,FLPLFASLIGKLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3486,Jingdongin-1,FLPLFLPKIICVITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2168,Brevinin-1PLb,FLPLIAGLAANFLPKIFCAITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3563,Brevinin-1HN1,FLPLIASLAANFVPKIFCKITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3564,Brevinin-1V,FLPLIASVAANLVPKIFCKITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2429,"temporin-1Ob, Preprotemporin-1Ob1",FLPLIGKILGTIL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_723,"Temporin-F, Temporin-1Tf",FLPLIGKVLSGIL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_506,Temporin-A,FLPLIGRVLSGIL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3178,Crabrolin,FLPLILRKIVTAL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2195,"Brevinin -1 Gra, Brevinin-1E-OG6",FLPLLAGLAANFLPKIFCKITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1077,Brevinin-1E,FLPLLAGLAANFLPKIFCKITRKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1979,Brevinin-1RTa,FLPLLAGVVANFLPQIICKIARKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2212,Temporin-1TSd,FLPLLASLIGGML,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1587,"Temporin-GH, AMP-5",FLPLLFGAISHLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1470,Brevinin-1DYc,FLPLLLAGLPKLLCLFFKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1480,Dybowskin-6,FLPLLLAGLPLKLCFLFKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2179,Temporin-1PLa,FLPLVGKILSGLI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1679,Temporin-RN1,FLPLVLGALSGILPKIL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2202,Temporin-1CSc,FLPLVTGLLSGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3105,Temporin-1Vc,FLPLVTMLLGKLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1892,Brevinin-1CG5,FLPMLAGLAANFLPKIVCKITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1802,Brevinin-1Lb,FLPMLAGLAASMVPKFVCLITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3585,"Brevinin-1La, Brevinin-1PRd",FLPMLAGLAASMVPKLVCLITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1519,Odorranain-S1,FLPPSPWKETFRTS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2312,Temporin-1Ec,FLPVIAGLLSKLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2169,Brevinin-1PLc,FLPVIAGVAAKFLPKIFCAITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1461,Temporin-1SKa,FLPVILPVIGKLLNGIL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1460,"Temporin-1SKb, Temporin-1TGc",FLPVILPVIGKLLSGIL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3008,Brevinin-1,FLPVLAGIAAKVVPALFCKITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3583,Brevinin-1PRb,FLPVLAGLTPSIVPKLVCLLTKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3388,Temporin-Rb,FLPVLAGVLSRA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3582,Brevinin-1PRa,FLPVLTGLTPSIVPKLVCLLTKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1009,"Brevinin-1SY, Brevinin-1S, RaCa15",FLPVVAGLAAKVLPSIICAVTKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1016,Ranatuerin-7,FLSAIASMLGKFL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1592,Pleurain-D1 antimicrobial peptide,FLSGILKLAFKIPSVLCAVLKNC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2204,"Temporin-SHa, Temporin-1Sa",FLSGIVGMLGKLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2206,Temporin-1Sc,FLSHIAGFLSNLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3104,Temporin-1Vb,FLSIIAKVLGSLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1468,"Brevinin-1DYa, Amurin-2c",FLSLALAALPKFLCLVFKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1469,"Brevinin-1DYb, Amurin-2",FLSLALAALPKLFCLIFKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1545,"Phylloseptin-7, PS-7",FLSLIPHAINAVSAIAKHF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1652,"Phylloseptin-1, PS-1",FLSLIPHAINAVSAIAKHN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_950,Phylloseptin 12,FLSLLPSIVSGAVSLAKKL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3103,Temporin-1Va,FLSSIGKILGNLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1888,Brevinin-1CG1,FLSTALKVAANVVPTLFCKITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3491,Pantinin-3,FLSTIWNGIKSLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3485,Brevinin-1-AJ1,FLSTLLKVAFKVVPTLFCPITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1891,Brevinin-1CG4,FLSTLLNVASKVVPTLFCKITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1890,Brevinin-1CG3,FLSTLLNVASNVVPTLICKITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3476,"Amphiphatic peptide CT2, VmCT2",FLSTLWNAAKSIF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2221,Brevinin-1PTa,FMGGLIKAATKIVPAAYCAITKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1947,VESP-VB1,FMPIIGRLMSGSL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_21594,Acremolide A,FP,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_6090,Tyrocidine A1,FPFFNQYVKL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_13440,,FPFP,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_13441,,FPLP,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_6092,Tyrocidine B1,FPWFNQYVKL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_6094,Tyrocidine C1,FPWWNQYVKL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_822,"M-oxotoxin-Ot1a, M-OXTX-Ot1a, Oxki1, Oxyopinin-1",FRGLAKLLKIGLKSFARVLKKVLPKAAKAGKALAKSMADENAIRQQNQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2254,"Hyposin-5, Hyposin-HA4",FRPALIVRTKGTRL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1594,Pleurain-D4 antimicrobial peptid,FRSGILKLASKIPSVLCAVLKNC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2868,"Defensin, isoform C",FTCDVLGFEIAGTKLNSAACGAHCLALGRTGGYCNSKSVCVCR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2632,"Defensin 1, AlDef-1",FTCDVLSVEAKGVKLNHAACGIHCLFRRRTGGYCNKKRVCICR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_18900,"Cyclo(Phe-Val), Diketopiperazine (FV)",FV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1674,Gaegurin-RN4,FVGPVLKIAAGILPTAICKIYKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1026,"Temporin-1Tl, Temporin-L",FVQWFSKFLGRIL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_948,"Pandinin-2, Pin2, Non-disulfide-bridged peptide 4.1, NDBP-4.1",FWGALAKGALKLIPSLFSSFSKKD,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1970,Brevinin-2LTa,GAFGDLLKGVAKEAGMKLLNMAQCKLSGKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2222,Brevinin-2PTa,GAIKDALKGAAKTVAVELLKKAQCKLEKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2167,Ranacyclin-T,GALRGCWTKSYPPKPCK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2299,"D94, Bacteriocin plantaricin J, Bacteriocin PlnJ",GAWKNFWSSLRKGFYDGEAGRAIRR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2594,Mytilin-A,GCASRCKAKCAGRRCKGWASASFRGRCYCKCFRC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1521,Odorranain-U1,GCSRWIIGIHGQICRD,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_568,"M-zodatoxin-Lt7a, Latarcin 7, Ltc7",GETFDKLKEKLKTFYQKLVEKAEDLKGDLKAKLS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3618,Signiferin-4.2,GFADLFGKAVDFIKS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_825,"Theta defensin 3, RTD-3",GFCRCICTRGFCRCICTR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_823,"Theta defensin 1, RTD-1",GFCRCLCRRGVCRCICTR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1619,Pleurain-N1 antimicrobial peptide,GFFDRIKALTKNVTLELLNTITCKLPVTPP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_565,"M-zodatoxin-Lt5a, Latarcin-5, Ltc-5",GFFGKMKEYFKKFGASFKRRFANLKKRL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2182,Palustrin-2b,GFFSTVKNLATNVAGTVIDTLKCKVTGGCRS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1497,Odorranain-I1,GFFTLIKAANKLINKTVNKEAGKGGLEIMA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1005,"M-ctenitoxin-Cs1a, M-CNTX-Cs1a, Cupiennin-1a",GFGALFKFLAKKVAKTVAKQAAKQGAKYVVNKQME,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3114,Plectasin,GFGCNGPWDEDDMQCHNHCKSIKGYKGGYCAKGGFVCKCY,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2017,Cg-Defensin,GFGCPGNQLKCNNHCKSISCRAGYCDAATLWLRCTCTDCNGKK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2852,Defensin,GFGCPLDQMQCHRHCQTITGRSGGYCSGPLKLTCTCYR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2538,Defensin MGD-1,GFGCPNNYQCHRHCKSIPGRCGGYCGGWHRLRCTCYRC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3442,Macropin 1,GFGMALKLLKKVL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2273,CPF-P5,GFGSFLGKALKAALKIGADVLGGAPQQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2272,CPF-P4,GFGSFLGKALKAALKIGANVLGGAPEQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1007,"M-ctenitoxin-Cs1d, M-CNTX-Cs1d, Cupiennin-1d",GFGSLFKFLAKKVAKTVAKQAAKQGAKYVANKHME,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2274,"CPF-PG1, Caerulein precursor fragment-related peptide R2",GFGSLLGKALKIGTNLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2225,"Alyteserin-1Ma, Preproalyteserin-1/2Ma",GFKEVLKADLGSLVKGIAAHVAN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2227,Alyteserin-1Mb,GFKEVLKAGLGSLVKGIPAHVAN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2223,Brevinin-2PTb,GFKGAFKNVMFGIAKSAGKSALNALACKIDKSC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1012,Ranatuerin-3,GFLDIINKLGKTFAGHMLDKIKCTIGTCPPSP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3352,Frenatin-4,GFLDKLKKGASDFANALVNSIKGT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2213,Brevinin-2PTe,GFLDSFKNAMIGVAKSVGKTALSTLACKIDKSC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3154,"Antimicrobial peptide 1, XT-1",GFLGPLLKLAAKGVAKVIPHLIPSRQQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2292,CPF-SE2,GFLGPLLKLGLKGAAKLLPQLLPSRQQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2291,CPF-SE1,GFLGPLLKLGLKGVAKVIPHLIPSRQQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2293,"CPF-SE3, Antimicrobial peptide 6, XT-6, CPF-SP3",GFLGSLLKTGLKVGSNLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2369,"Melectin, MEP",GFLSILKKVLPKVMAHMK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2183,Palustrin-2c,GFLSTVKNLATNVAGTVIDTLKCKVTGGCRS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3726,Odorranain-F-OA4,GFMATAKNVAKNMDVTLLDNLKCKITKAC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3725,Odorranain-F-OA3,GFMDTAKNVAKNEAGNLLDNLKCKITKAC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3723,Odorranain-F-OA1,GFMDTAKNVAKNMAGNLLDNLKCKITKAC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3724,"Odorranain-F-RA1 antimicrobial peptide, Odorranain-F-OA2",GFMDTAKNVAKNMAVTLLDNLKCKITKAC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1895,"Palustrin-2ISc, Lividin-11, Odorranain-F-OR1, Ranatuerin R2AW",GFMDTAKNVAKNVAATLLDKLKCKITGGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1875,Palustrin-2ISa,GFMDTAKNVAKNVAVTLLDKLKCKITGGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3727,Odorranain-F-OW1,GFMNTAKNVAKNVAVTLLDNLKCKITGGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1896,Palustrin-2ISd,GFMSTASNVLTNVAGTVMDKLKCKFTGAC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_21158,Penitropeptide,GFPPWL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_2303,Ascaphin-1 free acid form,GFRDVLKGAAKAFVKTVAGHIAN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1518,Odorranain-R1,GFSPNLPGKGLRIS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1820,Esculentin-2P,GFSSIFRGVAKFASKGLGKDLARLGVNLVACKISKQC,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_1588,"Brevinin-2GHa, AMP-1",GFSSLFKAGAKYLLKSVGKAGAQQLACKAANNCA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1601,Pleurain-G1 antimicrobial peptide,GFWDSVKEGLKNAAVTILNKIKCKISECPPA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3479,"Antimicrobial peptide CT1-NDBP-5.17, UyCT1",GFWGKLWEGVKNAI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3615,"Amphipathic peptide CT2, Um3",GFWGKLWEGVKSAI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3599,Amphipathic peptide CT1,GFWGSLWEGVKSVV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2289,XPF-SE3,GFWTTAAEGLKKFAKAGLASILNPK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2138,Aedes Cecropin-A,GGLKKLGKKLEGAGKRVFNAAEKALPVVAGAKAL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3617,Signiferin-3.1,GIAEFLNYIKSKA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1857,"Esculentin-2-AL-a, Amolopin-9a antimicrobial peptide",GIFALIKTAAKFVGKNLLKQAGKAGLEHLACKANNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3712,Nigrocin-1-OA2,GIFGKILGVGKKTLCELSGMC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2311,"Brevinin-2Ej, Brevinin-2Ee",GIFLDKLKNFAKGVAQSLLNKASCKLSGQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3713,Nigrocin-1-OA3,GIFLKVLGVGKKVLCGVSGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2424,Brevinin-2Ob,GIFNVFKGALKTAGKHVAGSLLNQLKCKVSGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2184,Palustrin-3a,GIFPKIIGKGIKTGIVNGIKSLVKGVGMKVFKAGLNNIGNTGCNEDEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2185,Palustrin-3b,GIFPKIIGKGIKTGIVNGIKSLVKGVGMKVFKAGLSNIGNTGCNEDEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3567,Esculentin-2PRb,GIFSALAAGVKLLGNTLFKMAGKAGAEHLACKATNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1355,Esculentin-1V protein,GIFSKFAGKGIKDLIIKGVKGIAKEAGMDVIRTGIDIAGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1872,Esculentin-1ISa,GIFSKFAGKGIKNLLVKGVKNIGKEVGMDVIRTGIDIAGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2215,Esculentin-1HSa,GIFSKFGGKAIKNLFIKGAKNIGKEVGMDVIRTGIDVAGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3701,Esculentin-1-OR4,GIFSKISGKAIKNLFIKGAENVGKHVGMDVVRTGIDVVGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3698,"Lividin-10, Esculentin-1-OR1",GIFSKISGKAIKNLFIKGAKNVGKEVGMDVVRTGIDVVGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3702,Esculentin-1-OR5,GIFSKISGKAIKNLFIKGAKNVGKEVGMDVVRTGMDVVGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3700,Esculentin-1-OR3,GIFSKISGKAIKNLFIKGAKNVGKRVGMDVVRTGMDVVGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1357,"Esculentin-1P protein, Esculentin-1A protein",GIFSKLAGKKIKNLLISGLKNVGKEVGMDVVRTGIDIAGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1467,Esculentin-1B,GIFSKLAGKKLKNLLISGLKNVGKEVGMDVVRTGIDIAGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1078,Esculentin-1,GIFSKLGRKKIKNLLISGLKNVGKEVGMDVVRTGIDIAGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1976,Esculentin-2LTa,GIFSLFKAGAKFFGKHLLKQAGKAGAEHLACKATNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1874,Esculentin-2ISa,GIFSLIKGAAKLITKTVAKEAGKTGLELMACKVTNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1358,Esculentin-2P,GIFSLIKGAAKVVAKGLGKEVGKFGLDLMACKVTNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2216,Esculentin-2HSa,GIFSLIKGAAQLIGKTVAKEAGKTGLELMACKVTKQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1858,"Esculentin-2-AL-b, Amolopin-9b antimicrobial peptide",GIFSLIKTAAKFVGKNLLKQAGKAGVEHLACKANNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1909,"Defensin D2, So-D2",GIFSSRKCKTPSKTFKGICTRDSNCDTSCRYEGYPAGDCKGIRRRCMCSKPC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1908,"Defensin D7, So-D7",GIFSSRKCKTPSKTFKGYCTRDSNCDTSCRYEGYPAGD,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1879,Nigrocin-2ISa,GIFSTVFKAGKGIVCGLTGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1907,Ishikawain-8,GIFSVLNEVCKKNDYKPEICAHFSQNKP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2178,"Esculentin-1PLb, Esculentin-1Vb",GIFTKINKKKAKTGVFNIIKTIGKEAGMDVIRAGIDTISCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1356,Esculentin-2V protein,GIFTLFKGAAKLLGKTLAKEAGKTGLELMACKVTNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3703,"Esculentin-2JDb, Esculentin-2-OA1",GIFTLIKGAAKLIGKTVAKEAGKTGLELMACKITNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_534,"Bombinin-like peptide 3, BLP-3",GIGAAILSAGKSALKGLAKGLAEHF,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_529,"Bombinin-like peptide 1, BLP-1",GIGASILSAGKSALKGLAKGLAEHFAN,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_1121,"Beta-defensin 4A, Beta-defensin 2, BD-2, hBD-2, SAP1",GIGDPVTCLKSGAICHPVFCPRRYKQIGTCGLPGTKCCKKP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_835,Maximin 3,GIGGKILSGLKTALKGAAKELASTYLH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_841,Maximin 4,GIGGVLLSAGKAALKGLAKVLAEKYAN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1781,Magainin-1,GIGKFLHSAGKFGKAFVGEIMKS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_530,"Bombinin-like peptide 2, BLP-2",GIGSAILSAGKSALKGLAKGLAEHFAN,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_2276,"CPF-L2, Caerulein precursor fragment-related peptide R3/BM2",GIGSALAKAAKLVAGIV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2275,CPF-L1,GIGSLLAKAAKLGANLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_832,Maximin-1,GIGTKILGGVKTALKGALKELASTYAN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_834,Maximin-2,GIGTKILGGVKTALKGALKELASTYVN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3389,Myxinidin,GIHDILKYGKPS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1481,"Beta-defensin 1, BD-1, cBD-1",GIINTIQRYFCRVRGGRCAALTCLPRETQIGRCSVKGRKCCRTRK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_919,"Beta-defensin 103, Beta-Defensin 3, hBD-3",GIINTLQKYYCRVRGGRCAVLSCLPKEEQIGKCSTRGRKCCRRKK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2305,Ascaphin-5,GIKDWIKGAAKKLIKTVASHIANQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1163,"Hylaseptin-P1, HSP1",GILDAIKAIAKAAG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1893,Brevinin-2CG1,GILDKLKEFGISAARGVAQSLLNTASCKLAKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1804,"Ranatuerin-2La, Ranatuerin-2PRa",GILDSFKGVAKGVAKDLAGKLLDKLKCKITGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3568,Ranatuerin-2PRb,GILDTFKGVAKGVAKDLAVHMLENLKCKMTGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3671,"Brevinin-2-RA9 peptide, Brevinin-2-OA1",GILDTFKNMALNAAKSAGVSVLNALSCKLSKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1982,Brevinin-2RTb,GILDTLKEFGKTAAKGIAQSLLSTASCKLAKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_916,"Gaegurin-4, GGN4",GILDTLKQFAKGVGKDLVKGAAQGVLSTVSCKLAKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3490,Pantinin-1,GILGKLWEGFKSIV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3718,Nigrocin-1-OW2,GILGNIVGMGKKIVCGLSGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3719,Nigrocin-1-OW3,GILGNIVGMGKKVVCGLSGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3721,Nigrocin-1-OW5,GILGNIVGMGKQVVCGLSGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1880,Nigrocin-2ISb,GILGTVFKAGKGIVCGLTGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3714,"Lividin-7c protein, Lividin-7a, Nigrocin-1-OR1",GILSGILGVGKKLVCGLSGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3715,Nigrocin-1-OR2,GILSGILGVGKMLVCGLSGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3716,Nigrocin-1-OR3,GILSGLLGVGKMLVCGLSGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3720,Nigrocin-1-OW4,GILSGVLGMGKKIVCGLRGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1803,Esculentin-2L,GILSLFTGGIKALGKTLFKMAGKAGAEHLACKATNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1272,Esculentin-2A,GILSLVKGVAKLAGKGLAKEGGKFGLELIACKIAKQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1805,"Ranatuerin-2Lb, Ranatuerin-2PRd",GILSSIKGVAKGVAKNVAAQLLDTLKCKITGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3539,Ranatuerin-2BYa,GILSTFKGLAKGVAKDLAGNLLDKFKCKITGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2310,Brevinin-2Ei,GILSTIKDFAIKAGKGAAKGLLEMASCKLSGQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1897,Nigrocin-2ISc,GILSTVFKAGKGIVCGLSGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3540,Ranatuerin-2BYb,GIMDSVKGLAKNLAGKLLDSLKCKITGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2175,Ranatuerin-2PLe,GIMDSVKNAAKNLAGQLLDTIKCKITAC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2174,Ranatuerin-2PLd,GIMDSVKNVAKNIAGQLLDKLKCKITGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1069,Brevinin-2E,GIMDTLKNLAKTAGKGALQSLLNKASCKLSGQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2176,Ranatuerin-2PLf,GIMDTVKNAAKDLAGQLDKLKCRITGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2172,Ranatuerin-2PLb,GIMDTVKNAAKDLAGQLLDKLKCRITGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2171,Ranatuerin-2PLa,GIMDTVKNVAKNLAGQLLDKLKCKITAC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3581,Ranatuerin-2PRe,GIMNTVKDVATGVATHLLNMVKCKITGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2210,Brevinin-2TSa,GIMSLFKGVLKTAGKHVAGSLVDQLKCKITGGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_755,"Circulin-A, CIRA",GIPCGESCVWIPCISAALGCSCKNKVCYRN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1740,Cycloviolacin O2,GIPCGESCVWIPCISSAIGCSCKSKVCYRN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_14,Brevinin-2 related peptide B2RP,GIWDTIKSMGKVFAGKILQNL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3108,Brevinin-2Va,GIWDTLKNVGKAVLGKVLENV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2149,Moricin-like peptide B,GKIPVKAIKKGGQIIGKALRGINIASTAHDIISQFKPKKKKNH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_20828,PAX 1,GKKKKKK,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3003,"Lycocitin-1, M-lycotoxin-Ls3a",GKLQAFLAKMKEIAAQTL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1360,Turkey heterophil peptide THP1,GKREKCLRRNGFCAFLKCPTLSVISGTCSRFQVCC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_947,"Pandinin-1, Pin1, Non-disulfide-bridged peptide 3.4, NDBP-3.4",GKVWDWIKSAAKKIWSSEPVSQLKGQVLNAAKNYVAEKIGATPT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_966,"Opistoporin-1, OP1, Non-disulfide-bridged peptide 3.5, Opistoporin-3, OP3",GKVWDWIKSTAKKLWNSEPVKELKNTALNAAKNLVAEKIGATPS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3287,"Halictine-2, HAL-2",GKWMSLLKHILK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2365,Desertcolin 1,GLADFLNKAVGKVVDFVKS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2270,CPF-P2,GLASFLGKALKAGLKIGSHLLGGAPQQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2288,XPF-SE2,GLASTIGSLLGKFAKGGAQAFLQPK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_780,Aurein-2.6,GLFDIAKKVIGVIGSL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_772,Aurein-1.1,GLFDIIKKIAESI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1322,Citropin-1.3,GLFDIIKKVASVIGGL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1321,Citropin-1.2,GLFDIIKKVASVVGGL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1257,Aurein-3.1,GLFDIVKKIAGHIAGSI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1261,Aurein-3.2,GLFDIVKKIAGHIASSI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_781,Aurein-3.3,GLFDIVKKIAGHIVSSI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2976,Aurein-2.3,GLFDIVKKVVGAIGSL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2975,Aurein-2.2,GLFDIVKKVVGALGSL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1325,Citropin-1.1.3,GLFDVIKKVASVIGLASP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1471,Brevinin-2DYb,GLFDVVKGVLKGAGKNVAGSLLEQLKCKLSGGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1478,"Brevinin-2DYc, Brevinin-2RNa",GLFDVVKGVLKGVGKNVAGSLLEQLKCKLSGGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1991,Caerin-1.20,GLFGILGSVAKHVLPHVIPVVAEHL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2198,"Nigrocin-2GRb, Odorranain-H1",GLFGKILGVGKKVLCGLSGMC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_536,"M-zodatoxin-Lt2a, Latarcin-2a, Ltc-2a",GLFGKLIKKFGRKAISYAVKKARGKH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1824,Maculatin-1.1,GLFGVLAKVAAHVVPAIAEHF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2572,Caerin 1.9,GLFGVLGSIAKHVLPHVVPVIAEKL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1011,Ranatuerin-2,GLFLDTLKGAAKDVAGKLEGLKCKITGCKLP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1021,Ranatuerin-2Cb,GLFLDTLKGLAGKLLQGLKCIKAGCKP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2287,XPF-SE1,GLFLDTLKKFAKAGMEAVTNPK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1462,Brevinin-2SKb,GLFNVFKKVGKNVLKNVAGSLMDNLKCKVSGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2177,Esculentin-1PLa,GLFPKINKKKAKTGVFNIIKTVGKEAGMDLIRTGIDTIGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1463,Brevinin-2SKa,GLFSAFKKVGKNVLKNVAGSLMDNLKCKVSGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2170,Esculentin-2PLa,GLFSILKGVGKIALKGLAKNMGKMGLDLVSCKISKEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1815,Esculentin-2B,GLFSILRGAAKFASKGLGKDLTKLGVDLVACKISKQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3694,"Esculentin-1-RA8 peptide, Esculentin-1-OA3",GLFSKFAGKGIKDLIFKGVKHIGKEVGMDVIRTGIDVAGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3696,"Esculentin-1-RA5 peptide, Esculentin-1-OA5",GLFSKFAGKGIKNFLIKGVKHIGKEVGMDVIRTGIDVAGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2193,Esculentin-IGra,GLFSKFAGKGIKNLIFKGVKHIGKEVGMDVIRTGIDVAGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1354,Esculentin-1S protein,GLFSKFAGKGIKNMIIKGIKGIGKEVGMDVIRTGIDVAGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3732,Andersonin-X1,GLFSKFAGKGIVNFLIEGVE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3693,Esculentin-1-OA2,GLFSKFSGKGIKNFLIKGVKHIGKEVGMDVIRTGIDVAGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3692,Esculentin-1-OA1,GLFSKFVGKGIKNFLIKGVKHIGKEVGMDVIRVGIDVAGCKIKGVC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1990,Caerin-1.6,GLFSVLGAVAKHVLPHVVPVIAEKL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1779,Caerin 1.11,GLFSVLGSVAKHVVPRVVPVIAEHL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1472,"Brevinin-2DYe, Brevinin-2CDYa",GLFSVVTGVLKAVGKNVAKNVGGSLLEQLKCKISGGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3695,Esculentin-1-OA4,GLFTKFAGKGIKDLIFKGVKHIGKEVGMDVIRTGIDVAGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1499,Odorranain-J1,GLFTLIKCAYQLIAPTVACN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3704,Esculentin-2-OA2,GLFTLIKGAAKLIGKTTAKEAGKTGKLEMACKITNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2196,"Brevinin-2 Grc, Esculentin-2-OG10, Esculentin-2-OA3, Esculentin-2JDa",GLFTLIKGAAKLIGKTVAKEAGKTGLELMACKITNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1353,Esculentin-2S protein,GLFTLIKGAVKMIGKTVAKEAGKTGLELMACKVTNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3728,"Antixoidant peptide, Odorranain-J-OA1",GLFTLIKGAYKLDAPTVACN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3729,Odorranain-J-OA2,GLFTLIKGAYKNDAPTVACN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2315,"Caerulein precursor-related fragment, CPRF-Ec",GLGSFFKNAIKIAGKVGSTIGKVADAIGNKE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2314,"Caerulein precursor-related fragment, CPRF-Eb",GLGSFLKNAIKIAGKVGSTIGKVADAIGNKE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2313,"Caerulein precursor-related fragment, CPRF-Ea",GLGSILGKILNVAGKVGKTIGKVADAVGNKE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1562,Ixosin,GLHKVMREVLGYERNSYKKFFLR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3681,Brevinin-2-OR3,GLIDTIKNMALNAAKSAGVSVLNTLSCKLSKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1335,Citropin-2.1,GLIGSIGKALGGLLVDVLKPKL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1337,Citropin-2.1.3,GLIGSIGKALGGLLVDVLKPKLQAAS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2402,Alyteserin-1a,GLKDIFKAGLGSLVKGIAAHVAN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_499,"M-zodatoxin-Lt4a, Latarcin 4a, Ltc-4a",GLKDKFKSMGEKLKQYIQTWKAKF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2403,Alyteserin-1b,GLKEIFKAGLGSLVKGIAAHVAN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2404,Alyteserin-1c,GLKEIFKAGLGSLVKGIAAHVAS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2284,Magainin-SE1,GLKEVLHSTKKFAKGFITGLTGQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1459,Ranatuerin-2SKa,GLLDAIKDTAQNLFANVLDKIKCKFTKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3349,Frenatin-1,GLLDALSGILGL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2989,Fallaxidin 3.2,GLLDFAKHVIGIASKL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3675,Brevinin-2-OA5,GLLDGILNANFNAAKSAGTSVLNALSCKLSKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1252,Aurein-2.1,GLLDIVKKVVGAFGSL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2986,Fallaxidin 3.1,GLLDLAKHVIGIASKL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2224,Brevinin-2PTc,GLLDSFKNAMIGIAKSAGKTALNKIACKIDKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3009,Brevinin-2,GLLDSLKGFAATAGKGVLQSLLSTASCKLAKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2214,Brevinin-2HSa,GLLDSLKNLAINAAKGAGQSVLNTLSCKLSKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1614,Pleurain-M1 antimicrobial peptide,GLLDSVKEGLKKVAGQLLDTLKCKISGCTPA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3674,Brevinin-2-OA4,GLLDTFKNLALNAAESAGVSVLNSLSCKLSKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2194,"Brevinin -2 Gra, Brevinin-2E-OG6, Brevinin-2JD",GLLDTFKNLALNAAKSAGVSVLNSLSCKLSKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3673,Brevinin-2-OA3,GLLDTFKNMAINAAHGAGVSVLNALSCKLKKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3672,"Brevinin-2E-OG1 antimicrobial peptide, Brevinin-2-OA2",GLLDTFKNMALNAAKSAGVSVLNALSCKLSKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1816,Ranatuerin-2B,GLLDTIKGVAKTVAASMLDKLKCKISGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3684,Brevinin-2-OR6,GLLDTIKNMALNAAKSAGVSVLNSLSCKDSKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3680,Brevinin-2-OR2,GLLDTIKNMALNAAKSAGVSVLNSLSCKLSKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3685,"Lividin-2a, Brevinin-2-OR7",GLLDTIKNMALNAAKSAGVSVLNTLSCKLSKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2173,"Ranatuerin-2PLc, Ranatuerin-2Va",GLLDTIKNTAKNLAVGLLDKIKCKMTGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1544,Nigrocin-OG2,GLLGKILGVEKKVLCGLSGMC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2298,Maculatin 1.3,GLLGLLGSVVSHVVPAIVGHF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3157,"Antimicrobial peptide 7, XT-7",GLLGPLLKIAAKVGSNLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2220,Nigrocin-2HSb,GLLGSIFGAGKKIACALSGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2219,Nigrocin-2HSa,GLLGSLFGAGKKVACALSGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3350,Frenatin-2,GLLGTLGNLLNGLGL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3116,Anoplin,GLLKRIKTLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3560,Ranatuerin-2G,GLLLDTLKGAAKDIAGIALEKLKCKITGCKP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2967,Cryptonin,GLLNGLALRLGKRALKKIIKRLCR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_845,Rugosin-A,GLLNTFKDWAISIAKGAGKGVLTTLSCKLDKSC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1639,"Odorranin-HP, Odorranain-W-RA1",GLLRASSVWGRKYYVDLAGCAKA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1071,"Cathelin-related antimicrobial peptide, Cramp, Cathelin-like protein, CLP",GLLRKGGEKIGEKLKKIGQKIKNFFQKLVPQPEQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2990,Fallaxidin 4.1,GLLSFLPKVIGVIGHLIHPPS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1542,Nigrocin-OG4,GLLSGILGAGKHIICGLSGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2197,"Nigrocin-2GRa, Grahamin-1",GLLSGILGAGKNIVCGLSGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1522,Odorranain-V1,GLLSGTSVRGSI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3711,"Nigrosin-RA3 antimicrobial peptide, Nigrocin-1-OA1",GLLSGVLGVGKKIVCGLSGLC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_708,"Antibacterial peptide PMAP-37, Myeloid antibacterial peptide 37",GLLSRLRDFLSDRGRRLGEKIERIGQKIKDLSEFFQS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_505,Caerin-1.10,GLLSVLGSVAKHVLPHVVPVIAEKL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1141,Caerin-1.3,GLLSVLGSVAQHVLPHVVPVIAEHL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3400,Brevinin-2PRe,GLLSVLKGVLKTTGKHIFKNVGGSLLDQAKCKISGQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3401,Ranatuerin-2PRa,GLMDVFKGAAKNLLASALDKIRCKVTKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3396,Brevinin-2PRa,GLMSLFKGVLKTAGKHIFKNVGGSLLDQAKCKITGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3397,Brevinin-2PRb,GLMSLFRGVLKTAGKHIFKNVGGSLLDQAKCKITGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1262,Aurein-5.2,GLMSSIGKALGGLIVDVLKPKTPAS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1981,Brevinin-2RTa,GLMSTLKDFGKTAAKEIAQSLLSTASCKLAKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3351,Frenatin-3,GLMSVLGHAVGNVLGGLFKPKS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3399,Brevinin-2PRd,GLMSVLKGVLKTAGKHIFKNVGGSLLDQAKCKITGQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3398,Brevinin-2PRc,GLMSVTKGVLKTAGKHIFKNVGGSLLDQAKCKISGQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2372,Pseudin-1,GLNTLKKVFQGLHEAIKLINNHVQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1770,Varv peptide A,GLPVCGETCVGGTCNTPGCSCSWPVCTRN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_734,Kalata-B1,GLPVCGETCVGGTCNTPGCTCSWPVCTRN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1058,CAP18,GLRKRLRKFRNKIKEKLKKIGQKIQGLLPKLAPRTDY,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2332,Ponericin-G6,GLVDVLGKVGGLIKKLLP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_13432,Bacicyclin,GLVIAF,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1072,rCRAMP,GLVRKGGEKFGEKLRKIGQKIKEFFQKLALEIEQ,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_1993,Caerin-2.6,GLVSSIGKVLGGLLADVVKSKGQPA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1992,Caerin-2.2,GLVSSIGRALGGLLADVVKSKEQPA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_988,Dermaseptin-like PBN2,GLVTSLIKGAGKLLGGLFGSVTGGQS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1632,Caerin-3.5,GLWEKVKEKANELVSGIVEGVK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1887,Palustrin-2CG1,GLWNTIKEAGKKFAINVLDKIRCGIAGGCKT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1995,Caerin-3.1,GLWQKIKDKASELVSGIVEGVK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1996,Caerin-4.2,GLWQKIKSAAGDLASGIVEAIKS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3192,"Dermadistinctin-K, DD K",GLWSKIKAAGKEAAKAAAKAAGKAALNAVSEAV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3196,"Dermadistinctin-Q2, DD Q2",GLWSKIKEAAKTAGLMAMGFVNDMV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1195,"Adenoregulin, Dermaseptin BII, Dermaseptin B2",GLWSKIKEVGKEAAKAAAKAAGKAALGAVSEAV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1546,"Dermaseptin-1, DPh-1, DShypo 01, Dermaseptin-H4, DMS4",GLWSTIKNVGKEAAIAAGKAALGAL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1547,"Dermaseptin-H5, Dermaseptin-like peptide 5, DMS5",GLWSTIKNVGKEAAIAAGKAVLGSL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2286,PGLa-SE2,GMATAAGTTLGKLAKFVIGAV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2285,"PGLa-like peptide, Antimicrobial peptide 5, XT-5, PGLa-SP1",GMATKAGTALGKVAKAVIGAAL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3261,"Halictine-1, HAL-1",GMWSKILGHLIR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1159,Apidaecin-2,GNNRPIYIPQPRPPHPRL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1161,Apidaecin-1A,GNNRPVYIPQPRPPHPR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2090,Apidaecin-1A,GNNRPVYIPQPRPPHPRI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_13438,Cyclo(Gly-Pro),GP,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_10056,,GPE,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_2265,"Cathelicidin-6, Myeloid antibacterial peptide 27, BMAP-27",GRFKRFRKKFKKLFKKLSPVIPLLHLG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_707,"Antibacterial peptide PMAP-36, Myeloid antibacterial peptide 36",GRFRRLRKKTRKRLKKIGKVLKWIPPIVGSIPLGCG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3325,"Eumenine mastoparan-OD, OdVP1",GRILSFIKGLAEHL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_20829,PAX 2,GRKKKKK,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1359,Chicken heterophil peptide CHP1,GRKSDCFRKSGFCAFLKCPSLTLISGKCSRFYLCCKRIR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3004,"Lycocitin-2, M-lycotoxin-Ls3b",GRLQAFLAKMKEIAAQTL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2188,Maximin-S1,GSNTGFNFKTLDKE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_10055,,GSPE,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_17809,"Pseudofactin II, PFII",GSTLLSLL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1336,Bacteriocin Lactococcin-G subunit alpha,GTWDDIGQGIGRVAYWVGKAMGNMSDVNQASRINRKKKH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_824,"Theta defensin 2, RTD-2",GVCRCLCRRGVCRCLCRR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3156,"Antimicrobial peptide 4, XT-4",GVFLDALKKFAKGGMNAVLNPK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3566,Esculentin-2PRa,GVFSFLKTGAKLLGSTLLKMAGKAGAEHLACKATNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3709,Esculentin-2-OR5,GVFTLIKGATQLIGKTLGKELGKTGLEIMACKITKQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3708,Esculentin-2-OR4,GVFTLIKGATQLIGKTLGKELGKTGLELMACKITEQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3705,"Lividin-4, Esculentin-2-OR1",GVFTLIKGATQLIGKTLGKELGKTGLELMACKITNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3706,Esculentin-2-OR2,GVFTLIKGATQLIGKTLGKEVGKTGLELMACKITKQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3707,Esculentin-2-OR3,GVFTLLKGATQLIGKTLGKELGKTGLELMACKITNQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1825,Uperin-3.6,GVIDAAKKVVNVLKNLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2281,Brevinin-2GU,GVIIDTLKGAAKTVAAELLRKAHCKLTNSC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2282,B2RP-ERa,GVIKSVLKGVAKTVALGML,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_757,"Circulin-B, CIRB",GVIPCGESCVFIPCISTLLGCSCKNKVCYRN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1589,"Brevinin-2GHb, AMP-2",GVITDALKGAAKTVAAELLRKAHCKLTNSC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_18566,Emericellamide A,GVLAA,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_18456,Arenamide A,GVLAF,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_18563,Oryzamide A,GVLAL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_18565,Oryzamide C,GVLAM,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3676,Brevinin-2-OA6,GVLATVKNLLIGTGDGAAQSVLKTLSCKLSNDC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3678,Brevinin-2-OA8,GVLATVKNLLNGTGDGAAQSVLKTLSCKLSNDC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_18558,Chrysogeamide A,GVLAV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_18564,Oryzamide B,GVLAY,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1974,Brevinin-2LTc,GVLDTFKDVAIGVAKGAGTGVLKALLCKLDKSC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3677,Brevinin-2-OA7,GVLGTVKDLLIGAGKSAAQSTLKTLSCKISNDC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2199,"OdC8, Brevinin-2 Grb, Odorranain-C8",GVLGTVKNLLIGAGKSAAQSVLKTLSCKLSNDC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_826,"Antimicrobial peptide PGQ, Preproprotein pGQ",GVLSNVIGYLKKLGTGALNAVLKQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3155,"Antimicrobial peptide 2, XT-2, XPF-St1",GVWSTVLGGLKKFAKGGLEAIVNPK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2290,XPF-SE4,GVWTTILGGLKKFAKGGLEALTNPK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_681,Xenopsin precursor fragment-amide (XPF-amide),GWASKIGQTLGKIAKVGLKELIQPK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1003,Pleurocidin,GWGSFFKKAAHVGKHVGKAALTHYL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1420,"Pleurocidin-like peptide WF4, NRC-06",GWGSIFKHGRHAAKHIGHAAVNHYL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2316,Ponericin-G1,GWKDWAKKAGGWLKKKGPGMAKAALKAAMQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1855,"Cecropin-A1/A2, Sarcotoxin-1A",GWLKKIGKKIERVGQHTRDATIQGLGIAQQAANVAATAR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1856,Cecropin-B,GWLRKLGKKIERIGQHTRDASIQVLGIAQQAANVAATAR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_662,Phylloxin,GWMSKIASGIGTFLSGMQQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2009,"Shepherin I, Antimicrobial peptide shep-GRP",GYGGHGGHGGHGGHGGHGGHGHGGGGHG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2010,"Shepherin II, Antimicrobial peptide shep-GRP",GYHGGHGGHGGGYNGGGGHGGHGGGYNGGGHHGGGGHG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2335,Temporin-1DRa,HFLGTLVNLAKKIL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1801,Myticin-B,HPHVCTSYYCSKFCGTAGCTRYGCRNLHRGKLCFCLHCSR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_849,"Metchnikowin, Mtk-1",HRHQGPIFDTRPSPFNPNQPRPGPIY,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1800,Myticin-A,HSHACTSYWCGKFCGTASCTHYLCRVLHPGKMCACVHCSR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1716,"Penaeidin-4d, Penaeidin 4-1",HSSGYTRPLRKPSRPIFIRPIGCDVCYGIPSSTARLCCFRYGDCCHL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1339,Spinigerin,HVDKKVADKVLLLKQLRIMRLLTRL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1028,Enterocin X-beta,IAPIIVAGLGYLVKDAWDHSDQIISGFKKGWNGGRRK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2043,Hepcidin-20,ICIFCCGCCHRSKCGMCCKT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3655,Brevinin-1-OR3,IDPFVAGVAAEMMQHVYCAASKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3554,"Venom protein 13b, Polybia-MP-III",IDWLKLGKMVMDVL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_15012,,IEIE,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_2143,"Meucin-13, Venom antimicrobial peptide-6",IFGAIAGLLKNIF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3489,Pantinin-2,IFGAIWKGISSLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3246,Cytotoxic linear peptide IsCT2f,IFGAIWNGIKS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3247,Cytotoxic linear peptide IsCT2,IFGAIWNGIKSLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3005,Moronecidin,IFHHIFKGIVHVGKTIHRLVTG,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_3353,"Peptide Hp1090, Um5",IFKAIWSGIKSLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3330,Grammistin Gs B,IGGIISFFKRLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3619,Riparin-2.1,IIEKLVNTALGLLSGL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3616,Signiferin-2.1,IIGHLIKTALGMLGL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1142,Pilosulin 3,IIGLVSKGTCVLVKTVCKKVLKQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1684,Bombin GH-1L,IIGPVLGLVGKPLESLLE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1352,Bombinin-H2,IIGPVLGLVGSALGGLLKKI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1349,Bombinin-H1,IIGPVLGMVGSALGGLLKKI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3240,Rondonin,IIIQYEGHKH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3658,Brevinin-1-OR6,IIPFVAGVAAEMMEHVYCAASKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3347,Dybowskin-1CDYa,IIPLPLGYFAKKT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2226,"Alyteserin-2Mb, Preproalyteserin-1/2Mb",ILGAIIPLVSGLLSHL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3326,"Orancis-protonectin, OdVP2",ILGIITSLLKSL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3248,Cytotoxic linear peptide IsCTf,ILGKIWEGIKS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2159,Cytotoxic linear peptide IsCT,ILGKIWEGIKSLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2407,Alyteserin-2a,ILGKLLSTAAGLLSNL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1682,"Bombinin-like peptides 3, GH-1 peptide, Bombin H6",ILGPILGLVSNALGGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_844,Maximin H4,ILGPVISKIGGVLGGLLKNL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_833,Maximin H1,ILGPVISTIGGVLGGLLKNL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_842,Maximin-H3,ILGPVLGLVGNALGGLIKKI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_839,Maximin H2,ILGPVLSMVGSALGGLIKKI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1585,"Polybia-CP, Polybia chemotactic peptide, Venom protein CP",ILGTILGLLKSL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3660,Brevinin-1-OR8,ILPFVAGVAAEMMEHVYCAASKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3657,Brevinin-1-OR5,ILPFVAGVAAEMMKHVYCAASKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3654,"Lividin-1 protein, Brevinin-1-OR2",ILPFVAGVAAEMMQHVYCAASKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3668,Brevinin-1-OR9,ILPFVAGVAAMEMEHVYCAASKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3402,"Temporin-1PRa, Temporin-C",ILPILGNLLNGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3403,Temporin-1PRb,ILPILGNLLNSLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3346,"Temporin-CDYb, Temporin-1CEb",ILPILSLIGGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1646,Temporin-1Ja,ILPLVGNLLNDLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3481,"CT3-NDBP-5.15, UyCT3, OcyC1, NDBP-5.7",ILSAIWSGIKSLF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1640,"Mastoparan-M, Mast cell-degranulating peptide, Mastoparan-like peptide 12c",INLKAIAALAKKLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1641,Mastoparan-like peptide 12d,INLKAIAAMAKKLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3343,Mastoparan-L,INLKALAALAKKIL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2122,Eumenine mastoparan-AF,INLLKIAKGIIKSL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1948,MP-VB1,INMKASAAVAKKLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3656,Brevinin-1-OR4,INPFVAGVAAEMMQHVYCAASKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1564,"Mastoparan-like peptide 12a, Mastoparan-X, MP-X, Mastoparan-V",INWKGIAAMAKKLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1563,Mastoparan-like peptide 12b,INWKGIAAMKKLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_503,Dominulin-B,INWKKIAEIGKQVLSAL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_502,Dominulin-A,INWKKIAEVGGKILSSL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1240,"Agelaia-mastoparan, Agelaia-MP",INWLKLGKAIIDAL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2782,"Polistes Mastoparan R3/R1, Mastoparan PDD-B",INWLKLGKKILGAI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3553,"Venom protein 13a, Polybia-MP-II",INWLKLGKMVIDAL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_21596,Acremolide C,IP,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3483,Temporin-CPa,IPPFIKKVLTTVF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2047,Ostricacin-3,IPRPLDPCIAQNGRCFTGICRYPYFWIGTCRNGKSCCRRR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3741,Hejiangin-F1,IPWKLPATFRPVERPFSKPFCRKD,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_462,Gastric inhibitory polypeptide (GIP),ISDYSIAMDKIRQQDFVNWLLAQKGKKSDWKHNITQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2028,Cathelin-related antimicrobial peptide CRAMP -2,ISRLAGLLRKGGEKIGEKLKKIGQKIKNFFQKLVPQPE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2031,"mCRAMP, Cathelin-related antimicrobial peptide",ISRLAGLLRKGGEKIGEKLKKIGQKIKNFFQKLVPQPEQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2296,"Lycotoxin-1, M-lycotoxin-Hc1a",IWLTALKFLGKHAAKHLAKQQLSKL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3482,"Antimicrobial peptide CT5-NDBP-5.16, UyCT5",IWSAIWSGIKGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1474,Lantibiotic Enterocin W-alpha,KCPWWNLSCHLGNDGKICTYSHECTAGCN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3328,"Venom peptide 3, OdVP3",KDLHTVVSAILQAL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3648,"Andersonin-L peptide, Andersonin-G1",KEKLKLKCKAPKCYNDKLACT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2154,Moricin-like peptide D,KGIGSALKKGGKIIKGGLGALGAIGTGQQVYEHVQNRQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1718,Parasin I,KGRGKQGGKVRAKAKTRSS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3244,PGLa-H,KIAKVALKAL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2297,"Lycotoxin-2, M-lycotoxin-Hc2a",KIKWFKTMKSIAKFIAKEQMKKHLGGE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3699,"Lividin-10, Esculentin-1-OR2",KISGKAIKNLFIKGAKNVGKEVGMDVVRTGIDVVGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3166,Beta-defensin 3,KKINNPVSCLRKGGRCWNRCIGNTRQIGSCGVPFLKCCKRK,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_1347,Bacteriocin Lactococcin-G subunit beta,KKWGWLAWVDPAYEFIKGFGKGAIKEGNKDKWKNI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1334,Bacteriocin Lactococcin-Q subunit beta,KKWGWLAWVEPAGEFLKGFGKGAIKEGNKDKWKNI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1528,Bacteriocin Salivaricin P-2,KNGYGGSGNRWVHCGAGIVGGALIGAIGGPWSAVAGGISGGFASCH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3742,Lividin-D1,KNNFCQVLYVWLLRLGKQCFVKFSKDVET,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1432,"Horse cathelicidin 3, Myeloid cathelicidin 3, eCATH-3",KRFHSVGSLIQRHQQMIRDKSEATRHGIRIITRPKLLLAS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1527,Bacteriocin Salivaricin P-1,KRGPNCVGNFLGGLFAGAAAGVPLGPAGIVGGANLGMVGGALTCL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1431,"Horse cathelicidin 2, Myeloid cathelicidin 2, eCATH-2",KRRHWFPLSFQEFLEQLRRFRDQLPFP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2736,Tu-AMP1,KSCCRNTVARNCYNVCRIPGTPRPVCAATCDCKLITGTKCPPGYEK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_595,Thionin,KSCCRNTWARNCYNVCRLPGTISREICAKKCDCKIISGTTCPSDYPK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2733,Pp-AMP1,KSCCRSTQARNIYNAPRFAGGSRPLCALGSGCKIVDDKKTPPND,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2734,Pp-AMP2,KSCCRSTTARTARVPCAKKSNIYNGCRVPGGCKIQEAKKCEPPYD,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3488,Bacteriocin plantaricin A,KSSAYSLQMGATAIKQVKKLFKKWGW,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_500,Sesquin,KTCENLADTY,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1964,"Cp-thionin-2, Defensin-like protein 2",KTCMTKKEGWGRCLIDTTCAHSCRKYGYMGGKCQGITRRCYCLLNC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3223,JCpep7,KVFLGLK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2374,"Ubiquicidin, UBI 1-59",KVHGSLARAGKVRGQTPKVAKQEKKKKKTGRAKRRMQYNRRFVNVVPTFGKKKGPNANS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2148,Moricin-like peptide A,KVNVNAIKKGGKAIGKGFKVISAASTAHDVYEHIKNRRH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2150,Moricin-like peptide C1,KVPIGAIKKGGKIIKKGLGVIGAAGTAHEVYSHVKNRH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2152,Moricin-like peptide C3,KVPIGAIKKGGKIIKKGLGVIGAAGTAHEVYSHVKNRQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2151,Moricin-like peptide C2,KVPIGAIKKGGKIIKKGLGVLGAAGTAHEVYNHVRNRQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2153,Moricin-like peptide C4/C5,KVPVGAIKKGGKAIKTGLGVVGAAGTAHEVYSHIRNRH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_572,Cecropin-B,KWKIFKKIEKVGRNIRNGIIKAGPAVAVLGEAKAL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_573,"Cecropin-B, Immune protein P9",KWKVFKKIEKMGRNIRNGIVKAGPAIAVLGEAKAL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_965,"Bacteriocin Sakacin-P, Sakacin 674",KYYGNGVHCGKHSCTVDWGTAIGNIGNNAAANWATGGNAGWNK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1250,Bacteriocin Pediocin PA-1,KYYGNGVTCGKHSCSVDWGKATTCIINNGAMAWATGGHQGNHKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3670,Brevinin-1-OR11,LAFVAGVAAEMMQHVYCAASKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1920,"Defensin-like protein 1, Defensin AMP1, Ah-Amp1",LCNERPSQTWSGNCGNTAHCDKQCQDWEKASHGACHKRENHWKCFCYFNC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3383,"Panurgine K, PNG-K",LDVKKIICVACKIKPNPACKKICPK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3385,"Panurgine R, PNG-R",LDVKKIICVACKIRPNPACKKICPK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_15011,,LELE,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_18514,Gageopeptide A,LELL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_22257,Mortiamide D,LFAIIFV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1374,Turkey heterophil peptide THP2,LFCKRGTCHFGRCPSHLIKVGSCFGFRSCCKWPWDA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2046,Ostricacin-1,LFCRKGTCHFGGCPAHLVKVGSCFGFRACCKWPWDV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3333,"Grammistin GsF, Grammistin Gs 1",LFGFLIKLIPSLFGALSNIGRNRNQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3334,"Grammistin Gs G, Grammistin Pp 4a",LFGFLIPLLPHIIGAIPQVIGAIR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3752,Mucroporin,LFGLIPSLIGGLVSAFK,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPN_19090,Cyclo(D-Leu-D-His),LH,Gram- bacteria,,,1,Nonribosomal,monomer
+DBAASPN_13444,,LILI,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_11240,Stylissamide G,LIPFPFP,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3329,Mastoparan B,LKLKSIVSWAKKVL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_18474,"Cyclo(Leu-Leu), Gordonia Dipeptide",LL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1777,"Cathelicidin antimicrobial peptide, Antibacterial protein LL-37, ppyLL-37",LLGDFFRKAREKIGEEFKRIVQRIKDFLRNLVPRTES,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2283,Ponericin-L2,LLKELWTKIKGAGKAVLGKIKGLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_21414,Bacilotetrin A,LLLE,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_21134,,LLLLI,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_21136,,LLLLL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_21135,,LLLLV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_847,"Temporin-B, Temporin-1Tb",LLPIVGNLLKSLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3747,Tiannanin-A1,LLPPWLRPRNG,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_989,Ranatuerin-2P,LMDTVKNVAKNLAGHMLDKLKCKITGC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3644,Eumenitin,LNLKGIFKKVASLLT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2127,Eumenitin-F,LNLKGLFKKVASLLT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2126,Eumenitin-R,LNLKGLIKKVASLLN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_22831,Glidonin 9,LNPVFPWVAASA,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3360,"Panurgine 1, PNG-1",LNWGAILKHIIK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3653,"Lividin-1 protein, Brevinin-1-OR1",LPFVAGVAAEMMQHVYCAASKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_13439,,LPLP,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_2048,Ostricacin-4,LPVNEAQCRQVGGYCGLRICNFPSRFLGLCTRNHPCCSRVWV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_18886,"Cyclo(D-Leu-D-Arg), Diketopiperazine (lr)",LR,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1216,Urechistachykinin-1,LRQSQFVGSR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1375,Turkey heterophil peptide THP3,LSCKRGTCHFGRCPSHLIKGSCSGG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_6794,"Cyclo(Leu-Val), Diketopiperazine (LV)",LV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3172,Carnocyclin-A,LVAYGIAQGTAEKVVSLINAGLTVGSIISILGGVTVGLSGVFTAVKAAIAKQGIKKAIQL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1983,"Cathelicidin-2, Fowlicidin-2",LVQRGRFGRFLRKIRRFRPKVTITIQGSARFG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2165,Peptide leucine arginine (pLR),LVRGCWTKSYPPKPCFVR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3245,Antimicrobial protein BL-A60,LYKLVKVVLNM,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_22825,Glidonin 1,MNPVFPWVAASA,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3588,Temporin-PRc,NFLDTLINLAKKFI,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1807,Temporin-1Lb,NFLGTLINLAKKIM,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2203,"Temporin-1CSd, Temporin-1DRb",NFLGTLVNLAKKIL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1902,Ishikawain-3,NFYEIFRNRNRGGLIKDAATPWLPCEILRPC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_11147,Desotamide A,NGWLLI,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1903,Ishikawain-4,NIFEIFRNRNRGGLIKDAATPWLPCEILRPC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3562,Temporin-HN2,NILNTIINLAKKIL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1921,Defensin AMP1 / Ct-AMP1,NLCERASLTWTGNCGNTGHCDTQCRNWESAKHGACHKRGNWKCFCYFNC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_36,Distinctin chain 2,NLVSGLIEARKYLEQLHRKLKNCKV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3167,"Beta-defensin 8, Gallinacin-8, AvBD8",NNEAQCEQAGGICSKDHCFHLHTRAFGHCQRGVPCCRTVYD,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_659,"Tracheal antimicrobial peptide, TAP",NPVSCVRNKGICVPIRCPGSMKQIGTCVGRAVKCCRKK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3336,"Grammistin C, Gs C",NWRKILGKIAKVAAGLLGSMLAGYQV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3337,Grammistin Pp 3,NWRKILGQIASVGAGLLGSLLAGYE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_18958,Cyclo(Pro-Ala),PA,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_19084,Cyclo(Pro-Asp),PD,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_19081,Cyclo(L-Pro-D-Glu),PE,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_13433,,PEPE,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1341,Jellein-1,PFKISIHL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_19085,Cyclo(D-Pro-Gly),PG,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_2979,"Cyclopeptide E, Cherimolacylopeptide E",PGLGFY,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_18983,Cyclo(Pro-Ile),PI,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_15015,Provipeptide B,PIPF,Gram- bacteria,,,1,Nonribosomal,monomer
+DBAASPN_11246,Stylisin 2,PIPFPPY,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_2005,Cathelicidin-B1,PIRNWWIRIWEWLNGIRKRLRQRSPFYVRGHLNVTSTPQP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_15014,Provipeptide A,PLPF,Gram- bacteria,,,1,Nonribosomal,monomer
+DBAASPN_6740,"Cyclo(Pro-Met), S.sp. DKP-MP",PM,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_21048,,PPYY,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_18879,"Cyclo(L-Pro-D-Arg), Diketopiperazine (Pr)",PR,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_18892,Cyclo(Pro-Val),PV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_6793,"Cyclo(Pro-Trp), Diketopiperazine (PW)",PW,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_567,"M-zodatoxin-Lt6a, Latarcin 6a, Ltc-6a",QAFQTFKPDWNKIRYDAMKMQTSLGQMKKRFNL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2595,"Longicin, Antimicrobial peptide",QDDESDVPHVRVRRGFGCPLNQGACHNHCRSIGRRGGYCAGIIKQTCTCYRK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2191,"Penaeidin 5-2, Fenchi-penaeidin 5-2",QGYKSGHTGPYPRPLYGSRPIGLRPITRPDPSCAGCRILTLDDAIACCRRLGRCCSALKG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1957,Beta-defensin 6,QLINSPVTCMSYGGSCQRSCNGGFRLGGHCGHPKIRCCRRK,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_3659,Brevinin-1-OR7,QLPFVAGVACEMCQCVYCAASKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1134,Ee-CBP (Bark),QQCGRQAGNRRCANNLCCSQYGYCGRTNEYCCTSQGCQSQCRRCG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3242,Buforin-EC,RAGLKFPVGRVHRLLR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3234,Defensin BTD-2,RCVCRRGVCRCVCRRGVC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3237,BTD-7,RCVCTRGFCRCFCRRGVC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3236,BTD-4,RCVCTRGFCRCICLLGIC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3233,BTD-1,RCVCTRGFCRCVCRRGVC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3235,"BTD-3, Theta defensin 3, PhTD-3",RCVCTRGFCRCVCTRGFC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1955,Flower-specific defensin / NaD1,RECKTESNTFPGICITKPPCRKACISEKFTDGHCSKILRRCLCTKPC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2445,"Pg-AMP, Glycine-rich antimicrobial peptide Pg-AMP",RESPSSRMECYEQAERYGYGGYGGGRYGGGYGSGRGQPVGQGVERSHDDNRNQPR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3739,Hejiangin-A1,RFIYMKGFGKPRFGKR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1263,"Cathelicidin-2, Bactenecin-5, Bac5, ChBac5",RFRPPIRRPPIRPPFNPPFRPPVRPPFRPPFRPPFRPPIGPFP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1651,"Cathelicidin-2, Bactenecin-5",RFRPPIRRPPIRPPFYPPFRPPIRPPIFPPIRPPFRPPLGPFP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1919,Stomoxyn,RGFRKHFNKLVKKVKHTISETAHVAKDTAVIAGSGAAVVAAT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1823,Protegrin-2,RGGRLCYCRRRFCICV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1485,"SMAP28, SMAP-29, Cathelin-related peptide SC5",RGLRRLGRKIAHGVKKYGPTVLRIIRIA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1073,"Cathelin-related peptide SC5, Antibacterial peptide SMAP-29, Myeloid antibacterial peptide MAP-29",RGLRRLGRKIAHGVKKYGPTVLRIIRIAG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3187,"Defensin-2, PHD2",RICRCRIGRCLGLEVYFGVCFLHGRLARRCCR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1873,Esculentin-1ISb,RIFSKIGGKAIKNLILKGIKNIGKEVGMDVIRTGIDVAGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3050,"PMAP-23, Myeloid antibacterial peptide 23",RIIDLLWRVRRPQKPKFVTVWVR,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_1975,Esculentin-1LTa,RISFKKGKGSWIKNGLIKGIKGLGKEISLDVIRTGIDIAGCKIKGEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1776,"Cathelicidin antimicrobial peptide, Antibacterial protein LL-37, cjaRL-37",RLGDILQKAREKIEGGLKKLVQKIKDFFGKFAPRTES,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1775,"Cathelicidin antimicrobial peptide, Antibacterial protein LL-37, pobRL-37",RLGNFFRKAKKKIGRGLKKIGQKIKDFLGNLVPRTES,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1778,"Cathelicidin antimicrobial peptide, Antibacterial protein LL-37, mmuRL-37",RLGNFFRKVKEKIGGGLKKVGQKIKDFLGNLVPRTAS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1156,Cathelicidin K9CATH,RLKELITTGGQKIGEKIRRIGQRIKDFFKNLQPREEKS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1905,Ishikawain-6,RLMKCYKPNSRGFQLCE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2139,WAP four-disulfide core domain protein 15B,RPEIKKKNVFSKPGYCPEYRVPCPFVLIPKCRRDKGCKDALKCCFFYCQMRCVDPWESPE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2307,"Isracidin, Alpha-S1-casein",RPKHPIKHQGLPQEVLNENLLRF,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_2145,Astacidin 2,RPRPNYRPRPIYRP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2742,Vicilin-like Antimicrobial peptide 2c-1 / MiAMP2c-1,RQRDPQQQYEQCQERCQRHETEPRHMQTCQQRCERRYEKEKRKQQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2743,"Vicilin-like Antimicrobial peptide 2c-2, MiAMP2c-2",RQRDPQQQYEQCQERCQRHETEPRHMQTCQQRCERRYEKEKRKQQKR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3186,"Defensin-1, PHD1",RRICRCRIGRCLGLEVYFGVCFLHGRLARRCCR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_709,Antibacterial protein PR-39,RRRPRPPYLPRPRPPPFFPPRLPPRIPPGFPPRFPPRFP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2187,Maximin S4,RSNKGFNFMVDMIQALSK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_694,Androctonin,RSVCRQIKICRRRGGCYYKCTNRPY,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3188,"Defensin-3, PHD3",RTCRCRLGRCSRRESYSGSCNINGRIYSLCCR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_652,Tigerinin-2,RVCFAIPLPICH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_658,Tigerinin-4,RVCYAIPLPIC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_657,Tigerinin-3,RVCYAIPLPICY,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_11,"Cathelicidin-1, CATH-1, Fowlicidin-1",RVKRVWPLVIRTVIAGYNLYRAIKKK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_21154,MBJ-0174,RVLVY,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1438,"Hyphancin-3D, ABP-dHC-Cecropin A",RWKIFKKIERVGQNVRDGIIKAGPAIQVLGTAKALGK,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_3740,"Andersonin-R peptide, Hejiangin-E1",SADQTGMNKAALSPIRFISKSV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2166,Ranacyclin-E,SAPRGCWTKSYPPKPCK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2441,"Toxin CsTx-2b, Omega-ctenitoxin-Cs1a",SCIPKHEECTNDKHNCCRKGLFKLKCQCSTFDDESGQPTERCACGRPMGHQAIETGLNIF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_818,"Caltrin, Calcium transport inhibitor, Peptide YY-2,  Seminalplasmin, SPLN",SDEKASPDKHHRFSLSRYAKLANRLANPKLLETFLSKWIGDRGNRSVK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_10401,Pontifactin,SDVSS,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1620,Pleurain-P1,SFGAKNAVKNGLQKLRNQCQANNYQGPFCDIFKKNP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3683,Brevinin-2-OR5,SFLDTLKNLAISAAKGAGQSVLSTLSCKLSETC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3686,"Lividin-2, Brevinin-2-OR8",SFLDTLKNLAISAAKGAGQSVLSTLSCKLSKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3687,Brevinin-2-OR9,SFLSTFKELAINAAKNAGQSILHTLSCKLDKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3688,Brevinin-2-OR10,SFLSTFKELAINAAKNAGQSLLHTLSCKLDKTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1877,Brevinin-2ISb,SFLTTFKDLAIKAAKSAGQSVLSTLSCKLSNTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1949,Hipposin,SGRGKTGGKARAKAKTRSSRAGLQFPVGRVHRLLRKGNYAHRVGAGAPVYL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3222,Dolabellanin-B2,SHQDCYEALHKCMASHSKPFSCSMKFHMCLQQQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_843,Maximin 5,SIGAKILGGVKTFFKGALKELASTYLQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1578,Pleurain-A1,SIITMTKEAKLPQLWKQIACRLYNTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1638,Pleurain-A2,SIITMTKEAKLPQSWKQIACRLYNTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1971,Brevinin-2LTb,SILDKIKNVALGVARGAGTGILKALLCKLDKSC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3555,Temporin-1Gb,SILPTIVSFLSKFL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3556,Temporin-1Gc,SILPTIVSFLTKFL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_756,"Cyclopsychotride-A, CPT",SIPCGESCVFIPCTVTALLGCSCKSKVCYKN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1677,Rugosin-RN3,SIRDKIKTIAIDLAKSAGMGILKTLICKLDKSC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1676,Rugosin-RN1,SIRDKIKTIAIDLAKSAGTGVLKTLICKLDKSC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1678,Rugosin-RN5,SIRDKIKTIAIDLAKSAGTGVLKTLICKLNKSC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2537,"Leaf cyclotide 1, Vhl-1",SISCGESCAMISFCFTEVIGCSCKNKVCYLN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1595,"Brevinin-2GHc, AMP-4",SIWEGIKNAGKGFLVSILDKVRCKVAGGCNP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1333,Bacteriocin Lactococcin-Q subunit alpha,SIWGDIGQGVGKAAYWVGKAMGNMSDVNQASRINRKKKH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1886,Esculentin-2CG1,SLFSIFKTAAKFVGKNLLKQAGKAGLETLACKAKNEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_846,Rugosin-B,SLFSLIKAGAKFLGKNLLKQGAQYAACKVSKEC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_848,Ceratotoxin-C,SLGGVISGAKKVAKVAIPIGKAVLPVVAKLVG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3197,Dermatoxin,SLGSFLKGVGTTLASVGKVVSDQFGKLLQAGQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_561,"M-zodatoxin-Lt4b, Latarcin-4b, Ltc-4b",SLKDKVKSMGEKLKQYIQTWKAKF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1876,Brevinin-2ISa,SLLDTFKNLAVNAAKSAGVSVLNALSCKISRTC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3565,"Brevinin-2HS2A, Brevinin-2HS2",SLLGTVKDLLIGAGKSAAQSVLKGLSCKLSKDC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3176,Decoralin,SLLSLIRKLIT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2731,Temporin -LTc,SLSRFLSFLKIVYPPAF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1977,Palustrin-2LTa,SLWENFKNAGKQFILNILDKIRCRVAGGCRT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1672,"Nigroain-K2, Nigroain-K-SN1",SLWETIKNAGKGFILNILDKIRCKVAGGCKT,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1671,Nigroain-K1,SLWETIKNAGKGFIQNILDKIR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3558,Ranatuerin-1Ga,SMISVLKNLGKVGLGFVACKVNKQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1019,Ranatuerin-1C,SMLSVLKNLGKVGLGLVACKINKQC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_535,"M-zodatoxin-Lt1a, Latarcin-1, Ltc-1",SMWSGMWRRKLKKLRNALKKKLKGE,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1029,Enterocin X-alpha,SNDSLWYGVGQFMGKQANCITNHPVKHMIIPGYCLSKILG,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_18873,"Cyclo(Ser-Pro), Diketopiperazine (SP)",SP,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1904,Ishikawain-5,SPYRCGSPDSRGSENTRCLIKK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2192,Arasin-1,SRWPSPGRPRPFPGRPKPIFRPRPCNCYAPPCPCDRW,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3225,"Antimicrobial peptide 1, Cn-AMP1",SVAGRAQGM,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2832,"HV-BBI, Bowman-Birk trypsin inhibitor",SVIGCWTKSIPPRPCFVK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3679,"Lividin-3 protein, Brevinin-2-OR1",SVLGTVKDLLIGAGKSAAQSVLTALSCKLSNSC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3682,Brevinin-2-OR4,SVLGTVKDLLIGAGKSAAQSVLTANSCKLSNSC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1878,Brevinin-2ISc,SVLGTVKDLLIGAGKSAAQSVLTTLSCKLSNSC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3691,Brevinin-2-OW3,SVMGTVKDLLIGAGKSAAQSVLKALSCKLSKDC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3689,Brevinin-2-OW1,SVMGTVKDLLIGAGKSAAQSVLKSLSCKISNDC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3690,Brevinin-2-OW2,SVMGTVKDLLIGAGKSAAQSVLKSLSCKLSNDC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_22138,Asperversiamide B,SWAAVFV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_557,"M-zodatoxin-Lt3b, Latarcin-3b, Ltc-3b",SWASMAKKLKEYMEKLKQRA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_550,"M-zodatoxin-Lt3a, Latarcin-3a, Ltc-3a, La47",SWKSMAKKLKEYMEKLKQRA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_569,Cecropin-P1,SWLSKTAKKLENSAKKRISEGIAIAIQGGPR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_22137,Asperversiamide A,SWSAVFV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_22142,Asperheptatide A,SWSGVFV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3226,"Antimicrobial peptide 2, Cn-AMP2",TESYFVFSVGM,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1343,Jellein-4,TPFKISIH,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1342,Jellein-2,TPFKISIHL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3647,"Andersonin-G peptide, Andersonin-C1, Antixoidant peptide",TSRCIFYRRKKCS,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_19893,Stephensiolide U,TSSII,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_13437,Stephensiolide D,TSSVI,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_19772,Stephensiolide C,TSSVV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_10400,Aneurinifactin,TYVSYT,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_21496,Turnagainolide A,VAIV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3649,"Andersonin-M3 peptide, Andersonin-H3",VAIYGRDDRSDVCRQVQHNWLVCDTY,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_21495,Arthroamide,VAVV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_18305,Pagoamide A,VCGCSTSAFVF,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1648,"Neutrophil defensin 4, Defensin alpha 4, HNP-4",VCSCRLVFCRRTELRVGNCLIGGVSFTYCCTRV,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2249,Metalnikowin-1,VDKPDYRPRPRPPNM,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_15013,,VEVE,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1502,"Odorranain-L2 antimicrobial peptide, Odorranain-L1",VEVQVRDKGKGIYGLSPLRQPAP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_22838,Holrhizin A,VFEIAI,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1853,Andropin,VFIDILDKVENAIHNAAQVGIGFAKPFEKLINPK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3749,Wuchuanin-C1,VFLGNIVSMGKKI,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_2002,Clavanin A,VFQFLGKIIHHVGNFVHGFSHVF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2364,Clavanin-B,VFQFLGRIIHHVGNFVHGFSHVF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_6306,Gramicidin A,VGALAVVVWLWLWLW,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_18368,Gramicidin D,VGALAVVVWLWLWLWG,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1135,"Antimicrobial peptide 2, AC-AMP2",VGECVRGRCPSGMCCSQFGYCGKGPKYCGR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1631,"Guentherin, AMP-3",VIDDLKKVAKKVRRELLCKKHHKKLN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2137,Proteinase inhibitor PSKP-1,VIEPKCYKYEGKKCPPDINPVCGTDKRTYYNECALCVFIRQSTKKADKAIKIKKWGKC,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_1464,"Prepromelittin-related peptide, Peptide VR-23",VIGSILGALASGLPTLISWIKNR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3645,"Odorranain-P-RA1 peptide, Brevinin-1-OA1",VIVFVASVAAEMMQHVYCAASKKC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_15016,Cyclo(D-Val-D-Leu),VL,Gram- bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1806,Temporin-1La,VLPLISMALGKLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3409,Lasioglossin LL-II,VNWKKILGKIIKVAK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3414,Lasioglossin LL-III,VNWKKILGKIIKVVK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3404,Lasioglossin LL-I,VNWKKVLGKIIKVAK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_21597,Acremolide D,VP,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1213,"Apolipophorin-3, Apolipophorin-III, Gm apolipophoricin",VQETQKLAKTVGANLEETNKKLAPQIKSAYDDFVKQAQEVQKKLHEAASKQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_57,Tenecin-1,VTCDILSVEAKGVKLNDAACAAHCLFRGRSGGYCNGKRVCVCR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2628,Defensin Allomyrina dichotoma,VTCDLLSFEAKGFAANHSLCAAHCLAIGRRGGSCERGVCICRR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2840,"Royalisin, Defensin-1",VTCDLLSFKGQVNDSACAANCLSLGKAGGHCEKGVCICRKTSFKDLWDKYF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_771,"Neutrophil defensin 4, HANP-4",VTCFCKRPVCDSGETQIGYCRLGNTFYRLCCRQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_768,"Neutrophil defensin 1, HANP-1",VTCFCRRRGCASRERHIGYCRFGNTIYRLCCRR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_770,"Neutrophil defensin 3, HANP-3",VTCFCRRRGCASRERLIGYCRFGNTIYGLCCRR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3744,"Antixoidant peptide, Margaratain-A1",VTPPWARIYYGCAKA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3722,"Odorranain-A-RA7 peptide, Odorranain-A-OA1",VVKCSYRLGSPDSQCN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1482,"Odorranain-A3 antimicrobial peptide, Odorranain-A1",VVKCSYRLGSPDSRCN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3735,"Andersonin-O peptide, Odorranain-A-OA11",VVKCSYRQGSPDSR,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3736,"Andersonin-U peptide, Odorranain-A-OA12",VVKFSYRKGSPAPQKN,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1479,Dybowskin-4,VWPLGLVICKALKIC,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_7135,"Cyclo(Trp-Phe), Diketopiperazine (WF)",WF,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_2136,Propionicin-F,WFYQGMNIAIYANIGGVANIIGYTEAAVATLLGAVVAVAPVVP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_7133,"Cyclo(Trp-Ile), Diketopiperazine (WI)",WI,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_7134,"Cyclo(Trp-Leu), Diketopiperazine (WL)",WL,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_2334,Ponericin-W1,WLGSALKIGAKLLPSVVGLFKKKKQ,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_7158,Desotamide B,WLLVNG,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_55,Halocidin subunit A,WLNALLHHGLNCAKGVLA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_575,Cecropin-D,WNPFKELEKVGQRVRDAVISAGPAVATVAQATALAK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_574,Antheraea Cecropin-D,WNPFKELERAGQRVRDAIISAGPAVATVAQATALAK,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_7131,"Cyclo(Trp-Pro), Diketopiperazine (WP)",WP,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_18982,"Cyclo(Trp-Pro-Phe), Epicotripeptin",WPF,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_18505,Euryjanicin A,WPISFVP,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_18887,"Cyclo(Trp-Arg), Diketopiperazine (WR)",WR,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_18961,Cyclo(Trp-Ser),WS,Gram- bacteria,,,1,Nonribosomal,monomer
+DBAASPN_18861,"Cyclo(Trp-Trp), Diketopiperazine (WW)",WW,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3335,Grammistin Gs A,WWRELLKKLAFTAAGHLGSVLAAKQSGW,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_7132,"Cyclo(Trp-Tyr), Diketopiperazine (WY)",WY,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_3224,"Antimicrobial peptide 3, Cn-AMP3",YCSYTMEA,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_3199,"Survival-promoting peptide, Y-P30",YDPEAASAPGSGNPCHEASAAQKENAGEDP,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_6733,"Cyclo(D-Tyr-D-Phe), Diketopiperazine (yf)",YF,Gram- bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1591,Pleurain-C1 antimicrobial peptide,YPELQQDLIARLL,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_817,"Neuropeptide Y, NPY",YPSKPDNPGEDAPAEDMARYYSALRHYINLITRQRY,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_2308,"Casecidin 15, Beta-casein",YQEPVLGPVRGPFPI,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_2309,"Casecidin 17, Beta-casein",YQEPVLGPVRGPFPIIV,Gram- bacteria,,,1,Ribosomal,monomer
+DBAASPR_828,"Bacteriocin plantaricin A, PlnA",YSLQMGATAIKQVKKLFKKWGW,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_18448,Tauramamide,YSLWR,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_1956,Tachystatin-A1,YSRCQLQGFNCVVRSYGLPTIPCCRGLTCRSYFPGSTYGRCQRF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1849,Tachystatin-A2,YSRCQLQGFNCVVRSYGLPTIPCCRGLTCRSYFPGSTYGRCQRY,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPN_11206,Humimycin A,YSYFTVV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPN_11207,Humimycin B,YSYYTIV,Gram+ bacteria,,,1,Nonribosomal,monomer
+DBAASPR_698,Abaecin,YVPLPNVPQPGRRPFPTFPGQGPFNPKIKWPQGY,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_1850,Tachystatin-B1,YVSCLFRGARCRVYSGRSCCFGYYCRRDFPGSIFGTCSRRNF,Gram+ bacteria,,,1,Ribosomal,monomer
+DBAASPR_14831,Astacidin PcAst-2,FYPRPYRPPYLPDPRPFPRPLPAFGHEFRRH,Escherichia coli ATCC 25922,124.08192,µM,0,Ribosomal,Monomer
+DBAASPR_8708,SA-hepcidin 2,NPAGCRFCCGCCPNMIGCGVCCRF,Escherichia coli,125.7595,µM,0,Ribosomal,Monomer
+DBAASPR_3898,Maculatin 1.1.1,FGVLAKVAAHVVPAIAEHF,Escherichia coli IFO 12734,126.48832,µM,0,Ribosomal,Monomer
+DBAASPR_19178,"Aborycin, Siamycin III",CLGIGSCNDFAGCGYAVVCFW,Escherichia coli,128.0,µg/ml,0,Ribosomal,Monomer
+DBAASPR_19106,Actagardine,SSGWVCTLTIECGTVICAC,Escherichia coli,128.0,µg/ml,0,Ribosomal,Monomer
+DBAASPR_9743,"Px Defensin, PxDef",RIPCQYEDATEDTICQQHCLPKGYSYGICVSYRCSCV,Salmonella enterica,131.28284,µM,0,Ribosomal,Monomer
+DBAASPR_8579,Ranatuerin-1T,GLLSGLKKVGKHVAKNVAVSLMDSLKCKISGDC,Escherichia coli,136.2476,µM,0,Ribosomal,Monomer
+DBAASPR_4138,Nigrocin-2SCc,GILSNVLGMGKKIVCGLSGLC,Escherichia coli,144.5234,µM,0,Ribosomal,Monomer
+DBAASPR_17565,"Cruzioseptin-17, CZS-17",GFLDVVKGVGKAALGAVTHLINQGEQ,Escherichia coli,145.57927,µM,0,Ribosomal,Monomer
+DBAASPR_13807,Sm-NK-lysin,GLLKSLCRKFVKVHLPELIEELTTTD,Escherichia coli,149.3315,µM,0,Ribosomal,Monomer
+DBAASPR_8707,SA-hepcidin 1,QSHLSMCRYCCNCCRNNKGCGFCCKF,Escherichia coli,150.586,µM,0,Ribosomal,Monomer
+DBAASPR_13803,Sm-Hepcidin 1,QSHLSLCRWCCNCCNRYKGCGFCCKF,Escherichia coli,153.2895,µM,0,Ribosomal,Monomer
+DBAASPR_10246,Temporin-GHc,FLQHIIGALTHIF,Escherichia coli ATCC 25922,156.91936,µM,0,Ribosomal,Monomer
+DBAASPR_13805,Sm-Piscidin,KGARQAWKDYKYNRNMQKMNQGYGQQGG,Escherichia coli,165.538,µM,0,Ribosomal,Monomer
+DBAASPR_5373,Membrane protein PepG1 Short,MITISTMLQFGLFLIALIGLVIKLIELSNKK,Escherichia coli,173.2725,µM,0,Ribosomal,Monomer
+DBAASPR_6701,Temporin-1CEa,FVDLKKIANIINSIF,Escherichia coli,173.615,µM,0,Ribosomal,Monomer
+DBAASPR_8093,"Defensin-A, CpDef-A",LTCDILGSTPACAAHCIARGYRGGWCDGQSVCNCRR,Listeria monocytogenes,190.774,µM,0,Ribosomal,Monomer
+DBAASPR_9848,Cathelicidin-RC2,KKCGFFCKLKNKLKSTGSRSNIAAGTHGGTFRV,Escherichia coli ATCC 25922,200.0,µg/ml,0,Ribosomal,Monomer
+DBAASPR_4204,Brevinin-1Ed,VIPFVASVAAEMMHHVYCAASKRC,Escherichia coli,200.0,µg/ml,0,Ribosomal,Monomer
+DBAASPR_13804,Sm-LEAP-2,SLLWRWNSMKPVGASCRDHLECGTKYCRRSICTF,Escherichia coli,200.3905,µM,0,Ribosomal,Monomer
+DBAASPR_5177,Hadrurin,GILDTIKSIASKVWNSKTVQDLKRKGINWVANKLGVSPQAA,Escherichia coli,222.1135,µM,0,Ribosomal,Monomer
+DBAASPR_11248,Cyclotetrapeptide,PLAI,Escherichia coli ATCC 11229,250.0,µg/ml,0,Ribosomal,Monomer
+DBAASPR_5408,"Neuropeptide-like protein 31, NLP-31",QWGYGGYGRGYGGYGGYGRGYGGYGGYGRGYGGYGRGMYGGYGRPYGGYGWGK,Escherichia coli,251.46878,µM,0,Ribosomal,Monomer
+DBAASPR_5372,Membrane protein PepG1 Long,MVALLKSLERRRLMITISTMLQFGLFLIALIGLVIKLIELSNKK,Escherichia coli,251.6725,µM,0,Ribosomal,Monomer
+DBAASPR_20233,Clavanin D,AFKLLGRIIHHVGNFVYGFSHVF,Escherichia coli ATCC 25922,256.0,µg/ml,0,Ribosomal,Monomer
+DBAASPR_9704,"Gallinacin-12, Beta-defensin 12, AvBD-12",GPDSCNHDRGLCRVGNCNPGEYLAKYCFEPVILCCKPLSPTPTKT,Escherichia coli ATCC 25922,256.0,µg/ml,0,Ribosomal,Monomer
+DBAASPR_5082,Cecropin-A AMD,GRLKKLGKKIEGAGKRVFKAAEKALPVVAGVKAL,Listeria monocytogenes,353.944,µM,0,Ribosomal,Monomer
+DBAASPR_5624,Oreochromicin 3,IWDAIFHGAKHFLHRLVNPGGKDAVKDVQQKQ,Escherichia coli,585.3184,µM,0,Ribosomal,Monomer
+DBAASPR_12667,Citrocin,GGVGKIIEYFIGGGVGRYG,Salmonella enterica,950.095,µM,0,Ribosomal,Monomer
+DBAASPR_21324,Cyclopurpuracin,GFIGSPVP,Escherichia coli,1000.0,µg/ml,0,Ribosomal,Monomer
+DBAASPR_13514,"Omega-conotoxin MVIIA, Ziconotide",CKGKGAKCSRLMYDCCTGSCRSGKC,Escherichia coli,1324.645,µM,0,Ribosomal,Monomer

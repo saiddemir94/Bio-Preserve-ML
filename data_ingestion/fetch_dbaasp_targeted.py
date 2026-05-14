@@ -1,7 +1,6 @@
 import csv
 import json
 import sys
-import time
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import urlopen
@@ -15,12 +14,14 @@ DATA_DIR = BASE_DIR / "data"
 RAW_OUTPUT_PATH = DATA_DIR / "raw" / "dbaasp_targeted_peptides.csv"
 FOOD_CONTEXT_PATH = DATA_DIR / "food_context.json"
 DBAASP_BASE_URL = "https://dbaasp.dbaasp.niaidprod.net"
-REQUEST_DELAY_SECONDS = 0.03
-MAX_SEARCH_ROWS_PER_TARGET = 160
-SYNTHESIS_TYPE = "Ribosomal"
+TARGET_SYSTEM_POOL_SIZE = 1000
+MAX_SEARCH_ROWS_PER_QUERY = 1000
+SYNTHESIS_TYPES = ["Ribosomal", "Nonribosomal"]
 COMPLEXITY = "Monomer"
+MAX_SEQUENCE_LENGTH = 60
 ACTIVE_MIC_THRESHOLD = 25.0
 INACTIVE_MIC_THRESHOLD = 100.0
+FOOD_RELEVANT_TARGET_GROUPS = ["Gram+", "Gram-"]
 TARGET_ALIASES = {
     "E. coli": "Escherichia coli",
     "Salmonella": "Salmonella enterica",
@@ -79,12 +80,52 @@ def infer_label(activity, measure_name):
     return None
 
 
-def collect_activity_records(peptide, target_query):
+def collect_search_records(search_items, query_label):
+    records = []
+
+    for item in search_items:
+        sequence = clean_text(item.get("sequence")).upper()
+        if not is_canonical_sequence(sequence):
+            continue
+
+        sequence_length = item.get("sequenceLength") or len(sequence)
+        if sequence_length > MAX_SEQUENCE_LENGTH:
+            continue
+
+        activity = item.get("activity")
+        label = None
+        if activity is not None:
+            if activity <= ACTIVE_MIC_THRESHOLD:
+                label = 1
+            elif activity > INACTIVE_MIC_THRESHOLD:
+                label = 0
+
+        if label is None:
+            label = 1
+
+        records.append(
+            {
+                "dbaasp_id": clean_text(item.get("dbaaspId")),
+                "name": clean_text(item.get("name")),
+                "sequence": sequence,
+                "target_organism": query_label,
+                "mic_value": activity,
+                "mic_unit": "",
+                "label": label,
+                "synthesis_type": clean_text(item.get("synthesisType")),
+                "complexity": clean_text(item.get("complexity")),
+            }
+        )
+
+    return records
+
+
+def collect_activity_records(peptide, target_query=None):
     sequence = clean_text(peptide.get("sequence")).upper()
     if not is_canonical_sequence(sequence):
         return []
 
-    if peptide.get("sequenceLength", len(sequence)) > 30:
+    if peptide.get("sequenceLength", len(sequence)) > MAX_SEQUENCE_LENGTH:
         return []
 
     if extract_name(peptide.get("complexity")).lower() != "monomer":
@@ -94,7 +135,7 @@ def collect_activity_records(peptide, target_query):
 
     for activity_row in peptide.get("targetActivities") or []:
         target_species = extract_name(activity_row.get("targetSpecies"))
-        if target_query.lower() not in target_species.lower():
+        if target_query and target_query.lower() not in target_species.lower():
             continue
 
         activity = activity_row.get("activity")
@@ -120,14 +161,22 @@ def collect_activity_records(peptide, target_query):
     return records
 
 
-def fetch_target_records(target_query):
+def fetch_search_records(params, query_label):
+    search_result = dbaasp_get(
+        "/peptides",
+        {**params, "limit": MAX_SEARCH_ROWS_PER_QUERY, "offset": 0},
+    )
+    return collect_search_records(search_result.get("data", []), query_label)
+
+
+def fetch_target_species_records(target_query, synthesis_type):
     search_result = dbaasp_get(
         "/peptides",
         {
             "targetSpecies.value": target_query,
-            "synthesisType.value": SYNTHESIS_TYPE,
+            "synthesisType.value": synthesis_type,
             "complexity.value": COMPLEXITY,
-            "limit": MAX_SEARCH_ROWS_PER_TARGET,
+            "limit": MAX_SEARCH_ROWS_PER_QUERY,
             "offset": 0,
         },
     )
@@ -137,7 +186,6 @@ def fetch_target_records(target_query):
         peptide_id = item["id"]
         peptide = dbaasp_get(f"/peptides/{peptide_id}")
         records.extend(collect_activity_records(peptide, target_query))
-        time.sleep(REQUEST_DELAY_SECONDS)
 
     return records
 
@@ -152,12 +200,21 @@ def deduplicate_records(records):
             best_records[sequence] = record
             continue
 
-        current_rank = (current["label"], -float(current["mic_value"]))
-        next_rank = (record["label"], -float(record["mic_value"]))
+        current_mic = current["mic_value"] if current["mic_value"] is not None else 999999
+        next_mic = record["mic_value"] if record["mic_value"] is not None else 999999
+        current_rank = (current["label"], -float(current_mic))
+        next_rank = (record["label"], -float(next_mic))
         if next_rank > current_rank:
             best_records[sequence] = record
 
-    return sorted(best_records.values(), key=lambda item: (item["label"], item["mic_value"]))
+    return sorted(
+        best_records.values(),
+        key=lambda item: (
+            -int(item["label"]),
+            item["mic_value"] if item["mic_value"] is not None else 999999,
+            item["sequence"],
+        ),
+    )
 
 
 def write_records(records):
@@ -182,10 +239,25 @@ def write_records(records):
 
 def main():
     all_records = []
-    for target in load_target_pathogens():
-        target_records = fetch_target_records(target)
-        print(f"{target}: {len(target_records)} usable activity records")
-        all_records.extend(target_records)
+    target_pathogens = load_target_pathogens()
+
+    for synthesis_type in SYNTHESIS_TYPES:
+        for target in target_pathogens:
+            target_records = fetch_target_species_records(target, synthesis_type)
+            print(f"{target} / {synthesis_type}: {len(target_records)} activity records")
+            all_records.extend(target_records)
+
+        for target_group in FOOD_RELEVANT_TARGET_GROUPS:
+            group_records = fetch_search_records(
+                {
+                    "targetGroup.value": target_group,
+                    "synthesisType.value": synthesis_type,
+                    "complexity.value": COMPLEXITY,
+                },
+                f"{target_group} bacteria",
+            )
+            print(f"{target_group} / {synthesis_type}: {len(group_records)} search records")
+            all_records.extend(group_records)
 
     unique_records = deduplicate_records(all_records)
     write_records(unique_records)
