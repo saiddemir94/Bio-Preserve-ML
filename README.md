@@ -313,20 +313,6 @@ start-backend.bat
 Bu durumda arayüz backend üzerinden de servis edilebilir.
 
 
-## Gelecek Geliştirmeler
-
-Projeyi güçlendirmek için planlanabilecek geliştirmeler:
-
-- DBAASP verisinin projeye entegre edilmesi
-- Ham ve işlenmiş veri ayrımının kurulması
-- Toksisite ve hemoliz bilgilerinin eklenmesi
-- MIC değerlerinin modele dahil edilmesi
-- Model performansının ölçülmesi
-- Farklı ML algoritmalarının karşılaştırılması
-- Gıda matrisleri için daha gerçekçi kurallar oluşturulması
-- Biyoloji ekibi onaylı etiketleme sisteminin kurulması
-- Kalıcı rapor saklama yapısının eklenmesi
-
 
 ## Kısa Özet
 
