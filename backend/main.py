@@ -50,8 +50,9 @@ app.add_middleware(
 def build_summary(result_frame):
     approved_count = int((result_frame["final_status"] == "Approved").sum())
     rejected_count = int((result_frame["final_status"] == "Rejected").sum())
+    ml_scored = result_frame[result_frame["ml_probability"] > 0.0]
     average_probability = (
-        float(result_frame["ml_probability"].mean()) if not result_frame.empty else 0.0
+        float(ml_scored["ml_probability"].mean()) if not ml_scored.empty else 0.0
     )
 
     return {

@@ -51,7 +51,12 @@ const summaryCards = [
   { key: "totalSequences", label: "Toplam peptit" },
   { key: "approvedCount", label: "Uygun aday" },
   { key: "rejectedCount", label: "Elenen aday" },
-  { key: "averageProbability", label: "Ortalama ML skoru" },
+  {
+    key: "averageProbability",
+    label: "Ortalama ML skoru",
+    tooltip:
+      "0–1 arasında bir değer. Yalnızca biyolojik filtreleri geçen peptitlerin Random Forest tahmin olasılıklarının ortalamasıdır. Yüksek değer, modelin o adayı antimikrobiyal peptit olarak görme olasılığının yüksek olduğunu gösterir.",
+  },
 ];
 
 function App() {
@@ -295,7 +300,12 @@ function App() {
           <section className="summary-grid">
             {summaryCards.map((card) => (
               <article className="summary-card" key={card.key}>
-                <span>{card.label}</span>
+                <span>
+                  {card.label}
+                  {card.tooltip ? (
+                    <small className="card-hint">{card.tooltip}</small>
+                  ) : null}
+                </span>
                 <strong>{summary[card.key]}</strong>
               </article>
             ))}

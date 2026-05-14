@@ -33,17 +33,17 @@ PATHOGEN_RULES = {
     "Listeria monocytogenes": {
         "min_charge": 3,
         "hydrophobicity_range": (0.40, 0.65),
-        "note": "Gram-positive target pathogen profile.",
+        "note": "Gram-pozitif hedef patojen profili.",
     },
     "Salmonella": {
         "min_charge": 4,
         "hydrophobicity_range": (0.35, 0.60),
-        "note": "Gram-negative target pathogen profile.",
+        "note": "Gram-negatif hedef patojen profili.",
     },
     "E. coli": {
         "min_charge": 4,
         "hydrophobicity_range": (0.35, 0.60),
-        "note": "Gram-negative target pathogen profile.",
+        "note": "Gram-negatif hedef patojen profili.",
     },
 }
 
@@ -86,20 +86,20 @@ def passes_biological_rules(features):
     reasons = []
 
     if not RULES["length_range"][0] <= features["length"] <= RULES["length_range"][1]:
-        reasons.append("Length is outside the target range.")
+        reasons.append("Uzunluk hedef aralığının dışında.")
 
     if not RULES["charge_range"][0] <= features["net_charge"] <= RULES["charge_range"][1]:
-        reasons.append("Net charge is outside the target range.")
+        reasons.append("Net yük hedef aralığının dışında.")
 
     if not (
         RULES["hydrophobicity_range"][0]
         <= features["hydrophobic_ratio"]
         <= RULES["hydrophobicity_range"][1]
     ):
-        reasons.append("Hydrophobicity ratio is outside the target range.")
+        reasons.append("Hidrofobisite oranı hedef aralığının dışında.")
 
     if features["key_amino_acid_ratio"] < 0.25:
-        reasons.append("Key amino acid content is below the desired threshold.")
+        reasons.append("Anahtar amino asit içeriği istenen eşiğin altında.")
 
     return len(reasons) == 0, reasons
 
@@ -107,19 +107,19 @@ def passes_biological_rules(features):
 def check_pathogen_compatibility(features, target_pathogen):
     pathogen = validate_pathogen(target_pathogen)
     if not pathogen:
-        return True, "No target pathogen selected."
+        return True, "Hedef patojen seçilmedi."
 
     rules = PATHOGEN_RULES.get(pathogen)
     if not rules:
-        return True, f"No pathogen-specific rule configured for {pathogen}."
+        return True, f"{pathogen} için tanımlı patojen kuralı bulunamadı."
 
     reasons = []
     if features["net_charge"] < rules["min_charge"]:
-        reasons.append(f"Net charge is low for {pathogen}.")
+        reasons.append(f"{pathogen} için net yük düşük.")
 
     min_hydrophobicity, max_hydrophobicity = rules["hydrophobicity_range"]
     if not min_hydrophobicity <= features["hydrophobic_ratio"] <= max_hydrophobicity:
-        reasons.append(f"Hydrophobicity is outside the preferred range for {pathogen}.")
+        reasons.append(f"Hidrofobisite {pathogen} için tercih edilen aralığın dışında.")
 
     if reasons:
         return False, "; ".join(reasons)
@@ -136,15 +136,15 @@ def check_food_compatibility(features, selected_food=None):
         reasons = []
 
         if food_matrix["salt_ratio"] > 2 and features["net_charge"] < 4:
-            reasons.append("Insufficient charge for a high-salt environment.")
+            reasons.append("Yüksek tuzlu ortam için yük yetersiz.")
 
         if food_matrix["pH"] < 5 and features["length"] > 22:
-            reasons.append("Sequence is too long for an acidic environment.")
+            reasons.append("Dizi asidik ortam için çok uzun.")
 
         if food_matrix["fat_content"] == "high" and not (
             0.35 <= features["hydrophobic_ratio"] <= 0.60
         ):
-            reasons.append("Hydrophobicity is not ideal for a high-fat matrix.")
+            reasons.append("Hidrofobisite yüksek yağlı matris için uygun değil.")
 
         if reasons:
             rejected_foods.append(
@@ -189,11 +189,11 @@ def evaluate_sequence(sequence, selected_food=None, target_pathogen=None):
             "hydrophobic_ratio": 0.0,
             "key_amino_acid_ratio": 0.0,
             "passed_biological_rules": False,
-            "rule_notes": "Sequence is empty.",
+            "rule_notes": "Dizi boş.",
             "ml_prediction": 0,
             "ml_probability": 0.0,
             "compatible_foods": "",
-            "food_notes": "Not evaluated.",
+            "food_notes": "Değerlendirilmedi.",
             "final_status": "Rejected",
         }
 
@@ -213,7 +213,7 @@ def evaluate_sequence(sequence, selected_food=None, target_pathogen=None):
             "ml_prediction": 0,
             "ml_probability": 0.0,
             "compatible_foods": "",
-            "food_notes": "Not evaluated.",
+            "food_notes": "Değerlendirilmedi.",
             "final_status": "Rejected",
         }
 
@@ -228,13 +228,13 @@ def evaluate_sequence(sequence, selected_food=None, target_pathogen=None):
         "hydrophobic_ratio": round(features["hydrophobic_ratio"], 4),
         "key_amino_acid_ratio": round(features["key_amino_acid_ratio"], 4),
         "passed_biological_rules": passed_rules,
-        "rule_notes": "Passed all biological filters."
+        "rule_notes": "Tüm biyolojik filtreler geçildi."
         if passed_rules
         else "; ".join(rule_reasons),
         "ml_prediction": 0,
         "ml_probability": 0.0,
         "compatible_foods": "",
-        "food_notes": "Not evaluated because biological filters failed.",
+        "food_notes": "Biyolojik filtreler geçilemediği için değerlendirilmedi.",
         "final_status": "Rejected",
     }
 
@@ -246,7 +246,7 @@ def evaluate_sequence(sequence, selected_food=None, target_pathogen=None):
     result["ml_probability"] = round(probability, 4)
 
     if predicted_label != 1:
-        result["food_notes"] = "Rejected by the machine learning model."
+        result["food_notes"] = "Makine öğrenimi modeli tarafından elendi."
         return result
 
     pathogen_ok, pathogen_note = check_pathogen_compatibility(features, target_pathogen)
@@ -259,16 +259,16 @@ def evaluate_sequence(sequence, selected_food=None, target_pathogen=None):
 
     if suitable_foods:
         result["food_notes"] = (
-            f"{pathogen_note} Compatible with selected food matrix."
+            f"{pathogen_note} Seçilen gıda matrisiyle uyumlu."
             if not rejected_foods
-            else "Rejected foods: "
+            else "Uyumsuz gıdalar: "
             + " | ".join(
                 f"{item['product']}: {item['reasons']}" for item in rejected_foods
             )
         )
         result["final_status"] = "Approved"
     else:
-        result["food_notes"] = "Failed food compatibility checks."
+        result["food_notes"] = "Gıda uyumluluk kontrolleri başarısız."
 
     return result
 
