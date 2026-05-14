@@ -56,6 +56,8 @@ const summaryCards = [
   { key: "dataSource", label: "Veri kaynağı" },
 ];
 
+const RESULTS_PER_PAGE = 10;
+
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -71,6 +73,7 @@ function App() {
   const [analysisMode, setAnalysisMode] = useState("general");
   const [selectedFood, setSelectedFood] = useState("");
   const [targetPathogen, setTargetPathogen] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
   const fileInputRef = useRef(null);
   const deferredQuery = useDeferredValue(query);
 
@@ -111,6 +114,27 @@ function App() {
       row.rule_notes.toLowerCase().includes(normalizedQuery)
     );
   });
+  const totalPages = Math.max(1, Math.ceil(filteredResults.length / RESULTS_PER_PAGE));
+  const safeCurrentPage = Math.min(currentPage, totalPages);
+  const pageStartIndex = (safeCurrentPage - 1) * RESULTS_PER_PAGE;
+  const paginatedResults = filteredResults.slice(pageStartIndex, pageStartIndex + RESULTS_PER_PAGE);
+  const visiblePages = Array.from({ length: totalPages }, (_, index) => index + 1).filter((page) => {
+    if (totalPages <= 7) {
+      return true;
+    }
+
+    return page === 1 || page === totalPages || Math.abs(page - safeCurrentPage) <= 2;
+  });
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [deferredQuery, approvedOnly, results]);
+
+  useEffect(() => {
+    if (currentPage > totalPages) {
+      setCurrentPage(totalPages);
+    }
+  }, [currentPage, totalPages]);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -168,6 +192,7 @@ function App() {
     setDownloadUrl("");
     setQuery("");
     setApprovedOnly(false);
+    setCurrentPage(1);
     setDataSourceMode("system");
     setAnalysisMode("general");
     setSelectedFood("");
@@ -434,7 +459,7 @@ function App() {
                 </tr>
               </thead>
               <tbody>
-                {filteredResults.map((row) => (
+                {paginatedResults.map((row) => (
                   <tr key={`${row.sequence}-${row.ml_probability}-${row.final_status}`}>
                     <td className="sequence">{row.sequence}</td>
                     <td>{row.target_food}</td>
@@ -457,6 +482,48 @@ function App() {
               </tbody>
             </table>
           </div>
+          {totalPages > 1 ? (
+            <div className="pagination" aria-label="Sonuç sayfaları">
+              <button
+                type="button"
+                className="page-button"
+                disabled={safeCurrentPage === 1}
+                onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
+              >
+                Önceki
+              </button>
+
+              <div className="page-numbers">
+                {visiblePages.map((page, index) => {
+                  const previousPage = visiblePages[index - 1];
+                  const needsGap = previousPage && page - previousPage > 1;
+
+                  return (
+                    <span className="page-number-group" key={page}>
+                      {needsGap ? <span className="page-gap">...</span> : null}
+                      <button
+                        type="button"
+                        className={`page-button number ${page === safeCurrentPage ? "active" : ""}`}
+                        aria-current={page === safeCurrentPage ? "page" : undefined}
+                        onClick={() => setCurrentPage(page)}
+                      >
+                        {page}
+                      </button>
+                    </span>
+                  );
+                })}
+              </div>
+
+              <button
+                type="button"
+                className="page-button"
+                disabled={safeCurrentPage === totalPages}
+                onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
+              >
+                Sonraki
+              </button>
+            </div>
+          ) : null}
         </section>
       ) : summary ? (
         <section className="empty-state">
