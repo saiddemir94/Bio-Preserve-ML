@@ -201,7 +201,7 @@ Proje şu anda çalışan bir prototiptir. Ancak kullanılan veri seti sınırl�
 Bilimsel doğruluk için daha güçlü, temizlenmiş ve etiketlenmiş gerçek veri setine ihtiyaç vardır.
 
 
-#Hangi dosya ne işe yarar ve neleri barındırır ?
+## Hangi dosya ne işe yarar ve neleri barındırır ?
 
 ```
 
