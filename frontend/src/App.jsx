@@ -59,6 +59,9 @@ const summaryCards = [
   },
 ];
 
+const EMPTY_FOOD_FORM = { product: "", pH: "", salt_ratio: "", temperature: "", fat_content: "medium" };
+const EMPTY_PATHOGEN_FORM = { name: "", min_charge: "", hydrophobicity_min: "", hydrophobicity_max: "", gram_type: "negative" };
+
 function App() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -76,19 +79,76 @@ function App() {
   const fileInputRef = useRef(null);
   const deferredQuery = useDeferredValue(query);
 
-  useEffect(() => {
-    async function loadOptions() {
-      try {
-        const response = await fetch(`${API_BASE_URL}/api/options`);
-        if (!response.ok) return;
-        const payload = await response.json();
-        setOptions(payload);
-      } catch {
-        setOptions(DEFAULT_OPTIONS);
-      }
+  const [showFoodForm, setShowFoodForm] = useState(false);
+  const [showPathogenForm, setShowPathogenForm] = useState(false);
+  const [foodForm, setFoodForm] = useState(EMPTY_FOOD_FORM);
+  const [pathogenForm, setPathogenForm] = useState(EMPTY_PATHOGEN_FORM);
+  const [addMessage, setAddMessage] = useState("");
+
+  async function loadOptions() {
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/options`);
+      if (!response.ok) return;
+      const payload = await response.json();
+      setOptions(payload);
+    } catch {
+      setOptions(DEFAULT_OPTIONS);
     }
-    loadOptions();
-  }, []);
+  }
+
+  useEffect(() => { loadOptions(); }, []);
+
+  async function handleAddFood(event) {
+    event.preventDefault();
+    setAddMessage("");
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/food-matrices`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          product: foodForm.product,
+          pH: parseFloat(foodForm.pH),
+          salt_ratio: parseFloat(foodForm.salt_ratio),
+          temperature: parseFloat(foodForm.temperature),
+          fat_content: foodForm.fat_content,
+        }),
+      });
+      const payload = await response.json();
+      if (!response.ok) throw new Error(payload.detail);
+      setAddMessage(payload.message);
+      setFoodForm(EMPTY_FOOD_FORM);
+      setShowFoodForm(false);
+      await loadOptions();
+    } catch (err) {
+      setAddMessage(err.message);
+    }
+  }
+
+  async function handleAddPathogen(event) {
+    event.preventDefault();
+    setAddMessage("");
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/pathogens`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: pathogenForm.name,
+          min_charge: parseInt(pathogenForm.min_charge),
+          hydrophobicity_min: parseFloat(pathogenForm.hydrophobicity_min),
+          hydrophobicity_max: parseFloat(pathogenForm.hydrophobicity_max),
+          gram_type: pathogenForm.gram_type,
+        }),
+      });
+      const payload = await response.json();
+      if (!response.ok) throw new Error(payload.detail);
+      setAddMessage(payload.message);
+      setPathogenForm(EMPTY_PATHOGEN_FORM);
+      setShowPathogenForm(false);
+      await loadOptions();
+    } catch (err) {
+      setAddMessage(err.message);
+    }
+  }
 
   const filteredResults = results.filter((row) => {
     if (approvedOnly && row.final_status !== "Approved") return false;
@@ -249,35 +309,84 @@ function App() {
               </fieldset>
 
               {showFoodSelect ? (
-                <label>
-                  <span>Hedef gıda</span>
-                  <select
-                    value={selectedFood || options.foods?.[0] || DEFAULT_OPTIONS.foods[0]}
-                    onChange={(event) => setSelectedFood(event.target.value)}
+                <div className="select-with-add">
+                  <label>
+                    <span>Hedef gıda</span>
+                    <select
+                      value={selectedFood || options.foods?.[0] || DEFAULT_OPTIONS.foods[0]}
+                      onChange={(event) => setSelectedFood(event.target.value)}
+                    >
+                      {options.foods.map((food) => (
+                        <option key={food} value={food}>{food}</option>
+                      ))}
+                    </select>
+                  </label>
+                  <button
+                    type="button"
+                    className="add-entry-btn"
+                    onClick={() => { setShowFoodForm((v) => !v); setShowPathogenForm(false); setAddMessage(""); }}
                   >
-                    {options.foods.map((food) => (
-                      <option key={food} value={food}>
-                        {food}
-                      </option>
-                    ))}
-                  </select>
-                </label>
+                    {showFoodForm ? "İptal" : "+ Yeni gıda"}
+                  </button>
+                  {showFoodForm ? (
+                    <form className="entry-form" onSubmit={handleAddFood}>
+                      <p className="entry-form-title">Yeni gıda matrisi ekle</p>
+                      <label>Ürün adı<input required placeholder="örn. Süt" value={foodForm.product} onChange={(e) => setFoodForm({ ...foodForm, product: e.target.value })} /></label>
+                      <label>pH<input required type="number" step="0.1" min="0" max="14" placeholder="örn. 6.5" value={foodForm.pH} onChange={(e) => setFoodForm({ ...foodForm, pH: e.target.value })} /></label>
+                      <label>Tuz oranı (%)<input required type="number" step="0.1" min="0" placeholder="örn. 1.5" value={foodForm.salt_ratio} onChange={(e) => setFoodForm({ ...foodForm, salt_ratio: e.target.value })} /></label>
+                      <label>Sıcaklık (°C)<input required type="number" step="1" placeholder="örn. 4" value={foodForm.temperature} onChange={(e) => setFoodForm({ ...foodForm, temperature: e.target.value })} /></label>
+                      <label>Yağ içeriği
+                        <select value={foodForm.fat_content} onChange={(e) => setFoodForm({ ...foodForm, fat_content: e.target.value })}>
+                          <option value="low">Düşük</option>
+                          <option value="medium">Orta</option>
+                          <option value="high">Yüksek</option>
+                        </select>
+                      </label>
+                      <button type="submit" className="primary-button">Kaydet</button>
+                      {addMessage ? <p className="entry-msg">{addMessage}</p> : null}
+                    </form>
+                  ) : null}
+                </div>
               ) : null}
 
               {showPathogenSelect ? (
-                <label>
-                  <span>Hedef patojen</span>
-                  <select
-                    value={targetPathogen || options.pathogens?.[0] || DEFAULT_OPTIONS.pathogens[0]}
-                    onChange={(event) => setTargetPathogen(event.target.value)}
+                <div className="select-with-add">
+                  <label>
+                    <span>Hedef patojen</span>
+                    <select
+                      value={targetPathogen || options.pathogens?.[0] || DEFAULT_OPTIONS.pathogens[0]}
+                      onChange={(event) => setTargetPathogen(event.target.value)}
+                    >
+                      {options.pathogens.map((pathogen) => (
+                        <option key={pathogen} value={pathogen}>{pathogen}</option>
+                      ))}
+                    </select>
+                  </label>
+                  <button
+                    type="button"
+                    className="add-entry-btn"
+                    onClick={() => { setShowPathogenForm((v) => !v); setShowFoodForm(false); setAddMessage(""); }}
                   >
-                    {options.pathogens.map((pathogen) => (
-                      <option key={pathogen} value={pathogen}>
-                        {pathogen}
-                      </option>
-                    ))}
-                  </select>
-                </label>
+                    {showPathogenForm ? "İptal" : "+ Yeni patojen"}
+                  </button>
+                  {showPathogenForm ? (
+                    <form className="entry-form" onSubmit={handleAddPathogen}>
+                      <p className="entry-form-title">Yeni patojen ekle</p>
+                      <label>Patojen adı<input required placeholder="örn. Staphylococcus aureus" value={pathogenForm.name} onChange={(e) => setPathogenForm({ ...pathogenForm, name: e.target.value })} /></label>
+                      <label>Min. net yük<input required type="number" step="1" min="0" placeholder="örn. 3" value={pathogenForm.min_charge} onChange={(e) => setPathogenForm({ ...pathogenForm, min_charge: e.target.value })} /></label>
+                      <label>Hidrofobisite min.<input required type="number" step="0.01" min="0" max="1" placeholder="örn. 0.35" value={pathogenForm.hydrophobicity_min} onChange={(e) => setPathogenForm({ ...pathogenForm, hydrophobicity_min: e.target.value })} /></label>
+                      <label>Hidrofobisite maks.<input required type="number" step="0.01" min="0" max="1" placeholder="örn. 0.65" value={pathogenForm.hydrophobicity_max} onChange={(e) => setPathogenForm({ ...pathogenForm, hydrophobicity_max: e.target.value })} /></label>
+                      <label>Gram tipi
+                        <select value={pathogenForm.gram_type} onChange={(e) => setPathogenForm({ ...pathogenForm, gram_type: e.target.value })}>
+                          <option value="positive">Gram-pozitif</option>
+                          <option value="negative">Gram-negatif</option>
+                        </select>
+                      </label>
+                      <button type="submit" className="primary-button">Kaydet</button>
+                      {addMessage ? <p className="entry-msg">{addMessage}</p> : null}
+                    </form>
+                  ) : null}
+                </div>
               ) : null}
             </div>
 

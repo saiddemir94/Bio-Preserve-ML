@@ -1,3 +1,4 @@
+import json
 import os
 from pathlib import Path
 from uuid import uuid4
@@ -7,15 +8,35 @@ from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
+from pydantic import BaseModel
 
 from pipeline import (
     DEFAULT_INPUT_PATH,
+    DATA_DIR,
     OUTPUT_DIR,
+    FOOD_CONTEXT,
+    PATHOGEN_RULES,
     available_foods,
     available_pathogens,
     process_sequences_dataframe,
     save_report,
 )
+
+
+class FoodMatrixIn(BaseModel):
+    product: str
+    pH: float
+    salt_ratio: float
+    temperature: float
+    fat_content: str
+
+
+class PathogenIn(BaseModel):
+    name: str
+    min_charge: int
+    hydrophobicity_min: float
+    hydrophobicity_max: float
+    gram_type: str
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -145,6 +166,57 @@ async def run_pipeline_upload(
         "results": result_frame.to_dict(orient="records"),
         "downloadUrl": f"/api/reports/{report_path.name}",
     }
+
+
+@app.post("/api/food-matrices")
+def add_food_matrix(body: FoodMatrixIn):
+    name = body.product.strip()
+    if not name:
+        raise HTTPException(status_code=400, detail="Ürün adı boş olamaz.")
+    if body.fat_content not in ("low", "medium", "high"):
+        raise HTTPException(status_code=400, detail="Yağ içeriği: low, medium veya high olmalı.")
+
+    existing = [m["product"].lower() for m in FOOD_CONTEXT["food_matrices"]]
+    if name.lower() in existing:
+        raise HTTPException(status_code=409, detail=f"'{name}' zaten kayıtlı.")
+
+    entry = {
+        "product": name,
+        "pH": body.pH,
+        "salt_ratio": body.salt_ratio,
+        "temperature": body.temperature,
+        "fat_content": body.fat_content,
+    }
+    FOOD_CONTEXT["food_matrices"].append(entry)
+    food_context_path = DATA_DIR / "food_context.json"
+    food_context_path.write_text(
+        json.dumps(FOOD_CONTEXT, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    return {"message": f"'{name}' eklendi.", "entry": entry}
+
+
+@app.post("/api/pathogens")
+def add_pathogen(body: PathogenIn):
+    name = body.name.strip()
+    if not name:
+        raise HTTPException(status_code=400, detail="Patojen adı boş olamaz.")
+
+    existing = [p.lower() for p in FOOD_CONTEXT.get("target_pathogens", [])]
+    if name.lower() in existing:
+        raise HTTPException(status_code=409, detail=f"'{name}' zaten kayıtlı.")
+
+    note = f"Gram-{'pozitif' if body.gram_type == 'positive' else 'negatif'} hedef patojen profili."
+    PATHOGEN_RULES[name] = {
+        "min_charge": body.min_charge,
+        "hydrophobicity_range": (body.hydrophobicity_min, body.hydrophobicity_max),
+        "note": note,
+    }
+    FOOD_CONTEXT.setdefault("target_pathogens", []).append(name)
+    food_context_path = DATA_DIR / "food_context.json"
+    food_context_path.write_text(
+        json.dumps(FOOD_CONTEXT, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    return {"message": f"'{name}' eklendi."}
 
 
 @app.get("/api/reports/{filename}")

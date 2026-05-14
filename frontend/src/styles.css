@@ -416,6 +416,84 @@ h1 {
   margin-bottom: 8px;
 }
 
+.select-with-add {
+  display: grid;
+  gap: 8px;
+}
+
+.add-entry-btn {
+  align-self: start;
+  background: rgba(13, 107, 95, 0.08);
+  border: 1px solid rgba(13, 107, 95, 0.2);
+  border-radius: 999px;
+  color: var(--accent-strong);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  transition: background 140ms ease, transform 140ms ease;
+}
+
+.add-entry-btn:hover {
+  background: rgba(13, 107, 95, 0.14);
+  transform: translateY(-1px);
+}
+
+.entry-form {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid rgba(13, 107, 95, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.entry-form-title {
+  margin: 0;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--accent-strong);
+}
+
+.entry-form label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.entry-form input,
+.entry-form select {
+  width: 100%;
+  border: 1px solid rgba(15, 93, 86, 0.18);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 10px 12px;
+  color: var(--text);
+  font: inherit;
+  outline: none;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.entry-form input:focus,
+.entry-form select:focus {
+  border-color: rgba(13, 107, 95, 0.55);
+  box-shadow: 0 0 0 3px rgba(13, 107, 95, 0.1);
+}
+
+.entry-form .primary-button {
+  min-height: 42px;
+  font-size: 0.88rem;
+}
+
+.entry-msg {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--accent-strong);
+  font-weight: 600;
+}
+
 .card-hint {
   display: block;
   margin-top: 4px;
