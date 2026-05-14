@@ -201,6 +201,8 @@ Proje şu anda çalışan bir prototiptir. Ancak kullanılan veri seti sınırl�
 Bilimsel doğruluk için daha güçlü, temizlenmiş ve etiketlenmiş gerçek veri setine ihtiyaç vardır.
 
 
+#Hangi dosya ne işe yarar ve neleri barındırır ?
+
 ```
 
 `raw` klasörü ham veriyi saklar. Bu veri doğrudan eğitimde kullanılmaz.
