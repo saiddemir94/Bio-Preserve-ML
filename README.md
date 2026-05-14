@@ -1,8 +1,10 @@
 # BioPreserve-AI
 
-BioPreserve-AI, antimikrobiyal peptit adaylarını gıda koruma amacıyla değerlendirmek için hazırlanmış bir analiz sistemidir. Proje, kullanıcıdan peptit sekanslarını içeren bir CSV dosyası alır, bu sekanslardan biyolojik özellikler çıkarır, makine öğrenmesi modeliyle adaylık tahmini yapar ve sonucu rapor olarak sunar.
 
-Bu proje; gıda mühendisliği, biyokimya ve bilgisayar mühendisliği taraflarını bir araya getiren bir prototiptir. Şu an çalışan sistem, peptit tarama akışını göstermek ve ileride gerçek biyolojik veriyle geliştirilecek yapının temelini oluşturmak için hazırlanmıştır.
+BioPreserve-AI, gıda koruma uygulamalarında kullanılabilecek doğal antimikrobiyal peptit adaylarını değerlendirmek için geliştirilmiş bir analiz sistemidir. Sistem, DBAASP tabanlı doğal peptit havuzunu veya kullanıcı tarafından yüklenen peptit listesini biyolojik parametreler ve makine öğrenmesi modeli ile analiz eder.
+
+Proje; seçilen gıda ürünü, hedef patojen ve peptit özelliklerini birlikte değerlendirerek aday peptitleri sıralar. Her peptit için uzunluk, net yük, hidrofobiklik oranı ve kritik amino asit oranı gibi biyolojik özellikler hesaplanır. Bu özellikler Random Forest modeli ve biyolojik uygunluk kurallarıyla birlikte kullanılarak sonuçlar raporlanır.
+
 
 ## Projenin Amacı
 
